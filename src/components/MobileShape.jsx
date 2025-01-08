@@ -42,7 +42,7 @@ export default function MobileShape() {
                         <motion.p
                             className="text-sm text-white relative z-10"
                             initial={{ rotate: 0 }}
-                            whileHover={{ rotate: 360 }}
+                            whileHover={{ rotate: 360, filter:"blur(4px)" }}
                             transition={{ duration: 1 }}
                         >
                             {text}

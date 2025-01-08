@@ -4,15 +4,15 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
 export default function Home() {
-    const sentence = "Hello, I'm a Mobile Developer!";
-    const wordToAnimate = "Mobile"; 
+    const sentence = "Hello, I'm an App Developer!";
+    const wordToAnimate = "App"; 
 
     const [currentWord, setCurrentWord] = useState(wordToAnimate); 
 
     // Automatically toggle the word every 3 seconds
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentWord(prevWord => (prevWord === "Mobile" ? "Web" : "Mobile"));
+            setCurrentWord(prevWord => (prevWord === "App" ? "Web" : "App"));
         }, 5000); // Change the word every 3 seconds
 
         return () => clearInterval(interval); // Cleanup on unmount
@@ -36,20 +36,20 @@ export default function Home() {
                                             transition={{ duration: 5, repeat: Infinity }} // Continuous rotation
                                         >
                                             {/* Rotating background for the word */}
-                                            <motion.div
+                                            {/* <motion.div
                                                 className="absolute inset-0 flex justify-center items-center"
                                                 style={box}
                                                 animate={{ rotate: 360 }}
-                                                transition={{ duration: 5, repeat: Infinity }} // Infinite rotation for background
-                                            />
+                                                transition={{ duration: 5, repeat: Infinity }} 
+                                            /> */}
                                             {/* Text on top of the rotating background */}
                                             <motion.span
                                                 className="text-blue-900 relative z-10"
                                                 key={currentWord} // Key to trigger re-render on word change
                                                 initial={{ opacity: 0, scale: 0.8 }}
-                                                animate={{ opacity: 1, scale: 1 }}
-                                                exit={{ opacity: 0, scale: 0.8 }}
-                                                transition={{ duration: 0.5 }}
+                                                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }} 
+                                                exit={{ opacity: 0, scale: 0.8, filter: "blur(5px)" }} 
+                                                transition={{ duration: 0.95 }}
                                             >
                                                 {currentWord} {/* Display current word */}
                                             </motion.span>
@@ -57,7 +57,7 @@ export default function Home() {
                                     </span>
                                 );
                             }
-                            return <span key={index} className={word === "Developer!" ? "ml-3" : ""}>{word} </span>;
+                            return <span key={index} className={word === "Developer!" ? "m-2" : "m-2"}>{word} </span>;
                         })}
                     </h2>
                     <p className="mt-5 text-lg text-gray-700">
