@@ -57,7 +57,7 @@ export default function MobileShape() {
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-black rounded-full mt-2"></div>
 
             {/* Screen Area */}
-            <div className="flex flex-col items-center justify-center h-full bg-gray-100 p-5">
+            <div className="flex flex-col items-center justify-center h-full bg-gray-200 ">
                 <div className="flex flex-wrap justify-center mt-4 gap-4">
                     {apps.map((app, index) => (
                         <AppIcon 
@@ -65,13 +65,17 @@ export default function MobileShape() {
                             icon={app.icon} 
                             appName={app.appName} 
                             navigateTo={app.navigateTo} 
-                            onClick={() => handleNavigate(app.navigateTo)} 
+                            onClick={() => handleNavigate(app.navigateTo)
+                                
+                            } 
+                            
                         />
                     ))}
                 </div>
+                <img src="dog.gif" className="w-16 h-16 absolute bottom-16 left-1/2 transform -translate-x-1/2"></img>
             </div>
-
             {/* Bottom Navigation Bar */}
+            <img src="dog.gif" className='w-16 h-16'/>
             <div className="absolute bottom-0 left-0 w-full h-16 bg-black rounded-b-3xl flex items-center justify-center">
                 <div className="w-10 h-2 bg-white rounded-full"></div>
             </div>

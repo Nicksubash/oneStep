@@ -21,14 +21,14 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className={`text-black py-6 backdrop-blur-lg shadow-lg rounded-full mx-auto min-w-[800px] transition-all duration-300 ${
+      className={`text-black py-4 backdrop-blur-lg shadow-lg rounded-full mx-auto min-w-[800px] transition-all duration-300 ${
         isShrunk ? 'py-2 px-4 scale-100' : 'py-6 px-8 scale-0'
       }`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.2 }}
     >
-         <div className="text-center mt-4 opacity-70 text-2xl font-semibold text-cyan-600 top-0">
+         <div className="text-center  text-2xl font-semibold text-cyan-600 top-0">
             <p>Find me on</p>
         </div>
       <div className="container flex justify-center items-center">
@@ -45,7 +45,7 @@ const Footer = () => {
               href={social.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-3xl hover:text-blue-700 transition-colors duration-300 text-cyan-600 "
+              className="text-3xl hover:text-cyan-700 transition-colors duration-300 text-cyan-600 "
               whileHover={{ scale: 1.2 }}
             >
               {/* Dynamic Icon Rendering */}

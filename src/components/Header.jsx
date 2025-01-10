@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { transform } from 'framer-motion';
 
 export default function Header() {
     const [isShrunk, setShrunk] = useState(false);
@@ -26,35 +27,35 @@ export default function Header() {
             <div className="container flex justify-between items-center">
                 <Link to="/">
                     <img
-                        src="/nameLogo.png"
+                        src="/cat.gif"
                         alt="logo"
                         className={`transition-transform duration-300 ${
-                            isShrunk ? 'h-12' : 'h-16'
+                            isShrunk ? 'h-8' : 'h-12'
                         }`}
                     />
                 </Link>
-                <nav className="flex space-x-6">
+                <nav className="flex space-x-6 gap-8 mr-8">
                     <Link
                         to="/"
-                        className="text-2xl text-cyan-600  hover:text-indigo-500 font-semibold transition-colors duration-300"
+                        className="text-2xl text-cyan-600  hover:text-cyan-700 font-semibold transition-all duration-300 transform hover:scale-110"
                     >
                         Home
                     </Link>
-                    <Link
+                    {/* <Link
                         to="/projects"
                         className="text-2xl text-cyan-600  hover:text-indigo-500 font-semibold transition-colors duration-300"
                     >
                         Projects
-                    </Link>
+                    </Link> */}
                     <Link
                         to="/About"
-                        className="text-2xl text-cyan-600  hover:text-indigo-500 font-semibold transition-colors duration-300"
-                    >
+                        className="text-2xl text-cyan-600 hover:text-cyan-700 font-semibold transition-all duration-300 transform hover:scale-110"
+                        >
                         About
                     </Link>
                     <Link
                         to="/contact"
-                        className="text-2xl text-cyan-600  hover:text-indigo-500 font-semibold transition-colors duration-300"
+                        className="text-2xl text-cyan-600  hover:text-cyan-700 font-semibold transition-all duration-300 transform hover:scale-110"
                     >
                         Contact
                     </Link>
