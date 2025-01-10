@@ -6,6 +6,8 @@ import Weather from './pages/Weather';
 import Dictionary from './pages/Dictionary';
 import Todo from './pages/Todo';
 import Content from './pages/Content';
+import Contact from './pages/Contact';
+import About from './pages/About';
 export default function App() {
     return (
         <Router>
@@ -23,6 +25,14 @@ export default function App() {
                     element={
                         <PageTransition>
                             <Projects />
+                        </PageTransition>
+                    }
+                />
+                 <Route
+                    path="/About"
+                    element={
+                        <PageTransition>
+                            <About />
                         </PageTransition>
                     }
                 />
@@ -56,6 +66,10 @@ export default function App() {
                         <Content/>
                     </PageTransition>
                 }/>
+                <Route path="/Contact"
+                element={
+                    <Contact/>
+                } />
                 
             </Routes>
         </Router>

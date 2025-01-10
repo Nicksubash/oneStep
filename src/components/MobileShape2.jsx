@@ -44,7 +44,7 @@ export default function MobileShape2() {
             {loading && <Loading />}
 
             {/* Status Bar */}
-            <div className="absolute top-0 left-0 w-full h-8 opacity-60 flex items-start justify-end px-4 text-white text-sm bg-">
+            <div className="absolute top-0 left-0 w-full h-8 flex items-start justify-end px-4 text-white text-sm bg-white">
                 <div>
                     <img src='/internet.png' alt="wifi" className='h-6 w-auto py-1' />
                 </div>

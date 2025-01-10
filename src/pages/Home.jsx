@@ -8,71 +8,73 @@ import { useNavigate } from "react-router-dom";
 
 export default function Home() {
     const sentence = "Hello, I'm an App Developer!";
-    const wordToAnimate = "App"; 
+    const wordToAnimate = "App";
 
-    const [currentWord, setCurrentWord] = useState(wordToAnimate); 
-    const[loading, setLoading] = useState(false)
-    const navigate=useNavigate();
+    const [currentWord, setCurrentWord] = useState(wordToAnimate);
+    const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
 
-    // Automatically toggle the word every 3 seconds
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentWord(prevWord => (prevWord === "App" ? "Web" : "App"));
+            setCurrentWord((prevWord) => (prevWord === "App" ? "Web" : "App"));
         }, 5000);
 
-        return () => clearInterval(interval); 
+        return () => clearInterval(interval);
     }, []);
 
-    const handleNavigate= ()=>{
+    const handleNavigate = () => {
         setLoading(true);
-        setTimeout(()=>{
+        setTimeout(() => {
             navigate("/projects");
-        },1000);
-    }
-
-    
+        }, 1000);
+    };
 
     return (
-        <div>
+        <div className="min-h-screen bg-gradient-to-r from-blue-100 via-indigo-200 to-purple-100 flex flex-col p-9">
+
             <Header />
-            <main className="flex items-center justify-center h-screen px-10">
-                <div className="w-1/2 flex flex-col justify-center">
-                    <h2 className="text-5xl font-extrabold">
-                        {/* Split sentence into words and animate "Mobile" */}
+            <main className="flex flex-1 items-center justify-center px-10 pt-8 gap-5 pb-9">
+                <div className="w-1/2 mb-8 flex flex-col justify-center items-center text-center  bg-opacity-90 shadow-2xl rounded-lg p-8">
+                    <h2 className="text-5xl font-extrabold mb-6">
                         {sentence.split(" ").map((word, index) => {
                             if (word === wordToAnimate) {
                                 return (
                                     <span key={index} className="relative inline-block">
-                                        {/* Container for rotating background and text */}
                                         <motion.div
                                             className="relative inline-flex justify-center items-center"
                                             animate={{ rotate: 0 }}
-                                            transition={{ duration: 5, repeat: Infinity }} 
+                                            transition={{ duration: 5, repeat: Infinity }}
                                         >
                                             <motion.span
                                                 className="text-blue-900 relative z-10"
-                                                key={currentWord} // Key to trigger re-render on word change
+                                                key={currentWord}
                                                 initial={{ opacity: 0, scale: 0.8 }}
-                                                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }} 
-                                                exit={{ opacity: 0, scale: 0.8, filter: "blur(5px)" }} 
+                                                animate={{ opacity: 1, scale: 1 }}
+                                                exit={{ opacity: 0, scale: 0.8 }}
                                                 transition={{ duration: 0.95 }}
                                             >
-                                                {currentWord} {/* Display current word */}
+                                                {currentWord}
                                             </motion.span>
                                         </motion.div>
                                     </span>
                                 );
                             }
-                            return <span key={index} className={word === "Developer!" ? "m-2" : "m-2"}>{word} </span>;
+                            return <span key={index} className="m-2">{word}</span>;
                         })}
                     </h2>
                     <p className="mt-5 text-lg text-gray-700">
                         I specialize in building high-performance mobile apps with React Native and Kotlin.
                     </p>
+                    <button
+                        onClick={handleNavigate}
+                        className="mt-8 bg-gradient-to-r from-indigo-500 to-pink-500 text-white py-3 px-6 rounded-lg text-lg font-bold hover:shadow-lg hover:scale-105 transition-transform"
+                    >
+                        View Projects
+                    </button>
                 </div>
                 <MobileShape />
             </main>
-            <Footer/>
+            <Footer />
         </div>
     );
 }

@@ -33,13 +33,15 @@ export default function MobileShape() {
         return <Navigate to={navigateTo} />; // Perform navigation after loading screen
     }
 
+    // className="peer w-full border-2 border-gray-300 bg-transparent text-black px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+
     return (
-        <div className="relative w-[320px] h-[700px] rounded-3xl shadow-2xl border-4 border-black overflow-hidden">
+        <div className="relative w-[320px] h-[700px] rounded-3xl shadow-2xl border-4 border-gray-700 focus:outline-dashed overflow-hidden">
             {/* Show loading screen while navigating */}
             {loading && <Loading />}
 
             {/* Status Bar */}
-            <div className="absolute top-0 left-0 w-full h-8 opacity-60 flex items-start justify-end px-4 text-white text-sm">
+            <div className="absolute top-0 left-0 w-full h-8 opacity-60 flex items-start justify-end px-4 text-white text-sm ">
                 <div>
                     <img src='/internet.png' alt="wifi" className='h-6 w-auto py-1' />
                 </div>
