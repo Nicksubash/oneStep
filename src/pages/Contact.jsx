@@ -16,10 +16,10 @@ export default function Contact() {
                         {/* Mobile Screen */}
                         <div className="absolute inset-0 flex flex-col justify-center items-center bg-white rounded-3xl overflow-hidden">
                             <div className="w-full h-full p-8">
-                                <div className="absolute -top-10 -left-10 h-32 w-32 bg-purple-400 bg-opacity-70 blur-3xl rounded-full"></div>
-                                <div className="absolute -bottom-10 -right-10 h-32 w-32 bg-pink-400 bg-opacity-70 blur-3xl rounded-full"></div>
+                                <div className="absolute -top-10 -left-10 h-32 w-32 bg-cyan-400 bg-opacity-70 blur-3xl rounded-full"></div>
+                                <div className="absolute -bottom-10 -right-10 h-32 w-32 bg-blue-400 bg-opacity-70 blur-3xl rounded-full"></div>
 
-                                <h1 className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-700 to-pink-700 mb-6">
+                                <h1 className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-700 to-cyan-400 mb-6">
                                     Let's Connect!
                                 </h1>
                                 <p className="text-center text-gray-700 font-medium mb-8">
@@ -60,9 +60,7 @@ export default function Contact() {
                                     <button 
                                         type="submit" 
                                         // className="w-full bg-gradient-to-r from-indigo-500 to-pink-500 text-white py-3 px-4 rounded-lg text-lg font-bold hover:shadow-lg hover:scale-105 transition-transform"
-                                        className="w-full bg-gradient-to-r from-indigo-500 to-pink-500 text-white py-3 px-4 rounded-lg text-lg font-bold hover:shadow-lg hover:scale-105 transition-transform backdrop-blur-lg bg-opacity-30"
-
-                                    >
+                                        className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-4 rounded-lg text-lg font-bold hover:shadow-lg hover:scale-105 transition-transform backdrop-blur-lg bg-opacity-30">
                                         Send Message
                                     </button>
                                 </form>
@@ -70,7 +68,7 @@ export default function Contact() {
                                 <div className="mt-8 text-center">
                                     <p className="text-gray-700 font-medium">
                                         Or email me directly at 
-                                        <a href="mailto:yourname@example.com" className="text-indigo-700 hover:underline ml-1">
+                                        <a href="mailto:nicksubash9@gmail.com" className="text-cyan-700 hover:underline ml-1">
                                             nicksubash9@gmail.com
                                         </a>
                                     </p>

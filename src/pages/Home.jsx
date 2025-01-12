@@ -30,50 +30,54 @@ export default function Home() {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-r from-blue-100 via-indigo-200 to-purple-100 flex flex-col p-9">
+        <div className="min-h-screen bg-gradient-to-r from-blue-100 via-indigo-200 to-purple-100 flex flex-col p-4 md:p-9">
 
             <Header />
-            <main className="flex flex-1 items-center justify-center px-10 pt-8 gap-5 pb-9">
-                <div className="w-1/2 mb-8 flex flex-col justify-center items-center text-center  bg-opacity-90 shadow-2xl rounded-lg p-8">
-                    <h2 className="text-5xl font-extrabold mb-6">
-                        {sentence.split(" ").map((word, index) => {
-                            if (word === wordToAnimate) {
-                                return (
-                                    <span key={index} className="relative inline-block">
-                                        <motion.div
-                                            className="relative inline-flex justify-center items-center"
-                                            animate={{ rotate: 0 }}
-                                            transition={{ duration: 5, repeat: Infinity }}
-                                        >
-                                            <motion.span
-                                                className="text-blue-900 relative z-10"
-                                                key={currentWord}
-                                                initial={{ opacity: 0, scale: 0.8 }}
-                                                animate={{ opacity: 1, scale: 1 }}
-                                                exit={{ opacity: 0, scale: 0.8 }}
-                                                transition={{ duration: 0.95 }}
-                                            >
-                                                {currentWord}
-                                            </motion.span>
-                                        </motion.div>
-                                    </span>
-                                );
-                            }
-                            return <span key={index} className="m-2">{word}</span>;
-                        })}
+            <main className="flex flex-col md:flex-row flex-1 items-center justify-center px-4 md:px-10 pt-8 gap-5 pb-9">
+                
+                {/* Text Section */}
+                <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center bg-opacity-90 shadow-2xl rounded-lg p-6 md:p-8">
+                    <h2 className="text-3xl md:text-5xl font-extrabold mb-6">
+                        {sentence.split(" ").map((word, index) => (
+                            word === wordToAnimate ? (
+                                <motion.div
+                                    key={index}
+                                    className="inline-flex justify-center items-center"
+                                    animate={{ rotate: 0 }}
+                                    transition={{ duration: 5, repeat: Infinity }}
+                                >
+                                    <motion.span
+                                        className="text-blue-900"
+                                        key={currentWord}
+                                        initial={{ opacity: 0, scale: 0.8 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        exit={{ opacity: 0, scale: 0.8 }}
+                                        transition={{ duration: 0.95 }}
+                                    >
+                                        {currentWord}
+                                    </motion.span>
+                                </motion.div>
+                            ) : (
+                                <span key={index} className="m-2">{word}</span>
+                            )
+                        ))}
                     </h2>
-                    <p className="mt-5 text-lg text-gray-700">
+                    <p className="mt-5 text-base md:text-lg text-gray-700">
                         I specialize in building high-performance mobile apps with React Native and Kotlin.
                     </p>
                     <button
                         onClick={handleNavigate}
-                        className="mt-8 bg-gradient-to-r from-indigo-500 to-pink-500 text-white py-3 px-6 rounded-lg text-lg font-bold hover:shadow-lg hover:scale-105 transition-transform"
-                    >
+                        className="mt-8 w-full md:w-auto bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-6 rounded-lg text-lg font-bold hover:shadow-lg hover:scale-105 transition-transform">
                         View Projects
                     </button>
                 </div>
-                <MobileShape />
+
+                {/* Shape Section */}
+                <div className="w-full md:w-1/2 mt-8 md:mt-0 flex items-center justify-center">
+                    <MobileShape />
+                </div>
             </main>
+
             <Footer />
         </div>
     );
