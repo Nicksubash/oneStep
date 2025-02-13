@@ -21,7 +21,7 @@ export default function Projects() {
       <div className='fix flex-col p-6 text-center'>
       <Works/>
       </div>
-      <MobileShape2 /> 
+      <MobileShape2 imageSrc={""}/> 
     </div>
     {/* Developemnt Process */}
     <div className="text-center mt-8 items-center justify-center ">

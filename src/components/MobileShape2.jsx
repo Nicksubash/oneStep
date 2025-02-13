@@ -5,7 +5,7 @@ import { Navigate, useNavigate, useLocation } from 'react-router-dom';
 import Loading from './Loader'; 
 import ProjectIcon from './ProjectIcon';
 
-export default function MobileShape2() {
+export default function MobileShape2({imageSrc}) {
     const [loading, setLoading] = useState(false); 
     const [navigateTo, setNavigateTo] = useState(null); 
     const [isNavigating, setIsNavigating] = useState(false);
@@ -79,6 +79,13 @@ export default function MobileShape2() {
 
             {/* Screen Area */}
             <div className="flex flex-row items-center justify-center h-full bg-gray-100 p-5 pt-12">
+                {imageSrc && (
+                    <img
+                        src={imageSrc} 
+                        alt="App Screenshot"
+                        className="w-full max-w-[280px] h-auto rounded-lg shadow-md"
+                    />
+                )}
                 <div className="flex flex-wrap justify-center gap-4">
                     {apps.map((app, index) => (
                         <AppIcon 
