@@ -6,7 +6,11 @@ export default {
   ],
   theme: {
     extend: {
-      colors:{"my-theme":"#8b99b3"}
+      colors:{"my-theme":"#8b99b3"},
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+        outfit: ['Outfit', 'sans-serif'],
+      },
     },
   },
   plugins: [],

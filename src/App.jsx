@@ -8,6 +8,7 @@ import Todo from './pages/Todo';
 import Content from './pages/Content';
 import Contact from './pages/Contact';
 import About from './pages/About';
+import WebProjects from './pages/WebProjects';
 export default function App() {
     return (
         <Router>
@@ -70,6 +71,13 @@ export default function App() {
                 element={
                     <Contact/>
                 } />
+
+                <Route path='/WebProjects'
+                element={
+                    <WebProjects/>
+                }>
+
+                </Route>
                 
             </Routes>
         </Router>

@@ -24,19 +24,20 @@ const Footer = () => {
         };
     }, []);
 
+    
     return (
         <motion.footer
-            className={`text-black py-4 backdrop-blur-lg shadow-lg rounded-full mx-auto transition-all duration-300 min-w-[300px] md:min-w-[800px] ${
+            className={`text-black py-4 mb-10 backdrop-blur-lg shadow-lg rounded-full mx-auto transition-all duration-300 min-w-[300px] md:min-w-[800px] ${
                 isShrunk ? 'py-2 px-4 scale-100' : 'py-6 px-8 scale-0'
             }`}
             initial={isMobile ? {} : { opacity: 0 }}
             animate={isMobile ? {} : { opacity: 1 }}
             transition={{ duration: isMobile ? 0 : 0.2 }}
         >
-            <div className="text-center text-2xl font-semibold text-cyan-600 top-0">
+            <div className="text-center text-2xl font-semibold text-cyan-600 top-0 ">
                 <p>Find me on</p>
             </div>
-            <div className="container flex justify-center items-center">
+            <div className="container flex justify-center items-center ">
                 <div className="flex space-x-6">
                     {socials.map((social) => (
                         <a

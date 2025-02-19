@@ -24,7 +24,7 @@ export default function Header() {
                 isShrunk ? 'py-1 px-2 scale-0' : 'py-4 px-6 scale-100'
             }`}
         >
-            <div className="container flex justify-between items-center w-full">
+            <div className="container flex justify-between items-center w-full p-9 font-outfit font-bold">
                 <Link to="/">
                     <img
                         src="/cat.gif"
@@ -53,6 +53,12 @@ export default function Header() {
                         className="text-2xl text-cyan-600 hover:text-cyan-700 font-semibold transition-all duration-300 transform hover:scale-110"
                     >
                         Home
+                    </Link>
+                    <Link
+                        to="/projects"
+                        className="text-2xl text-cyan-600 hover:text-cyan-700 font-semibold transition-all duration-300 transform hover:scale-110"
+                    >
+                        Projects
                     </Link>
                     <Link
                         to="/About"

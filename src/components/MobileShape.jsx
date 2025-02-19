@@ -70,7 +70,7 @@ export default function MobileShape({ children }) {
 
       {/* Bottom Navigation Bar */}
       <div className="absolute bottom-0 left-0 w-full h-16 bg-black rounded-b-3xl flex items-center justify-center">
-        <div className="w-10 h-2 bg-white rounded-full"></div>
+        <div className="w-32 h-1 bg-gray-300 rounded-full"></div>
       </div>
     </div>
   );

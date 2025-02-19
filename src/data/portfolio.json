@@ -103,17 +103,17 @@
           "id": "2",
           "dates": "March 2022 - July 2023",
           "type": "Full Time",
-          "position": "Sale & Marketing in  Staffing agency",
+          "position": "Employment agency & Marketing at IMAC ENGINEERING CO. LTD.",
           "bullets": ["Tele Marketing, Sales Pitches and Some Wordpress Developement of Company's website "]
         }
       ],
       "education": {
-        "universityName": "University X",
-        "universityDate": "2016-2020",
-        "universityPara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
-      },
-      "languages": ["Javascript", "HTML5", "CSS", "Python"],
-      "frameworks": ["React", "Typescript", "NodeJs"],
+        "universityName": "Japan University of Economics Shibuya Campus",
+        "universityDate": "2018-2022",
+        "universityPara": "During my four-year Bachelor's degree, I immersed myself in the core principles of business. The program covered a wide range of subjects including management, finance, marketing, accounting, and economics. Additionally, courses in computer literacy and web development sparked my interest in programming and enhanced my leadership skills—preparing me to effectively tackle real-world business challenges."
+        },
+      "languages": ["Kotlin","Javascript", "HTML5", "CSS", "JAVA"],
+      "frameworks": ["React","React Native", "NodeJs", "Thymeleaf Spring Boot"],
       "others": ["Figma", "AdobeXD", "AWS"]
     }
   }
