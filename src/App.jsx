@@ -9,10 +9,28 @@ import Content from './pages/Content';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import WebProjects from './pages/WebProjects';
+import LoginPage from './pages/auth/Login';
 export default function App() {
     return (
         <Router>
             <Routes>
+                <Route
+                    path="/"
+                    element={
+                        <PageTransition>
+                            <LoginPage />
+                        </PageTransition>
+                    }
+                />
+                <Route
+                    path="/home"
+                    element={
+                        <PageTransition>
+                            <Home />
+                        </PageTransition>
+                    }
+                />
+
                 <Route
                     path="/"
                     element={
