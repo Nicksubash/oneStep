@@ -3,10 +3,11 @@ import { useState } from 'react';
 import AnimatedButton from '../shared/AnimateButton';
 import PropTypes from 'prop-types';
 import { FiMail, FiLock, FiUser } from 'react-icons/fi';
+import { form } from 'framer-motion/client';
 
 export default function LoginForm({ onSuccess, onRegisterClick }) {
     const [formData, setFormData] = useState({
-        email: '',
+        username: '',
         password: ''
     });
     const [error, setError] = useState('');
@@ -22,8 +23,38 @@ export default function LoginForm({ onSuccess, onRegisterClick }) {
         setError('');
         setIsLoading(true);
 
+        /* data stored in db on office
+        username: 'nicksubash',
+        password: '123456',
+        */ 
+        const requestBody ={
+            username : formData.username,
+            password : formData.password
+        }
+        console.log('Sending request body:', requestBody);
+
         try {
             // await authService.login(formData);
+            const res = await fetch('http://localhost:8080/auth/login',{
+                method: 'POST',
+                headers:{
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(requestBody)
+            });
+
+            if(!res.ok){
+                const message = await res.text();
+                throw new Error(message|| "Login Failed");
+            }
+
+            const data  = await res.json();
+            console.log('Login successful:', data);
+
+            // Store the token in local storage
+            localStorage.setItem('token', data.token);
+            
+            // Callback after successful login
             onSuccess();
         } catch (err) {
             setError(err.message || 'Invalid credentials');
@@ -72,6 +103,27 @@ export default function LoginForm({ onSuccess, onRegisterClick }) {
                         />
                     </div>
                 </div>
+                
+                <div className="space-y-1">
+                    <label htmlFor="username" className="block text-sm font-medium text-gray-700">Username</label>
+                    <div className="relative">
+                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <FiUser className="h-5 w-5 text-gray-400" />
+                    </div>
+                    <input
+                    id="username"
+                    name="username"
+                    type="text"
+                    autoComplete="username"
+                    value={formData.username}
+                    onChange={handleChange}
+                    className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
+                    placeholder="your_username"
+                    required
+                    />
+                    </div>
+                </div>
+
 
                 <div className="space-y-1">
                     <label htmlFor="password" className="block text-sm font-medium text-gray-700">
