@@ -1,0 +1,159 @@
+{
+  "name": "Mero Nihongo",
+  "headerTaglineOne": "Hello 👋",
+  "headerTaglineTwo": "I'm Subash Parajuli - curious",
+  "headerTaglineThree": "Designer and Devloper",
+  "headerTaglineFour": " Based in Japan",
+  "showBlog": true,
+  "darkMode": true,
+  "socials": [
+    {
+      "id": "1",
+      "title": "Github",
+      "link": "https://github.com/Nicksubash"
+    },
+    {
+      "id": "2",
+      "title": "LinkedIn",
+      "link": "https://www.linkedin.com/in/subash-parajuli-746785202/"
+    },
+    {
+      "id": "3",
+      "title": "Twitter",
+      "link": "https://twitter.com"
+    },
+    { "id": "4", "title": "Blog", "link": "https://hashnode.com/@nicksubash" },
+    { "id": "5", "title": "Email", "link": "mailto:nicksubash9@gmail.com" }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Project One Test",
+      "description": "Web Design",
+      "imageSrc": "https://images.unsplash.com/photo-1487837647815-bbc1f30cd0d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njl8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+      "url": "http://chetanverma.com/"
+    },
+    {
+      "id": "2",
+      "title": "Project Two",
+      "description": "Web Development",
+      "imageSrc": "https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyNTY3ODl8fGVufDB8fHw%3D&auto=format&fit=crop&w=400&q=60",
+      "url": "http://chetanverma.com/"
+    },
+    {
+      "id": "3",
+      "title": "Project Three",
+      "description": "Design",
+      "imageSrc": "https://images.unsplash.com/photo-1504083898675-c896ecdae86e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+      "url": "http://chetanverma.com/"
+    },
+    {
+      "id": "4",
+      "title": "Project Four",
+      "description": "Marketing",
+      "imageSrc": "https://images.unsplash.com/photo-1492171983775-a51717616c0d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjB8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+      "url": "http://chetanverma.com/"
+    },
+    {
+      "id": "5",
+      "title": "Project Five",
+      "description": "Development",
+      "imageSrc": "https://images.unsplash.com/photo-1534239143101-1b1c627395c5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzZ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+      "url": "http://chetanverma.com/"
+    },
+    {
+      "id": "6",
+      "title": "Project Six",
+      "description": "Design & Development",
+      "imageSrc": "https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAyfHxwYXN0ZWx8ZW58MHx8MHw%3D&auto=format&fit=crop&w=400&q=60",
+      "url": "http://chetanverma.com/"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "title": "Art Direction",
+      "description": "We help with the creation and development of online advertising ideas, with particular focus on their visual appearance."
+    },
+    {
+      "id": "2",
+      "title": "Branding",
+      "description": "We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors."
+    },
+    {
+      "id": "3",
+      "title": "Web Design",
+      "description": "We build and optimize your online presence.  Website is the digital entry point into your business and a powerful revenue channel."
+    }
+  ],
+  "aboutpara": "I'm a passionate developer with expertise in building web and mobile applications.I specialize in Kotlin,React Native, and creating user-centric designs. When I'm not coding,you'll find me exploring new tech trends or enjoying the outdoors.",
+  "resume": {
+    "tagline": "👋  I'm a software Developer, product designer, and maker.",
+    "description": "I have delivered world-class user experiences to millions of people. Well-versed with Native Android App ,Build some personal React Native Apps",
+    "experiences": [
+      {
+        "id": "1",
+        "dates": "March 2022 - Present",
+        "type": "Full Time",
+        "position": "Software Developer at Egrowth Co., Ltd., Nigata,Japan",
+        "bullets": [
+          "Working as the Mobile and frontend Developer of a Kotlin and Web application"]
+      },
+      {
+        "id": "2",
+        "dates": "March 2022 - July 2023",
+        "type": "Full Time",
+        "position": "Employment agency & Marketing at IMAC ENGINEERING CO. LTD.",
+        "bullets": ["Tele Marketing, Sales Pitches and Some Wordpress Developement of Company's website "]
+      }
+    ],
+    "education": {
+      "universityName": "Japan University of Economics Shibuya Campus",
+      "universityDate": "2018-2022",
+      "universityPara": "During my four-year Bachelor's degree, I immersed myself in the core principles of business. The program covered a wide range of subjects including management, finance, marketing, accounting, and economics. Additionally, courses in computer literacy and web development sparked my interest in programming and enhanced my leadership skills—preparing me to effectively tackle real-world business challenges."
+      },
+    "languages": ["Kotlin","Javascript", "HTML5", "CSS", "JAVA"],
+    "frameworks": ["React","React Native", "NodeJs", "Thymeleaf Spring Boot"],
+    "others": ["Figma", "AdobeXD", "AWS"]
+  },
+  "features": [ 
+      {
+          "icon": "📝",
+          "title": "Mock Tests",
+          "description": "Full-length practice exams simulating real test conditions"
+      },
+      {
+          "icon": "🎧",
+          "title": "Audio Lessons",
+          "description": "Improve listening comprehension with native speaker audio"
+      },
+      {
+          "icon": "📊",
+          "title": "Progress Tracking",
+          "description": "Detailed analytics to monitor your improvement"
+      },
+      {
+          "icon": "👨🏫",
+          "title": "Expert Teachers",
+          "description": "Experienced instructors providing personalized feedback"
+      }
+  ],
+  "servicesForHome": {
+      "mockTestList": ["JLPT N1-N5", "EJU Math/Science", "SSW Interview", "Business Japanese"],
+      "languageCourseLevels": ["Beginner (N5)", "Intermediate (N3-N4)", "Advanced (N1-N2)", "Business Japanese"]
+  },
+  "testimonialsForHome": [
+      {
+          "quote": "\"The mock tests helped me pass JLPT N2 on my first attempt. The detailed answer explanations were invaluable!\"",
+          "userName": "Aarav Sharma",
+          "userTitle": "Tokyo University Student",
+          "userImage": "/user1.jpg"
+      },
+      {
+          "quote": "\"Thanks to the business Japanese course, I secured a job at a major Japanese IT company!\"",
+          "userName": "Priya Patel",
+          "userTitle": "Software Engineer, Osaka",
+          "userImage": "/user2.jpg"
+      }
+  ]
+}
