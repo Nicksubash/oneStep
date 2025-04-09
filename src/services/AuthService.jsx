@@ -1,35 +1,28 @@
-import axios from 'axios';
+// src/services/AuthService.jsx
+import axios from "axios";
 
-const API_URL = 'http://localhost:8080/auth/login'; 
+const API_URL = "http://localhost:8080/auth/login";
 
 class AuthService {
-  // Login method
-  login(username, password) {
-    return axios
-      .post(API_URL, { username, password })
-      .then((response) => {
-        // Save the JWT token to localStorage or sessionStorage
-        if (response.data.token) {
-          localStorage.setItem('user', JSON.stringify(response.data));
-        }
-        return response.data;
-      });
+  async login(username, password) {
+    const response = await axios.post(API_URL, {
+      username,
+      password,
+    });
+
+    if (response.data.token) {
+      localStorage.setItem("userToken", response.data.token);
+    }
+
+    return response.data;
   }
 
-  // Logout method
   logout() {
-    localStorage.removeItem('user');
+    localStorage.removeItem("userToken");
   }
 
-  // Get current user (from localStorage)
-  getCurrentUser() {
-    return JSON.parse(localStorage.getItem('user'));
-  }
-
-  // Check if the user is logged in
-  isAuthenticated() {
-    const user = this.getCurrentUser();
-    return user && user.token ? true : false;
+  getToken() {
+    return localStorage.getItem("userToken");
   }
 }
 
