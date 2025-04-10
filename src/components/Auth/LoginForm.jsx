@@ -4,8 +4,11 @@ import AnimatedButton from '../shared/AnimateButton';
 import PropTypes from 'prop-types';
 import { FiMail, FiLock, FiUser } from 'react-icons/fi';
 import { form } from 'framer-motion/client';
+import { useAuth } from '../../services/authContext/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
-export default function LoginForm({ onSuccess, onRegisterClick }) {
+export default function LoginForm({ onSuccess, onRegisterClick, onError }) {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         username: '',
         password: ''
@@ -44,8 +47,10 @@ export default function LoginForm({ onSuccess, onRegisterClick }) {
             });
 
             if(!res.ok){
-                const message = await res.text();
-                throw new Error(message|| "Login Failed");
+                const errorMessage = await res.json();
+                setError(errorMessage.message || "Login Failed");
+                if(onError) onError();
+                return;
             }
 
             const data  = await res.json();
@@ -53,11 +58,13 @@ export default function LoginForm({ onSuccess, onRegisterClick }) {
 
             // Store the token in local storage
             localStorage.setItem('token', data.token);
+            navigate('/profile');
             
             // Callback after successful login
             onSuccess();
         } catch (err) {
             setError(err.message || 'Invalid credentials');
+            if(onError) onError();
         } finally {
             setIsLoading(false);
         }

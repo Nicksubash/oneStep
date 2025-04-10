@@ -1,8 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import AnimatedButton from "../shared/AnimateButton";
+import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
+    const navigate= useNavigate()
+    const handleButtonClick =() =>{
+        navigate('/mock-test')
+    }
     return (
         <section className="py-20 px-4 md:px-10 text-center  z-10">
             <motion.div
@@ -20,8 +25,8 @@ const HeroSection = () => {
                 <p className="text-xl md:text-2xl text-gray-600 mb-8">
                     Comprehensive preparation for JLPT, EJU, and Japanese work visas
                 </p>
-                <AnimatedButton className="text-lg px-8 py-3">
-                    Start Free Trial
+                <AnimatedButton className="text-lg px-8 py-3" onClick={handleButtonClick}>
+                    Start Mock Test
                 </AnimatedButton>
             </motion.div>
         </section>

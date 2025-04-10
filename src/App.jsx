@@ -1,13 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import Projects from './pages/Projects';
+import Projects from './pages/Profile';
 import PageTransition from './components/PageTransition'; 
 import Contact from './pages/Contact';
 import About from './pages/About';
+import { AuthProvider } from './services/authContext/AuthContext';
+import Profile from './pages/Profile';
+import MockTest from './pages/MockTest';
 
 export default function App() {
     return (
-        <Router>
+        <AuthProvider>
+            <Router>
             <Routes>  
                 <Route
                     path="/"
@@ -18,10 +22,10 @@ export default function App() {
                     }
                 />
                 <Route
-                    path="/projects"
+                    path="/profile"
                     element={
                         <PageTransition>
-                            <Projects />
+                            <Profile />
                         </PageTransition>
                     }
                 />
@@ -41,7 +45,11 @@ export default function App() {
                         </PageTransition>
                     }
                 />
+                <Route path="/mock-test" element={<MockTest />} />
+
             </Routes>
         </Router>
+        </AuthProvider>
+       
     );
 }
