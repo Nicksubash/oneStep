@@ -1,11 +1,20 @@
 {
   "name": "Mero Nihongo",
-  "headerTaglineOne": "Hello 👋",
-  "headerTaglineTwo": "I'm Subash Parajuli - curious",
-  "headerTaglineThree": "Designer and Devloper",
-  "headerTaglineFour": " Based in Japan",
-  "showBlog": true,
+  "headerTaglineOne": "SSW MockTest",
+  "headerTaglineTwo": "JLPT Courses",
   "darkMode": true,
+  "ExamList":[
+    {
+      "id":1,
+      "title":"Specifiec Skilled Worker(i)",
+      "description":""
+    },
+    {
+      "id":2,
+      "title":"Specifiec Skilled Worker(ii)",
+      "description":""
+    }
+  ] ,
   "socials": [
     {
       "id": "1",
@@ -25,7 +34,7 @@
     { "id": "4", "title": "Blog", "link": "https://hashnode.com/@nicksubash" },
     { "id": "5", "title": "Email", "link": "mailto:nicksubash9@gmail.com" }
   ],
-  "projects": [
+  "ExamsModule": [
     {
       "id": "1",
       "title": "Project One Test",
@@ -72,50 +81,20 @@
   "services": [
     {
       "id": "1",
-      "title": "Art Direction",
-      "description": "We help with the creation and development of online advertising ideas, with particular focus on their visual appearance."
+      "title": "Food Services",
+      "description": " "
     },
     {
       "id": "2",
       "title": "Branding",
-      "description": "We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors."
+      "description": ""
     },
     {
       "id": "3",
       "title": "Web Design",
-      "description": "We build and optimize your online presence.  Website is the digital entry point into your business and a powerful revenue channel."
+      "description": ""
     }
   ],
-  "aboutpara": "I'm a passionate developer with expertise in building web and mobile applications.I specialize in Kotlin,React Native, and creating user-centric designs. When I'm not coding,you'll find me exploring new tech trends or enjoying the outdoors.",
-  "resume": {
-    "tagline": "👋  I'm a software Developer, product designer, and maker.",
-    "description": "I have delivered world-class user experiences to millions of people. Well-versed with Native Android App ,Build some personal React Native Apps",
-    "experiences": [
-      {
-        "id": "1",
-        "dates": "March 2022 - Present",
-        "type": "Full Time",
-        "position": "Software Developer at Egrowth Co., Ltd., Nigata,Japan",
-        "bullets": [
-          "Working as the Mobile and frontend Developer of a Kotlin and Web application"]
-      },
-      {
-        "id": "2",
-        "dates": "March 2022 - July 2023",
-        "type": "Full Time",
-        "position": "Employment agency & Marketing at IMAC ENGINEERING CO. LTD.",
-        "bullets": ["Tele Marketing, Sales Pitches and Some Wordpress Developement of Company's website "]
-      }
-    ],
-    "education": {
-      "universityName": "Japan University of Economics Shibuya Campus",
-      "universityDate": "2018-2022",
-      "universityPara": "During my four-year Bachelor's degree, I immersed myself in the core principles of business. The program covered a wide range of subjects including management, finance, marketing, accounting, and economics. Additionally, courses in computer literacy and web development sparked my interest in programming and enhanced my leadership skills—preparing me to effectively tackle real-world business challenges."
-      },
-    "languages": ["Kotlin","Javascript", "HTML5", "CSS", "JAVA"],
-    "frameworks": ["React","React Native", "NodeJs", "Thymeleaf Spring Boot"],
-    "others": ["Figma", "AdobeXD", "AWS"]
-  },
   "features": [ 
       {
           "icon": "📝",
@@ -155,5 +134,151 @@
           "userTitle": "Software Engineer, Osaka",
           "userImage": "/user2.jpg"
       }
+  ],
+  "sswExam":[
+    {
+      "id": "care_worker",
+      "header": "Care Worker",
+      "title": "Care Worker Skill Examination",
+      "description": "Assess practical skills and knowledge related to elderly care, including body care, daily life support, and communication. This exam is crucial for those aiming to work in elderly care facilities in Japan.",
+      "buttonText": "Start Care Worker Mock Test",
+      "examDetails": { "time": "45 mins", "questions": "30" }
+    },
+    {
+      "id": "building_cleaning",
+      "header": "Building Cleaning",
+      "title": "Building Cleaning Skill Measurement Test",
+      "description": "This exam evaluates your abilities in building cleaning techniques, including floor, window cleaning, and waste disposal.  Essential for roles maintaining commercial and residential building cleanliness.",
+      "buttonText": "Practice Building Cleaning",
+      "examDetails": { "time": "30 mins", "questions": "25" }
+    },
+    {
+      "id": "machining",
+      "header": "Manufacturing (Machining)",
+      "title": "Machining Skill Examination",
+      "description": "Focuses on skills in operating and maintaining machine tools to cut and shape metal parts. This exam is for those working in manufacturing facilities producing machine components.",
+      "buttonText": "Take Machining Mock Test",
+      "examDetails": { "time": "60 mins", "questions": "40" }
+    },
+    {
+      "id": "welding",
+      "header": "Manufacturing (Welding)",
+      "title": "Welding Skill Examination",
+      "description": "Tests your proficiency in various welding techniques and safety procedures.  A key exam for those in manufacturing and construction sectors requiring welding expertise.",
+      "buttonText": "Practice Welding Skills",
+      "examDetails": { "time": "75 mins", "questions": "50" }
+    },
+    {
+      "id": "industrial_sheet_metal_work",
+      "header": "Manufacturing (Sheet Metal)",
+      "title": "Industrial Sheet Metal Work Skill Examination",
+      "description": "Evaluates your ability to fabricate and assemble products from sheet metal. Relevant for industries producing enclosures, ductwork, and other sheet metal components.",
+      "buttonText": "Sheet Metal Mock Exam",
+      "examDetails": { "time": "50 mins", "questions": "35" }
+    },
+    {
+      "id": "formwork_carpentry",
+      "header": "Construction",
+      "title": "Formwork Carpentry Skill Examination",
+      "description": "Assesses your skills in constructing temporary molds (formwork) for concrete structures.  Crucial for building foundations, walls, and other concrete elements in construction projects.",
+      "buttonText": "Formwork Carpentry Practice",
+      "examDetails": { "time": "60 mins", "questions": "40" }
+    },
+    {
+      "id": "reinforced_steel_bar_construction",
+      "header": "Construction",
+      "title": "Reinforced Steel Bar Construction Skill Examination",
+      "description": "Tests your ability to assemble and place reinforcing steel bars within concrete structures to enhance their strength.  Vital for ensuring structural integrity in buildings and infrastructure.",
+      "buttonText": "Steel Bar Construction Test",
+      "examDetails": { "time": "70 mins", "questions": "45" }
+    },
+    {
+      "id": "shipbuilding_welding",
+      "header": "Shipbuilding",
+      "title": "Shipbuilding Welding Skill Examination",
+      "description": "Specialized welding exam focusing on techniques and standards specific to shipbuilding. For welders working in shipyards and marine engineering.",
+      "buttonText": "Shipbuilding Welding Practice",
+      "examDetails": { "time": "80 mins", "questions": "55" }
+    },
+    {
+      "id": "automobile_repair",
+      "header": "Automobile Repair",
+      "title": "Automobile Repair and Maintenance Skill Examination",
+      "description": "Covers diagnostics, repair, and maintenance of automobiles.  Essential for mechanics and technicians working in automotive service centers and garages.",
+      "buttonText": "Automotive Repair Mock",
+      "examDetails": { "time": "90 mins", "questions": "60" }
+    },
+    {
+      "id": "ground_handling",
+      "header": "Aviation",
+      "title": "Ground Handling Skill Examination",
+      "description": "Focuses on procedures and safety in ground support operations at airports, including baggage handling, aircraft servicing, and passenger assistance.",
+      "buttonText": "Ground Handling Practice",
+      "examDetails": { "time": "40 mins", "questions": "30" }
+    },
+    {
+      "id": "aircraft_maintenance",
+      "header": "Aviation",
+      "title": "Aircraft Maintenance Skill Examination",
+      "description": "Examines knowledge and skills in maintaining aircraft systems and components to ensure airworthiness. For aircraft mechanics and maintenance engineers.",
+      "buttonText": "Aircraft Maintenance Test",
+      "examDetails": { "time": "120 mins", "questions": "70" }
+    },
+     {
+      "id": "accommodation_services",
+      "header": "Accommodation",
+      "title": "Accommodation Skill Examination",
+      "description": "Covers front desk operations, guest services, and hospitality skills necessary for working in hotels and other accommodation facilities. ",
+      "buttonText": "Accommodation Services Mock",
+      "examDetails": { "time": "50 mins", "questions": "35" }
+    },
+    {
+      "id": "food_manufacturing",
+      "header": "Food Manufacturing",
+      "title": "Food and Beverage Manufacturing Skill Measurement Test",
+      "description": "Evaluates skills in food processing, hygiene, quality control, and packaging within food and beverage production environments. ",
+      "buttonText": "Food Manufacturing Practice",
+      "examDetails": { "time": "60 mins", "questions": "40" }
+    },
+    {
+      "id": "food_service",
+      "header": "Food Service",
+      "title": "Food Service Industry Skill Examination",
+      "description": "Tests proficiency in restaurant service, cooking basics, hygiene practices, and customer interaction in the food service industry. ",
+      "buttonText": "Food Service Mock Test",
+      "examDetails": { "time": "45 mins", "questions": "30" }
+    },
+    {
+      "id": "cultivation_management",
+      "header": "Agriculture",
+      "title": "Cultivation Management Skill Examination",
+      "description": "Focuses on crop cultivation techniques, vegetable farming, and agricultural management practices. ",
+      "buttonText": "Cultivation Management Practice",
+      "examDetails": { "time": "55 mins", "questions": "35" }
+    },
+    {
+      "id": "livestock_management",
+      "header": "Agriculture",
+      "title": "Livestock Management Skill Examination",
+      "description": "Covers skills in livestock care, dairy farming, poultry farming, and animal husbandry. ",
+      "buttonText": "Livestock Management Test",
+      "examDetails": { "time": "65 mins", "questions": "40" }
+    },
+    {
+      "id": "fishery",
+      "header": "Fishery",
+      "title": "Fishery Skill Examination",
+      "description": "Evaluates skills in fishing techniques, net handling, seafood processing, and marine resource management. ",
+      "buttonText": "Fishery Practice Exam",
+      "examDetails": { "time": "50 mins", "questions": "30" }
+    },
+    {
+      "id": "aquaculture",
+      "header": "Aquaculture",
+      "title": "Aquaculture Skill Examination",
+      "description": "Focuses on fish farming, shellfish farming, and aquaculture management practices. ",
+      "buttonText": "Aquaculture Mock Test",
+      "examDetails": { "time": "55 mins", "questions": "35" }
+    }
   ]
 }

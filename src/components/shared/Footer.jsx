@@ -20,7 +20,7 @@ const Footer = () => {
 
     return (
         <motion.footer
-            className={`text-black py-4  backdrop-blur-lg shadow-lg  mx-auto transition-all duration-300 min-w-[300px] md:min-w-[800px]  px-4 scale-100`} // Removed conditional classes and kept only 'py-2 px-4 scale-100'
+            className={`text-black py-4  backdrop-blur-lg shadow-lg  mx-auto transition-all duration-300 min-w-[300px] md:min-w-[800px]  px-4 scale-100`}
             initial={isMobile ? {} : { opacity: 0 }}
             animate={isMobile ? {} : { opacity: 1 }}
             transition={{ duration: isMobile ? 0 : 0.2 }}
