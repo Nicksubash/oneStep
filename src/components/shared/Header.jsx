@@ -67,8 +67,8 @@ export default function Header() {
                         isOpen ? 'flex flex-col items-center space-y-4' : 'hidden'
                     } md:flex md:flex-row md:space-x-6 gap-8`}>
                         <Link to="/" className="text-2xl text-cyan-600 hover:text-cyan-700">Home</Link>
-                        <Link to="/about-us" className="text-2xl text-cyan-600 hover:text-cyan-700">About Us</Link>
-                        <Link to="/community" className="text-2xl text-cyan-600 hover:text-cyan-700">Community</Link>
+                        <Link to="/about" className="text-2xl text-cyan-600 hover:text-cyan-700">About Us</Link>
+                        <Link to="/vocabulary" className="text-2xl text-cyan-600 hover:text-cyan-700">Vocabulary</Link>
 
                         <div className="relative">
                             <button 
@@ -102,7 +102,6 @@ export default function Header() {
                         </div>
 
                         <Link to="/ssw" className="text-2xl text-cyan-600 hover:text-cyan-700">SSW</Link>
-                        <Link to="/book" className="text-2xl text-cyan-600 hover:text-cyan-700">BOOK</Link>
 
                         <div className="flex flex-col md:flex-row gap-4 md:ml-6 mt-4 md:mt-0">
                             {isLoggedIn ? (
