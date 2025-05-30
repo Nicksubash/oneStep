@@ -1,284 +1,36 @@
 {
-  "name": "Mero Nihongo",
-  "headerTaglineOne": "SSW MockTest",
-  "headerTaglineTwo": "JLPT Courses",
-  "darkMode": true,
-  "ExamList":[
-    {
-      "id":1,
-      "title":"Specifiec Skilled Worker(i)",
-      "description":""
-    },
-    {
-      "id":2,
-      "title":"Specifiec Skilled Worker(ii)",
-      "description":""
-    }
-  ] ,
+  "name": "One Step Co., Ltd.",
+  "contact": {
+    "address": "Tokyo, Japan",
+    "email": "onestep.recruit.japan@gmail.com ",
+    "phone": "+81-90-1234-5678",
+    "website": "https://onestep.jp"
+  },
   "socials": [
     {
-      "id": "1",
-      "title": "Github",
-      "link": "https://github.com/Nicksubash"
+      "id": 1,
+      "title": "Facebook",
+      "link": "https://facebook.com/onestep"
     },
     {
-      "id": "2",
-      "title": "LinkedIn",
-      "link": "https://www.linkedin.com/in/subash-parajuli-746785202/"
-    },
-    {
-      "id": "3",
+      "id": 2,
       "title": "Twitter",
-      "link": "https://twitter.com"
-    },
-    { "id": "4", "title": "Blog", "link": "https://hashnode.com/@nicksubash" },
-    { "id": "5", "title": "Email", "link": "mailto:nicksubash9@gmail.com" }
-  ],
-  "ExamsModule": [
-    {
-      "id": "1",
-      "title": "Project One Test",
-      "description": "Web Design",
-      "imageSrc": "https://images.unsplash.com/photo-1487837647815-bbc1f30cd0d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njl8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-      "url": "http://chetanverma.com/"
+      "link": "https://twitter.com/onestep"
     },
     {
-      "id": "2",
-      "title": "Project Two",
-      "description": "Web Development",
-      "imageSrc": "https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyNTY3ODl8fGVufDB8fHw%3D&auto=format&fit=crop&w=400&q=60",
-      "url": "http://chetanverma.com/"
+      "id": 3,
+      "title": "Instagram",
+      "link": "https://instagram.com/onestep"
     },
     {
-      "id": "3",
-      "title": "Project Three",
-      "description": "Design",
-      "imageSrc": "https://images.unsplash.com/photo-1504083898675-c896ecdae86e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-      "url": "http://chetanverma.com/"
+      "id": 4,
+      "title": "Linkedin",
+      "link": "https://linkedin.com/company/onestep"
     },
     {
-      "id": "4",
-      "title": "Project Four",
-      "description": "Marketing",
-      "imageSrc": "https://images.unsplash.com/photo-1492171983775-a51717616c0d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjB8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-      "url": "http://chetanverma.com/"
-    },
-    {
-      "id": "5",
-      "title": "Project Five",
-      "description": "Development",
-      "imageSrc": "https://images.unsplash.com/photo-1534239143101-1b1c627395c5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzZ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-      "url": "http://chetanverma.com/"
-    },
-    {
-      "id": "6",
-      "title": "Project Six",
-      "description": "Design & Development",
-      "imageSrc": "https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAyfHxwYXN0ZWx8ZW58MHx8MHw%3D&auto=format&fit=crop&w=400&q=60",
-      "url": "http://chetanverma.com/"
-    }
-  ],
-  "services": [
-    {
-      "id": "1",
-      "title": "Food Services",
-      "description": " "
-    },
-    {
-      "id": "2",
-      "title": "Branding",
-      "description": ""
-    },
-    {
-      "id": "3",
-      "title": "Web Design",
-      "description": ""
-    }
-  ],
-  "features": [ 
-      {
-          "icon": "📝",
-          "title": "Mock Tests",
-          "description": "Full-length practice exams simulating real test conditions"
-      },
-      {
-          "icon": "🎧",
-          "title": "Audio Lessons",
-          "description": "Improve listening comprehension with native speaker audio"
-      },
-      {
-          "icon": "📊",
-          "title": "Progress Tracking",
-          "description": "Detailed analytics to monitor your improvement"
-      },
-      {
-          "icon": "👨🏫",
-          "title": "Expert Teachers",
-          "description": "Experienced instructors providing personalized feedback"
-      }
-  ],
-  "servicesForHome": {
-      "mockTestList": ["JLPT N1-N5", "EJU Math/Science", "SSW Interview", "Business Japanese"],
-      "languageCourseLevels": ["Beginner (N5)", "Intermediate (N3-N4)", "Advanced (N1-N2)", "Business Japanese"]
-  },
-  "testimonialsForHome": [
-      {
-          "quote": "\"The mock tests helped me pass JLPT N2 on my first attempt. The detailed answer explanations were invaluable!\"",
-          "userName": "Aarav Sharma",
-          "userTitle": "Tokyo University Student",
-          "userImage": "/user1.jpg"
-      },
-      {
-          "quote": "\"Thanks to the business Japanese course, I secured a job at a major Japanese IT company!\"",
-          "userName": "Priya Patel",
-          "userTitle": "Software Engineer, Osaka",
-          "userImage": "/user2.jpg"
-      }
-  ],
-  "sswExam":[
-    {
-      "id": "care_worker",
-      "header": "Care Worker",
-      "title": "Care Worker Skill Examination",
-      "description": "Assess practical skills and knowledge related to elderly care, including body care, daily life support, and communication. This exam is crucial for those aiming to work in elderly care facilities in Japan.",
-      "buttonText": "Start Care Worker Mock Test",
-      "examDetails": { "time": "45 mins", "questions": "30" }
-    },
-    {
-      "id": "building_cleaning",
-      "header": "Building Cleaning",
-      "title": "Building Cleaning Skill Measurement Test",
-      "description": "This exam evaluates your abilities in building cleaning techniques, including floor, window cleaning, and waste disposal.  Essential for roles maintaining commercial and residential building cleanliness.",
-      "buttonText": "Practice Building Cleaning",
-      "examDetails": { "time": "30 mins", "questions": "25" }
-    },
-    {
-      "id": "machining",
-      "header": "Manufacturing (Machining)",
-      "title": "Machining Skill Examination",
-      "description": "Focuses on skills in operating and maintaining machine tools to cut and shape metal parts. This exam is for those working in manufacturing facilities producing machine components.",
-      "buttonText": "Take Machining Mock Test",
-      "examDetails": { "time": "60 mins", "questions": "40" }
-    },
-    {
-      "id": "welding",
-      "header": "Manufacturing (Welding)",
-      "title": "Welding Skill Examination",
-      "description": "Tests your proficiency in various welding techniques and safety procedures.  A key exam for those in manufacturing and construction sectors requiring welding expertise.",
-      "buttonText": "Practice Welding Skills",
-      "examDetails": { "time": "75 mins", "questions": "50" }
-    },
-    {
-      "id": "industrial_sheet_metal_work",
-      "header": "Manufacturing (Sheet Metal)",
-      "title": "Industrial Sheet Metal Work Skill Examination",
-      "description": "Evaluates your ability to fabricate and assemble products from sheet metal. Relevant for industries producing enclosures, ductwork, and other sheet metal components.",
-      "buttonText": "Sheet Metal Mock Exam",
-      "examDetails": { "time": "50 mins", "questions": "35" }
-    },
-    {
-      "id": "formwork_carpentry",
-      "header": "Construction",
-      "title": "Formwork Carpentry Skill Examination",
-      "description": "Assesses your skills in constructing temporary molds (formwork) for concrete structures.  Crucial for building foundations, walls, and other concrete elements in construction projects.",
-      "buttonText": "Formwork Carpentry Practice",
-      "examDetails": { "time": "60 mins", "questions": "40" }
-    },
-    {
-      "id": "reinforced_steel_bar_construction",
-      "header": "Construction",
-      "title": "Reinforced Steel Bar Construction Skill Examination",
-      "description": "Tests your ability to assemble and place reinforcing steel bars within concrete structures to enhance their strength.  Vital for ensuring structural integrity in buildings and infrastructure.",
-      "buttonText": "Steel Bar Construction Test",
-      "examDetails": { "time": "70 mins", "questions": "45" }
-    },
-    {
-      "id": "shipbuilding_welding",
-      "header": "Shipbuilding",
-      "title": "Shipbuilding Welding Skill Examination",
-      "description": "Specialized welding exam focusing on techniques and standards specific to shipbuilding. For welders working in shipyards and marine engineering.",
-      "buttonText": "Shipbuilding Welding Practice",
-      "examDetails": { "time": "80 mins", "questions": "55" }
-    },
-    {
-      "id": "automobile_repair",
-      "header": "Automobile Repair",
-      "title": "Automobile Repair and Maintenance Skill Examination",
-      "description": "Covers diagnostics, repair, and maintenance of automobiles.  Essential for mechanics and technicians working in automotive service centers and garages.",
-      "buttonText": "Automotive Repair Mock",
-      "examDetails": { "time": "90 mins", "questions": "60" }
-    },
-    {
-      "id": "ground_handling",
-      "header": "Aviation",
-      "title": "Ground Handling Skill Examination",
-      "description": "Focuses on procedures and safety in ground support operations at airports, including baggage handling, aircraft servicing, and passenger assistance.",
-      "buttonText": "Ground Handling Practice",
-      "examDetails": { "time": "40 mins", "questions": "30" }
-    },
-    {
-      "id": "aircraft_maintenance",
-      "header": "Aviation",
-      "title": "Aircraft Maintenance Skill Examination",
-      "description": "Examines knowledge and skills in maintaining aircraft systems and components to ensure airworthiness. For aircraft mechanics and maintenance engineers.",
-      "buttonText": "Aircraft Maintenance Test",
-      "examDetails": { "time": "120 mins", "questions": "70" }
-    },
-     {
-      "id": "accommodation_services",
-      "header": "Accommodation",
-      "title": "Accommodation Skill Examination",
-      "description": "Covers front desk operations, guest services, and hospitality skills necessary for working in hotels and other accommodation facilities. ",
-      "buttonText": "Accommodation Services Mock",
-      "examDetails": { "time": "50 mins", "questions": "35" }
-    },
-    {
-      "id": "food_manufacturing",
-      "header": "Food Manufacturing",
-      "title": "Food and Beverage Manufacturing Skill Measurement Test",
-      "description": "Evaluates skills in food processing, hygiene, quality control, and packaging within food and beverage production environments. ",
-      "buttonText": "Food Manufacturing Practice",
-      "examDetails": { "time": "60 mins", "questions": "40" }
-    },
-    {
-      "id": "food_service",
-      "header": "Food Service",
-      "title": "Food Service Industry Skill Examination",
-      "description": "Tests proficiency in restaurant service, cooking basics, hygiene practices, and customer interaction in the food service industry. ",
-      "buttonText": "Food Service Mock Test",
-      "examDetails": { "time": "45 mins", "questions": "30" }
-    },
-    {
-      "id": "cultivation_management",
-      "header": "Agriculture",
-      "title": "Cultivation Management Skill Examination",
-      "description": "Focuses on crop cultivation techniques, vegetable farming, and agricultural management practices. ",
-      "buttonText": "Cultivation Management Practice",
-      "examDetails": { "time": "55 mins", "questions": "35" }
-    },
-    {
-      "id": "livestock_management",
-      "header": "Agriculture",
-      "title": "Livestock Management Skill Examination",
-      "description": "Covers skills in livestock care, dairy farming, poultry farming, and animal husbandry. ",
-      "buttonText": "Livestock Management Test",
-      "examDetails": { "time": "65 mins", "questions": "40" }
-    },
-    {
-      "id": "fishery",
-      "header": "Fishery",
-      "title": "Fishery Skill Examination",
-      "description": "Evaluates skills in fishing techniques, net handling, seafood processing, and marine resource management. ",
-      "buttonText": "Fishery Practice Exam",
-      "examDetails": { "time": "50 mins", "questions": "30" }
-    },
-    {
-      "id": "aquaculture",
-      "header": "Aquaculture",
-      "title": "Aquaculture Skill Examination",
-      "description": "Focuses on fish farming, shellfish farming, and aquaculture management practices. ",
-      "buttonText": "Aquaculture Mock Test",
-      "examDetails": { "time": "55 mins", "questions": "35" }
+      "id": 5,
+      "title": "Blog",
+      "link": "https://onestep.com/blog"
     }
   ]
 }

@@ -4,8 +4,6 @@ import PageTransition from './components/PageTransition';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import { AuthProvider } from './services/authContext/AuthContext';
-import Profile from './pages/Profile';
-import MockTest from './pages/MockTest';
 
 export default function App() {
     return (
@@ -17,14 +15,6 @@ export default function App() {
                     element={
                         <PageTransition>
                             <Home />
-                        </PageTransition>
-                    }
-                />
-                <Route
-                    path="/profile"
-                    element={
-                        <PageTransition>
-                            <Profile />
                         </PageTransition>
                     }
                 />
@@ -44,8 +34,6 @@ export default function App() {
                         </PageTransition>
                     }
                 />
-                <Route path="/mock-test" element={<MockTest />} />
-
             </Routes>
         </Router>
         </AuthProvider>
