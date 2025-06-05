@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import CompanyLogo from './../../../public/onestep.jpeg'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,9 +14,34 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  
+
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: '会社案内', href: '/about' },
+    {
+      name: '会社案内',
+      href: '/companyinfo',
+      dropdownItems: [
+        {
+          image: CompanyLogo,
+          title: 'よくある質問',
+          description: 'お客様からよく寄せられる質問にお答えします。',
+          href: '/faq'
+        },
+        {
+          image: CompanyLogo,
+          title: '新着情報',
+          description: '弊社の最新ニュースやイベントをご覧ください。',
+          href: '/news'
+        },
+        {
+          image: CompanyLogo,
+          title: '企業理念',
+          description: '私たちのビジョンと価値観についてご紹介します。',
+          href: '/philosophy'
+        }
+      ]
+    },    
     {
       name: '事業内容',
       href: '/services',
@@ -131,11 +157,12 @@ const Navbar = () => {
       <a
         href={link.href}
         onClick={() => setActiveLink(link.name)}
-        className={`relative px-6 py-4 text-sm font-medium transition-all duration-300 flex items-center ${
+        className={`relative px-6 py-4 text-sm font-medium transition-all duration-300 flex items-center group ${
           activeLink === link.name
             ? 'text-white bg-gradient-to-r from-indigo-600 to-purple-600 shadow-lg'
-            : 'text-gray-300 hover:text-white hover:bg-slate-700'
+            : 'text-gray-300 hover:text-white'
         }`}
+        
         style={{
           clipPath: index === 0 
             ? 'polygon(0 0, calc(100% - 15px) 0, 100% 100%, 0 100%)'
@@ -149,18 +176,45 @@ const Navbar = () => {
 
       {/* Dropdown menu */}
       {link.submenu && (
-        <div className="absolute left-0 mt-1 w-60 bg-white shadow-lg rounded-xl py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50">
-          {link.submenu.map((item) => (
-            <a
-              key={item.title}
-              href={item.href}
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
-            >
-              {item.title}
-            </a>
-          ))}
+  <div className="absolute left-0 mt-1 w-60 bg-white shadow-lg rounded-xl py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50">
+    {link.submenu.map((item) => (
+      <a
+        key={item.title}
+        href={item.href}
+        className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+      >
+        {item.title}
+      </a>
+    ))}
+  </div>
+)}
+
+{link.dropdownItems && (
+  <div className="absolute left-1/2 translate-x-[-50%] mt-1 w-[60rem] bg-white shadow-2xl rounded-xl p-4 flex flex-row justify-between gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
+  {link.dropdownItems.map((item) => (
+      <a
+        key={item.title}
+        href={item.href}
+        className="flex items-start gap-4 hover:bg-indigo-50 p-3 rounded-lg transition"
+      >
+        <img
+          src={item.image}
+          alt={item.title}
+          className="w-20 h-20 object-cover rounded-md flex-shrink-0"
+        />
+        <div>
+          <h4 className="text-md font-semibold text-gray-900">{item.title}</h4>
+          <p className="text-sm text-gray-600">{item.description}</p>
         </div>
-      )}
+      </a>
+    ))}
+  </div>
+)}
+
+
+
+
+
     </div>
   ))}
 </nav>

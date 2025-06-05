@@ -4,7 +4,7 @@ import PageTransition from './components/PageTransition';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import { AuthProvider } from './services/authContext/AuthContext';
-
+import CompanyInfo from './pages/CompanyInfo';
 export default function App() {
     return (
         <AuthProvider>
@@ -31,6 +31,14 @@ export default function App() {
                     element={
                         <PageTransition>
                             <Contact />
+                        </PageTransition>
+                    }
+                />
+                <Route
+                    path="/companyinfo"
+                    element={
+                        <PageTransition>
+                            <CompanyInfo/>
                         </PageTransition>
                     }
                 />
