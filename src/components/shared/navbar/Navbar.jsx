@@ -33,7 +33,42 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "会社案内", href: "/about" },
+    { 
+      name: "会社案内", 
+      href: "/about",
+      megaMenu: {
+        sections: [
+          {
+            title: "企業理念",
+            icon: "💎",
+            href: "/about/philosophy",
+            description: "私たちの価値観と使命",
+            image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=300&fit=crop&crop=center"
+          },
+          {
+            title: "会社情報",
+            icon: "🏢",
+            href: "/about/company",
+            description: "組織概要と沿革",
+            image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop&crop=center"
+          },
+          {
+            title: "新着情報",
+            icon: "📰",
+            href: "/about/news",
+            description: "最新のお知らせ",
+            image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=300&fit=crop&crop=center"
+          },
+          {
+            title: "よくある質問",
+            icon: "❓",
+            href: "/about/faq",
+            description: "お客様からのご質問",
+            image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=300&fit=crop&crop=center"
+          }
+        ]
+      }
+    },
     {
       name: "事業内容",
       href: "/services",
@@ -77,11 +112,9 @@ const Navbar = () => {
                   {/* Logo Image */}
                   <div className="relative">
                     <div className="w-12 h-12 rounded-xl overflow-hidden shadow-lg border border-gray-200 transform transition-transform duration-300 group-hover:scale-105 group-hover:rotate-1">
-                      <img
-                        src="/onestep.jpeg"
-                        alt="OneStep Logo"
-                        className="w-full h-full object-cover"
-                      />
+                      <div className="w-full h-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg">
+                        OS
+                      </div>
                     </div>
                     {/* effect */}
                     <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-blue-500 opacity-0 group-hover:opacity-20 blur-md transition-all duration-300"></div>
@@ -205,7 +238,61 @@ const Navbar = () => {
                     <span className="relative z-10">{link.name}</span>
                   </a>
 
-                  {/* Dropdown menu */}
+                  {/* Mega Menu for 会社案内 */}
+                  {link.megaMenu && (
+                    <div className="fixed left-0 right-0 mx-auto top-[8.5rem] w-screen max-w-screen-2xl bg-white shadow-2xl rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-300 z-50 border border-gray-100 pointer-events-none group-hover:pointer-events-auto">
+                      <div className="max-w-7xl mx-auto p-8">
+                        <div className="grid grid-cols-4 gap-8">
+                          {link.megaMenu.sections.map((section, sectionIndex) => (
+                            <a
+                              key={sectionIndex}
+                              href={section.href}
+                              className="group/card relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 hover:shadow-xl transition-all duration-300 hover:scale-105 pointer-events-auto"
+                            >
+                              {/* Background Image */}
+                              <div className="relative h-40 overflow-hidden">
+                                <div 
+                                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover/card:scale-110"
+                                  style={{ 
+                                    backgroundImage: `url(${section.image})`,
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center'
+                                  }}
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                                
+                                {/* Icon Overlay */}
+                                <div className="absolute top-4 left-4">
+                                  <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center text-2xl">
+                                    {section.icon}
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              {/* Content */}
+                              <div className="p-4">
+                                <h3 className="font-semibold text-gray-900 mb-2 group-hover/card:text-indigo-600 transition-colors duration-200">
+                                  {section.title}
+                                </h3>
+                                <p className="text-sm text-gray-600 leading-relaxed">
+                                  {section.description}
+                                </p>
+                              </div>
+                              
+                              {/* Hover Arrow */}
+                              <div className="absolute bottom-4 right-4 opacity-0 group-hover/card:opacity-100 transition-opacity duration-200">
+                                <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                              </div>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Regular Dropdown menu for 事業内容 */}
                   {link.submenu && (
                     <div className="absolute left-0 mt-1 w-60 bg-white shadow-lg rounded-xl py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50">
                       {link.submenu.map((item) => (
