@@ -4,6 +4,8 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("Home");
+  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
+  const [megaMenuTimeout, setMegaMenuTimeout] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,24 +71,25 @@ const Navbar = () => {
         ]
       }
     },
-    {
-      name: "事業内容",
-      href: "/services",
-      submenu: [
-        { title: "Recruitment & Staffing", href: "/services#recruitment" },
-        { title: "English Language Courses", href: "/services#english" },
-        { title: "Import & Export", href: "/services#import" },
-        { title: "Translation & Documentation", href: "/services#translation" },
-        {
-          title: "Student Recruitment & Consulting",
-          href: "/services#student",
-        },
-        { title: "Japanese Language Preparation", href: "/services#jlpt" },
-      ],
-    },
-    { name: "お問い合わせ", href: "/contact" },
+    // {
+    //   name: "事業内容",
+    //   href: "/services",
+    //   submenu: [
+    //     { title: "Recruitment & Staffing", href: "/services#recruitment" },
+    //     { title: "English Language Courses", href: "/services#english" },
+    //     { title: "Import & Export", href: "/services#import" },
+    //     { title: "Translation & Documentation", href: "/services#translation" },
+    //     {
+    //       title: "Student Recruitment & Consulting",
+    //       href: "/services#student",
+    //     },
+    //     { title: "Japanese Language Preparation", href: "/services#jlpt" },
+    //   ],
+    // },
+    
     { name: "個人情報保護方針", href: "/privacy" },
     { name: "関連国の情報", href: "/info" },
+    { name: "お問い合わせ", href: "/contact" }
   ];
 
   const handleLinkClick = (linkName) => {
@@ -217,7 +220,26 @@ const Navbar = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="flex items-center justify-center space-x-1">
               {navLinks.map((link, index) => (
-                <div key={link.name} className="relative group">
+                <div 
+                  key={link.name} 
+                  className="relative group"
+                  onMouseEnter={() => {
+                    if (link.megaMenu) {
+                      if (megaMenuTimeout) {
+                        clearTimeout(megaMenuTimeout);
+                      }
+                      setIsMegaMenuOpen(true);
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (link.megaMenu) {
+                      const timeout = setTimeout(() => {
+                        setIsMegaMenuOpen(false);
+                      }, 100);
+                      setMegaMenuTimeout(timeout);
+                    }
+                  }}
+                >
                   <a
                     href={link.href}
                     onClick={() => handleLinkClick(link.name)}
@@ -238,16 +260,35 @@ const Navbar = () => {
                     <span className="relative z-10">{link.name}</span>
                   </a>
 
-                  {/* Mega Menu for 会社案内 */}
+                  {/* Hover buffer for mega menu */}
                   {link.megaMenu && (
-                    <div className="fixed left-0 right-0 mx-auto top-[8.5rem] w-screen max-w-screen-2xl bg-white shadow-2xl rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-300 z-50 border border-gray-100 pointer-events-none group-hover:pointer-events-auto">
+                    <div className="absolute top-full left-0 right-0 h-4 bg-transparent pointer-events-none"></div>
+                  )}
+
+                  {/* Mega Menu for 会社案内 */}
+                  {link.megaMenu && isMegaMenuOpen && (
+                    <div 
+                      className="fixed left-0 right-0 mx-auto top-[8.5rem] w-screen max-w-screen-2xl bg-white shadow-2xl rounded-b-2xl z-50 border border-gray-100"
+                      onMouseEnter={() => {
+                        if (megaMenuTimeout) {
+                          clearTimeout(megaMenuTimeout);
+                        }
+                        setIsMegaMenuOpen(true);
+                      }}
+                      onMouseLeave={() => {
+                        const timeout = setTimeout(() => {
+                          setIsMegaMenuOpen(false);
+                        }, 100);
+                        setMegaMenuTimeout(timeout);
+                      }}
+                    >
                       <div className="max-w-7xl mx-auto p-8">
                         <div className="grid grid-cols-4 gap-8">
                           {link.megaMenu.sections.map((section, sectionIndex) => (
                             <a
                               key={sectionIndex}
                               href={section.href}
-                              className="group/card relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 hover:shadow-xl transition-all duration-300 hover:scale-105 pointer-events-auto"
+                              className="group/card relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 hover:shadow-xl transition-all duration-300 hover:scale-105"
                             >
                               {/* Background Image */}
                               <div className="relative h-40 overflow-hidden">
@@ -307,6 +348,8 @@ const Navbar = () => {
                     </div>
                   )}
                 </div>
+
+                
               ))}
             </nav>
           </div>

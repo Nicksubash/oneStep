@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/shared/navbar/Navbar';
 import Footer from "../components/shared/Footer";
-import Hero from '../components/Hero';
+import Hero from '../components/Hero/Hero';
 
 export default function Home() {
    
