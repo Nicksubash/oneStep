@@ -41,25 +41,25 @@ const Navbar = () => {
       megaMenu: {
         sections: [
           {
-            title: "企業理念",
-            icon: "💎",
-            href: "/about/philosophy",
-            description: "私たちの価値観と使命",
-            image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=300&fit=crop&crop=center"
-          },
-          {
             title: "会社情報",
             icon: "🏢",
-            href: "/about/company",
+            href: "/company",
             description: "組織概要と沿革",
             image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop&crop=center"
           },
           {
-            title: "新着情報",
+            title: "代表挨拶",
             icon: "📰",
-            href: "/about/news",
-            description: "最新のお知らせ",
+            href: "/greeting",
+            description: "社長からの温かい言葉",
             image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=300&fit=crop&crop=center"
+          },
+          {
+            title: "企業理念",
+            icon: "💎",
+            href: "/philosophy",
+            description: "私たちの価値観と使命",
+            image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=300&fit=crop&crop=center"
           },
           {
             title: "よくある質問",
