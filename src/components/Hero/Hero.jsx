@@ -1,6 +1,6 @@
 import React from 'react';
-import Data from '../data/data.json';
-
+import Data from '../../data/data.json';
+import WhatWeDo from './WhatWeDo';
 const Hero = () => {
   const { name, contact } = Data;
 
@@ -42,6 +42,7 @@ const Hero = () => {
           />
         </div>
       </div>
+      <WhatWeDo/>
     </section>
   );
 };
