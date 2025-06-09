@@ -4,8 +4,9 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("Home");
-  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
+  const [activeMegaMenu, setActiveMegaMenu] = useState(null);
   const [megaMenuTimeout, setMegaMenuTimeout] = useState(null);
+  const [currentPage, setCurrentPage] = useState({});
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,22 +72,56 @@ const Navbar = () => {
         ]
       }
     },
-    // {
-    //   name: "事業内容",
-    //   href: "/services",
-    //   submenu: [
-    //     { title: "Recruitment & Staffing", href: "/services#recruitment" },
-    //     { title: "English Language Courses", href: "/services#english" },
-    //     { title: "Import & Export", href: "/services#import" },
-    //     { title: "Translation & Documentation", href: "/services#translation" },
-    //     {
-    //       title: "Student Recruitment & Consulting",
-    //       href: "/services#student",
-    //     },
-    //     { title: "Japanese Language Preparation", href: "/services#jlpt" },
-    //   ],
-    // },
-    
+    {
+      name: "事業内容",
+      href: "/services",
+      megaMenu: {
+        sections: [
+          { 
+            title: "Recruitment & Staffing", 
+            icon: "👥",
+            href: "/services#recruitment", 
+            description: "人材紹介と派遣サービス",
+            image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=300&fit=crop&crop=center" 
+          },
+          { 
+            title: "English Language Courses", 
+            icon: "🇬🇧",
+            href: "/services#english", 
+            description: "ビジネス英語コース",
+            image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=300&fit=crop&crop=center" 
+          },
+          { 
+            title: "Import & Export", 
+            icon: "📦",
+            href: "/services#import", 
+            description: "国際貿易ソリューション",
+            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop&crop=center" 
+          },
+          { 
+            title: "Translation & Documentation", 
+            icon: "📝",
+            href: "/services#translation", 
+            description: "多言語ドキュメントサービス",
+            image: "https://images.unsplash.com/photo-1516387938699-a93567ec168e?w=400&h=300&fit=crop&crop=center" 
+          },
+          { 
+            title: "Student Recruitment & Consulting", 
+            icon: "🎓",
+            href: "/services#student", 
+            description: "留学サポートプログラム",
+            image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=300&fit=crop&crop=center" 
+          },
+          { 
+            title: "Japanese Language Preparation", 
+            icon: "🇯🇵",
+            href: "/services#jlpt", 
+            description: "JLPT試験対策コース",
+            image: "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?w=400&h=300&fit=crop&crop=center" 
+          }
+        ]
+      }
+    },
     { name: "個人情報保護方針", href: "/privacy" },
     { name: "関連国の情報", href: "/info" },
     { name: "お問い合わせ", href: "/contact" }
@@ -94,6 +129,37 @@ const Navbar = () => {
 
   const handleLinkClick = (linkName) => {
     setActiveLink(linkName);
+  };
+
+  const handlePageChange = (menuName, direction) => {
+    setCurrentPage(prev => {
+      const current = prev[menuName] || 0;
+      const maxItems = 4;
+      const menu = navLinks.find(link => link.name === menuName);
+      const totalItems = menu?.megaMenu?.sections?.length || 0;
+      const totalPages = Math.ceil(totalItems / maxItems);
+      
+      let newPage = current;
+      if (direction === 'next' && current < totalPages - 1) {
+        newPage = current + 1;
+      } else if (direction === 'prev' && current > 0) {
+        newPage = current - 1;
+      }
+      
+      return { ...prev, [menuName]: newPage };
+    });
+  };
+
+  const getVisibleItems = (sections, menuName) => {
+    const maxItems = 4;
+    const page = currentPage[menuName] || 0;
+    const startIndex = page * maxItems;
+    const endIndex = startIndex + maxItems;
+    return sections.slice(startIndex, endIndex);
+  };
+
+  const getTotalPages = (totalItems) => {
+    return Math.ceil(totalItems / 4);
   };
 
   return (
@@ -216,7 +282,7 @@ const Navbar = () => {
         </div>
 
         {/* Navigation Section */}
-        <div className="hidden md:block bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 ">
+        <div className="hidden md:block bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="flex items-center justify-center space-x-1">
               {navLinks.map((link, index) => (
@@ -228,13 +294,13 @@ const Navbar = () => {
                       if (megaMenuTimeout) {
                         clearTimeout(megaMenuTimeout);
                       }
-                      setIsMegaMenuOpen(true);
+                      setActiveMegaMenu(link.name);
                     }
                   }}
                   onMouseLeave={() => {
                     if (link.megaMenu) {
                       const timeout = setTimeout(() => {
-                        setIsMegaMenuOpen(false);
+                        setActiveMegaMenu(null);
                       }, 100);
                       setMegaMenuTimeout(timeout);
                     }
@@ -265,26 +331,81 @@ const Navbar = () => {
                     <div className="absolute top-full left-0 right-0 h-4 bg-transparent pointer-events-none"></div>
                   )}
 
-                  {/* Mega Menu for 会社案内 */}
-                  {link.megaMenu && isMegaMenuOpen && (
+                  {/* Horizontal Scrollable Mega Menu */}
+                  {link.megaMenu && activeMegaMenu === link.name && (
                     <div 
                       className="fixed left-0 right-0 mx-auto top-[8.5rem] w-screen max-w-screen-2xl bg-white shadow-2xl rounded-b-2xl z-50 border border-gray-100"
                       onMouseEnter={() => {
                         if (megaMenuTimeout) {
                           clearTimeout(megaMenuTimeout);
                         }
-                        setIsMegaMenuOpen(true);
+                        setActiveMegaMenu(link.name);
                       }}
                       onMouseLeave={() => {
                         const timeout = setTimeout(() => {
-                          setIsMegaMenuOpen(false);
+                          setActiveMegaMenu(null);
                         }, 100);
                         setMegaMenuTimeout(timeout);
                       }}
                     >
                       <div className="max-w-7xl mx-auto p-8">
-                        <div className="grid grid-cols-4 gap-8">
-                          {link.megaMenu.sections.map((section, sectionIndex) => (
+                        {/* Navigation Controls */}
+                        {link.megaMenu.sections.length > 4 && (
+                          <div className="flex items-center justify-between mb-6">
+                            <div className="flex items-center space-x-2">
+                              <span className="text-sm text-gray-600">
+                                {((currentPage[link.name] || 0) * 4) + 1}-{Math.min(((currentPage[link.name] || 0) + 1) * 4, link.megaMenu.sections.length)} of {link.megaMenu.sections.length} items
+                              </span>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                              <button
+                                onClick={() => handlePageChange(link.name, 'prev')}
+                                disabled={(currentPage[link.name] || 0) === 0}
+                                className={`p-2 rounded-lg border transition-all duration-200 ${
+                                  (currentPage[link.name] || 0) === 0 
+                                    ? 'border-gray-200 text-gray-400 cursor-not-allowed' 
+                                    : 'border-indigo-200 text-indigo-600 hover:bg-indigo-50 hover:border-indigo-300'
+                                }`}
+                              >
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                                </svg>
+                              </button>
+                              
+                              <div className="flex items-center space-x-1">
+                                {Array.from({ length: getTotalPages(link.megaMenu.sections.length) }).map((_, index) => (
+                                  <button
+                                    key={index}
+                                    onClick={() => setCurrentPage(prev => ({ ...prev, [link.name]: index }))}
+                                    className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                                      (currentPage[link.name] || 0) === index 
+                                        ? 'bg-indigo-600' 
+                                        : 'bg-gray-300 hover:bg-gray-400'
+                                    }`}
+                                  />
+                                ))}
+                              </div>
+
+                              <button
+                                onClick={() => handlePageChange(link.name, 'next')}
+                                disabled={(currentPage[link.name] || 0) >= getTotalPages(link.megaMenu.sections.length) - 1}
+                                className={`p-2 rounded-lg border transition-all duration-200 ${
+                                  (currentPage[link.name] || 0) >= getTotalPages(link.megaMenu.sections.length) - 1
+                                    ? 'border-gray-200 text-gray-400 cursor-not-allowed' 
+                                    : 'border-indigo-200 text-indigo-600 hover:bg-indigo-50 hover:border-indigo-300'
+                                }`}
+                              >
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Items Grid */}
+                        <div className="grid grid-cols-4 gap-6">
+                          {getVisibleItems(link.megaMenu.sections, link.name).map((section, sectionIndex) => (
                             <a
                               key={sectionIndex}
                               href={section.href}
@@ -332,24 +453,7 @@ const Navbar = () => {
                       </div>
                     </div>
                   )}
-
-                  {/* Regular Dropdown menu for 事業内容 */}
-                  {link.submenu && (
-                    <div className="absolute left-0 mt-1 w-60 bg-white shadow-lg rounded-xl py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50">
-                      {link.submenu.map((item) => (
-                        <a
-                          key={item.title}
-                          href={item.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
-                        >
-                          {item.title}
-                        </a>
-                      ))}
-                    </div>
-                  )}
                 </div>
-
-                
               ))}
             </nav>
           </div>
@@ -436,6 +540,15 @@ const Navbar = () => {
           </div>
         </div>
       )}
+
+      <style jsx>{`
+        .line-clamp-2 {
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+        }
+      `}</style>
     </>
   );
 };

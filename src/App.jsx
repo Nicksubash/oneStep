@@ -6,6 +6,7 @@ import About from './pages/About';
 import Philosophy from './pages/Philosophy'
 import CompanyInfo from './pages/CompanyInfo';
 import CeoGreeting from './pages/CeoGreeting';
+import Service from './pages/Service';
 import { AuthProvider } from './services/authContext/AuthContext';
 
 export default function App() {
@@ -58,6 +59,14 @@ export default function App() {
                     element={
                         <PageTransition>
                             <CeoGreeting />
+                        </PageTransition>
+                    }
+                />
+                <Route
+                    path="/services"
+                    element={
+                        <PageTransition>
+                            <Service />
                         </PageTransition>
                     }
                 />
