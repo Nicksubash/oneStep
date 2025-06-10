@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../components/shared/navbar/Navbar';
+import Navbar from '../components/navbar/Navbar';
 import Footer from '../components/shared/Footer';
 import InfoTitle from '../components/shared/InfoTitle';
 

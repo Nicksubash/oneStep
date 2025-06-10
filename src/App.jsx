@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import PageTransition from './components/PageTransition'; 
+import PageTransition from './components/shared/PageTransition'; 
 import Contact from './pages/Contact';
 import About from './pages/About';
 import Philosophy from './pages/Philosophy'
