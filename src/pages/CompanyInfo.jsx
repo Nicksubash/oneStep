@@ -27,7 +27,7 @@ export default function CompanyInfo() {
             <tr className="border-b"><th className="p-2 bg-gray-100">設立</th><td className="p-2">2024年〇月〇日</td></tr>
             <tr className="border-b"><th className="p-2 bg-gray-100">所在地</th><td className="p-2">〒457-0845　愛知県名古屋市南区観音町観音ビル</td></tr>
             <tr className="border-b"><th className="p-2 bg-gray-100">代表者</th><td className="p-2">代表取締役　レグミ　スディプ</td></tr>
-            <tr className="border-b"><th className="p-2 bg-gray-100">連絡先</th><td className="p-2">📞 052-XXXX-XXXX　｜　📧 info@onestep.co.jp</td></tr>
+            <tr className="border-b"><th className="p-2 bg-gray-100">連絡先</th><td className="p-2">📞 052-829-1674　｜　📧 info@onestep.co.jp</td></tr>
             <tr className="border-b"><th className="p-2 bg-gray-100">事業内容</th>
               <td className="p-2">
                 <ul className="list-disc pl-5 space-y-1">

@@ -90,20 +90,13 @@ const Navbar = () => {
             href: "/services#recruitment", 
             description: "人材紹介と派遣サービス",
             image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=300&fit=crop&crop=center" 
-          },
+          }, 
           { 
-            title: "English Language Courses", 
-            icon: "🇬🇧",
-            href: "/services#english", 
-            description: "ビジネス英語コース",
-            image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=300&fit=crop&crop=center" 
-          },
-          { 
-            title: "Import & Export", 
-            icon: "📦",
-            href: "/services#import", 
-            description: "国際貿易ソリューション",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop&crop=center" 
+            title: "Student Recruitment & Consulting", 
+            icon: "🎓",
+            href: "/services#student", 
+            description: "留学サポートプログラム",
+            image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=300&fit=crop&crop=center" 
           },
           { 
             title: "Translation & Documentation", 
@@ -113,24 +106,32 @@ const Navbar = () => {
             image: "https://images.unsplash.com/photo-1516387938699-a93567ec168e?w=400&h=300&fit=crop&crop=center" 
           },
           { 
-            title: "Student Recruitment & Consulting", 
-            icon: "🎓",
-            href: "/services#student", 
-            description: "留学サポートプログラム",
-            image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=300&fit=crop&crop=center" 
-          },
-          { 
-            title: "Japanese Language Preparation", 
-            icon: "🇯🇵",
-            href: "/services#jlpt", 
-            description: "JLPT試験対策コース",
-            image: "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?w=400&h=300&fit=crop&crop=center" 
+            title: "Import & Export", 
+            icon: "📦",
+            href: "/services#import", 
+            description: "国際貿易ソリューション",
+            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop&crop=center" 
           }
+          // { 
+          //   title: "English Language Courses", 
+          //   icon: "🇬🇧",
+          //   href: "/services#english", 
+          //   description: "ビジネス英語コース",
+          //   image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=300&fit=crop&crop=center" 
+          // },
+          // { 
+          //   title: "Japanese Language Preparation", 
+          //   icon: "🇯🇵",
+          //   href: "/services#jlpt", 
+          //   description: "JLPT試験対策コース",
+          //   image: "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?w=400&h=300&fit=crop&crop=center" 
+          // }
         ]
       }
     },
     { name: "個人情報保護方針", href: "/privacy" },
     { name: "関連国の情報", href: "/info" },
+    { name: "チーム", href: "/teams" },
     { name: "お問い合わせ", href: "/contact" }
   ];
 

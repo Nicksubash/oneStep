@@ -7,6 +7,7 @@ import Philosophy from './pages/Philosophy'
 import CompanyInfo from './pages/CompanyInfo';
 import CeoGreeting from './pages/CeoGreeting';
 import Service from './pages/Service';
+import Teams from './pages/Teams';
 import { AuthProvider } from './services/authContext/AuthContext';
 
 export default function App() {
@@ -67,6 +68,14 @@ export default function App() {
                     element={
                         <PageTransition>
                             <Service />
+                        </PageTransition>
+                    }
+                />
+                 <Route
+                    path="/teams"
+                    element={
+                        <PageTransition>
+                            <Teams />
                         </PageTransition>
                     }
                 />
