@@ -8,12 +8,12 @@ import CompanyInfo from './pages/CompanyInfo';
 import CeoGreeting from './pages/CeoGreeting';
 import Service from './pages/Service';
 import Teams from './pages/Teams';
+import Student from './pages/Student';
 import CompanyContact from './pages/CompanyContact';
-import { AuthProvider } from './services/authContext/AuthContext';
+import TranslationService from './pages/TranslationService';
 
 export default function App() {
     return (
-        <AuthProvider>
             <Router>
             <Routes>  
                 <Route
@@ -88,9 +88,24 @@ export default function App() {
                         </PageTransition>
                     }
                 />
+                <Route
+                    path="/students"
+                    element={
+                        <PageTransition>
+                            <Student />
+                        </PageTransition>
+                    }
+                />
+                <Route
+                    path="/translation"
+                    element={
+                        <PageTransition>
+                            <TranslationService />
+                        </PageTransition>
+                    }
+                />
             </Routes>
         </Router>
-        </AuthProvider>
        
     );
 }
