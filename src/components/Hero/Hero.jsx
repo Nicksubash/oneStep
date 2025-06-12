@@ -1,6 +1,7 @@
 import React from 'react';
 import Data from '../../data/data.json';
 import WhatWeDo from './WhatWeDo';
+import CompanyCTA from '../shared/CompanyCTA';
 const Hero = () => {
   const { name, contact } = Data;
 
@@ -43,6 +44,7 @@ const Hero = () => {
         </div>
       </div>
       <WhatWeDo/>
+      <CompanyCTA />
     </section>
   );
 };

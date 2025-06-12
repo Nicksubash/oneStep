@@ -1,11 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import PageTransition from './components/PageTransition'; 
+import PageTransition from './components/shared/PageTransition'; 
 import Contact from './pages/Contact';
 import About from './pages/About';
 import Philosophy from './pages/Philosophy'
 import CompanyInfo from './pages/CompanyInfo';
 import CeoGreeting from './pages/CeoGreeting';
+import Service from './pages/Service';
+import Teams from './pages/Teams';
+import CompanyContact from './pages/CompanyContact';
 import { AuthProvider } from './services/authContext/AuthContext';
 
 export default function App() {
@@ -58,6 +61,30 @@ export default function App() {
                     element={
                         <PageTransition>
                             <CeoGreeting />
+                        </PageTransition>
+                    }
+                />
+                <Route
+                    path="/services"
+                    element={
+                        <PageTransition>
+                            <Service />
+                        </PageTransition>
+                    }
+                />
+                 <Route
+                    path="/teams"
+                    element={
+                        <PageTransition>
+                            <Teams />
+                        </PageTransition>
+                    }
+                />
+                <Route
+                    path="/company-contact"
+                    element={
+                        <PageTransition>
+                            <CompanyContact />
                         </PageTransition>
                     }
                 />

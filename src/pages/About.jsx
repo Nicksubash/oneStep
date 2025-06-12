@@ -1,4 +1,4 @@
-import Navbar from "../components/shared//navbar/Navbar";
+import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/shared/Footer";
 
 export default function About() {

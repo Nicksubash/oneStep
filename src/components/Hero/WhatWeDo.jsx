@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { services } from './ServiceData';
 import { useFloatingPositions } from '../CustomHooks/useFloatingPositions';
-import FloatingServiceItem from './../FloatingServiceItem';
-import BackgroundEffects from '../BackgroundEffect';
+import FloatingServiceItem from '../shared/FloatingServiceItem';
+import BackgroundEffects from '../shared/BackgroundEffect';
 
 const WhatWeDo = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
