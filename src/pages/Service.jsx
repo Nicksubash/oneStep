@@ -1,128 +1,43 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import Navbar from '../components/navbar/Navbar';
 import Footer from '../components/shared/Footer';
 import InfoTitle from '../components/shared/InfoTitle';
 import CompanyCTA from '../components/shared/CompanyCTA';
+import AnimatedSection from '../components/shared/AnimatedSection';
+import AnimatedFlowSection from '../components/shared/AnimatedFlowSection';
+import StrengthsGrid from '../components/shared/StrengthsGrid';
 import {CheckCircleIcon,UserGroupIcon,GlobeAltIcon,PuzzlePieceIcon} from '@heroicons/react/24/solid';
 
-// Custom hook for intersection observer
-const useIntersectionObserver = (options = {}) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const elementRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1, ...options }
-    );
-
-    const currentElement = elementRef.current;
-    if (currentElement) {
-      observer.observe(currentElement);
-    }
-
-    return () => {
-      if (currentElement) {
-        observer.unobserve(currentElement);
-      }
-    };
-  }, []);
-
-  return [elementRef, isVisible];
-};
-
-// Animated Section Component
-const AnimatedSection = ({ children, className = "", delay = 0 }) => {
-  const [ref, isVisible] = useIntersectionObserver();
-  
-  return (
-    <div
-      ref={ref}
-      className={`transition-all duration-1000 ease-out ${
-        isVisible 
-          ? 'opacity-100 translate-y-0' 
-          : 'opacity-0 translate-y-10'
-      } ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
-    >
-      {children}
-    </div>
-  );
-};
-
-// Animated Flow Step Component
-const AnimatedFlowStep = ({ step, index, isHovered, onHover, onLeave }) => {
-  const steps = ["お問い合わせ", "ヒアリング・ご提案", "ご契約・人選", "就業開始"];
-  const descriptions = [
-    "Webフォームまたはお電話にて、お気軽にご相談ください。",
-    "担当者が業務内容やご要望を伺い、最適なプランをご提案します。",
-    "ご契約後、豊富な人材の中からスキル・条件に合うスタッフを選出します。",
-    "就業後も当社がスタッフをしっかりサポート。安心してご活用いただけます。"
-  ];
-
-  return (
-    <div 
-      className={`flex flex-col items-center z-10 cursor-pointer transition-all duration-500 ease-out transform ${
-        isHovered 
-          ? 'scale-110 -translate-y-2' 
-          : 'scale-100 translate-y-0'
-      }`}
-      onMouseEnter={() => onHover(index)}
-      onMouseLeave={onLeave}
-    >
-      <div className={`bg-gradient-to-r from-indigo-600 to-purple-600 text-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mb-4 shadow-lg transition-all duration-500 ${
-        isHovered 
-          ? 'shadow-2xl ring-4 ring-indigo-300 ring-opacity-50' 
-          : 'shadow-lg'
-      }`}>
-        {index + 1}
-      </div>
-      <h3 className={`font-bold text-lg mb-2 transition-all duration-300 ${
-        isHovered ? 'text-indigo-600' : 'text-gray-900'
-      }`}>
-        {steps[index]}
-      </h3>
-      <p className={`text-sm text-gray-600 text-center transition-all duration-500 ${
-        isHovered 
-          ? 'text-gray-800 font-medium transform scale-105' 
-          : 'text-gray-600'
-      }`}>
-        {descriptions[index]}
-      </p>
-      {isHovered && (
-        <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-indigo-600 rounded-full animate-pulse"></div>
-      )}
-    </div>
-  );
-};
-
 export default function Service() {
-  const [hoveredStep, setHoveredStep] = useState(null);
-  
   const strengths = [
     {
-      icon: <UserGroupIcon className="h-12 w-12 text-indigo-600" />,
+      icon: <UserGroupIcon className="h-12 w-12 text-indigo-500" />,
       title: '多様な人材ネットワーク',
       description: '国籍を問わない豊富な人材ネットワークを活かし、貴社のニーズに最適な人材を迅速にご提案します。'
     },
     {
-      icon: <GlobeAltIcon className="h-12 w-12 text-indigo-600" />,
+      icon: <GlobeAltIcon className="h-12 w-12 text-indigo-500" />,
       title: 'グローバル基準のサポート',
       description: '日本文化やビジネスマナーに精通した外国人スタッフが多数在籍。異文化コミュニケーションも円滑です。'
     },
     {
-      icon: <PuzzlePieceIcon className="h-12 w-12 text-indigo-600" />,
+      icon: <PuzzlePieceIcon className="h-12 w-12 text-indigo-500" />,
       title: '柔軟なソリューション',
       description: '短期派遣から紹介予定派遣、専門職の確保まで、採用課題に合わせた柔軟なプランをご提供します。'
     }
   ];
 
   const jobTypes = ['製造業・物流業', '事務・CS', 'IT・エンジニア', '販売・接客', '通訳・翻訳', '介護・医療'];
+
+  // Flow data
+  const flowSteps = ["お問い合わせ", "ヒアリング・ご提案", "ご契約・人選", "就業開始"];
+  const flowDescriptions = [
+    "Webフォームまたはお電話にて、お気軽にご相談ください。",
+    "担当者が業務内容やご要望を伺い、最適なプランをご提案します。",
+    "ご契約後、豊富な人材の中からスキル・条件に合うスタッフを選出します。",
+    "就業後も当社がスタッフをしっかりサポート。安心してご活用いただけます。"
+  ];
 
   return (
     <>
@@ -142,7 +57,7 @@ export default function Service() {
       </Helmet>
 
       <Navbar />
-
+      
       <InfoTitle
         backgroundImage="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1600&h=600&fit=crop&crop=center"
         title="人材派遣・派遣サービス"
@@ -152,7 +67,6 @@ export default function Service() {
 
       <div className="bg-white">
         <div className="max-w-6xl mx-auto px-6 py-20 space-y-24 text-gray-800 leading-relaxed">
-
           {/* 人材派遣とは */}
           <AnimatedSection>
             <section className="grid md:grid-cols-2 gap-12 items-center">
@@ -179,55 +93,17 @@ export default function Service() {
               </AnimatedSection>
             </section>
           </AnimatedSection>
-
+          
           {/* 当社の強み */}
-          <AnimatedSection>
-            <section className="bg-indigo-50 rounded-xl p-12">
-              <AnimatedSection delay={200}>
-                <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">One Stepの強み</h2>
-              </AnimatedSection>
-              <div className="grid md:grid-cols-3 gap-8">
-                {strengths.map((strength, index) => (
-                  <AnimatedSection key={index} delay={300 + index * 200}>
-                    <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500 text-center">
-                      <div className="flex justify-center mb-4 transform hover:scale-110 transition-transform duration-300">
-                        {strength.icon}
-                      </div>
-                      <h3 className="text-xl font-bold text-indigo-700 mb-3">{strength.title}</h3>
-                      <p className="text-gray-600 text-sm">{strength.description}</p>
-                    </div>
-                  </AnimatedSection>
-                ))}
-              </div>
-            </section>
-          </AnimatedSection>
-
-          {/* ご利用の流れ */}
-          <AnimatedSection>
-            <section>
-              <AnimatedSection delay={200}>
-                <h2 className="text-3xl font-bold text-center text-gray-900 mb-16">ご利用開始までの流れ</h2>
-              </AnimatedSection>
-              <div className="grid md:grid-cols-4 gap-8 text-center relative">
-                <div className="hidden md:block absolute top-1/2 left-0 w-full h-px -mt-8">
-                  <div className="h-full w-3/4 mx-auto border-t-2 border-dashed border-gray-300"></div>
-                </div>
-                {[0, 1, 2, 3].map((index) => (
-                  <AnimatedSection key={index} delay={400 + index * 200}>
-                    <div className="relative">
-                      <AnimatedFlowStep
-                        step={index}
-                        index={index}
-                        isHovered={hoveredStep === index}
-                        onHover={setHoveredStep}
-                        onLeave={() => setHoveredStep(null)}
-                      />
-                    </div>
-                  </AnimatedSection>
-                ))}
-              </div>
-            </section>
-          </AnimatedSection>
+          <StrengthsGrid strengths={strengths} />
+        
+          {/* ご利用の流れ - Using the reusable component */}
+          <AnimatedFlowSection
+            title="ご利用開始までの流れ"
+            steps={flowSteps}
+            descriptions={flowDescriptions}
+            colorScheme="indigo"
+          />
 
           {/* 課題と職種 */}
           <AnimatedSection>
@@ -275,7 +151,7 @@ export default function Service() {
 
           {/* CTA */}
           <AnimatedSection delay={200}>
-            <CompanyCTA />
+          <CompanyCTA showTag={true} />
           </AnimatedSection>
         </div>
       </div>
