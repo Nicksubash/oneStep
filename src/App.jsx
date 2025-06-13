@@ -11,6 +11,10 @@ import Teams from './pages/Teams';
 import Student from './pages/Student';
 import CompanyContact from './pages/CompanyContact';
 import TranslationService from './pages/TranslationService';
+import PrivacyPage from './pages/PrivacyPage';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import FAQPage from './pages/FAQPage';
+
 
 export default function App() {
     return (
@@ -101,6 +105,22 @@ export default function App() {
                     element={
                         <PageTransition>
                             <TranslationService />
+                        </PageTransition>
+                    }
+                />
+                <Route
+                    path="/privacy"
+                    element={
+                        <PageTransition>
+                            <PrivacyPage />
+                        </PageTransition>
+                    }
+                />
+                <Route
+                    path="/faq"
+                    element={
+                        <PageTransition>
+                            <FAQPage />
                         </PageTransition>
                     }
                 />

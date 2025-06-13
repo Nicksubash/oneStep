@@ -53,8 +53,10 @@ const MobileMenu = ({ isOpen, navLinks, activeLink, onLinkClick, onClose }) => {
                 }`}
               >
                 <div className="flex flex-col">
-                  <span className="text-base">{link.name.ja}</span>
-                  <span className="text-xs opacity-75">{link.name.en}</span>
+                  <span className="text-base">{link.name}</span>
+                  {link.subtitle && (
+                    <span className="text-xs text-gray-500">{link.subtitle}</span>
+                  )}
                 </div>
               </a>
             ))}

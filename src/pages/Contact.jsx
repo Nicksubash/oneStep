@@ -276,7 +276,7 @@ const Contact = () => {
                   >
                     I agree to the{" "}
                     <a
-                      href="#"
+                      href="privacy"
                       className="text-indigo-600 font-semibold hover:underline"
                     >
                       Privacy Policy
@@ -297,7 +297,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <style jsx>{`
+        <style>{`
           @keyframes fade-in-left {
             from {
               opacity: 0;

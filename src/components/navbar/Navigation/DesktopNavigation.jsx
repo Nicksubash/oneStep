@@ -30,7 +30,7 @@ const DesktopNavigation = ({
               <a
                 href={link.href}
                 onClick={() => onLinkClick(link.name)}
-                className={`relative px-6 py-4 text-sm font-medium transition-all duration-300 flex items-center ${
+                className={`relative px-6 py-4 text-xl font-medium transition-all duration-300 flex items-center ${
                   activeLink === link.name
                     ? "text-white bg-gradient-to-r from-indigo-600 to-purple-600 shadow-lg"
                     : "text-gray-300 hover:text-white hover:bg-slate-700"
@@ -44,7 +44,12 @@ const DesktopNavigation = ({
                       : "polygon(15px 0, calc(100% - 15px) 0, 100% 100%, 0 100%)",
                 }}
               >
-                <span className="relative z-10">{link.name}</span>
+                <span className="relative z-10 flex flex-col items-center leading-tight">
+                  <span className="text-2xl font-semibold">{link.name}</span>
+                  {link.subtitle && (
+                    <span className="text-xs text-gray-400 -mt-1">{link.subtitle}</span>
+                  )}
+                </span>
               </a>
 
               {/* Hover buffer for mega menu */}

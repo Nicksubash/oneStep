@@ -16,10 +16,14 @@ const Navbar = () => {
   const [currentPage, setCurrentPage] = useState({});
 
   const navLinks = [
-    { name: "Home", href: "/" },
+    { name: "ホーム",
+      subtitle:"Home", 
+      href: "/", },
     {
       name: "会社案内",
-      href: "/about",
+      subtitle: "Company",
+      href: "/company",
+
       megaMenu: {
         sections: [
           {
@@ -46,7 +50,7 @@ const Navbar = () => {
           {
             title: "よくある質問",
             icon: "❓",
-            href: "/about/faq",
+            href: "/faq",
             description: "お客様からのご質問",
             image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=300&fit=crop&crop=center"
           }
@@ -55,6 +59,7 @@ const Navbar = () => {
     },
     {
       name: "事業内容",
+      subtitle: "Services",
       href: "/services",
       megaMenu: {
         sections: [
@@ -89,10 +94,8 @@ const Navbar = () => {
         ]
       }
     },
-    { name: "個人情報保護方針", href: "/privacy" },
-    { name: "関連国の情報", href: "/info" },
-    { name: "チーム", href: "/teams" },
-    { name: "お問い合わせ", href: "/contact" }
+    { name: "チーム",subtitle: "Our Teams", href: "/teams" },
+    { name: "お問い合わせ", subtitle: "Contact Us",href: "/contact" }
   ];
 
   useEffect(() => {
@@ -107,14 +110,14 @@ const Navbar = () => {
     const currentPath = window.location.pathname;
   
     const businessPages = ["/students", "/translation", "/import", "/recruitment"];
-    const aboutPages = ["/company", "/greeting", "/philosophy", "/about/faq"];
+    const aboutPages = ["/company", "/greeting", "/philosophy", "/faq"];
   
     const currentLink = navLinks.find((link) => {
       if (link.href === currentPath) return true;
   
       if (link.href === "/services" && businessPages.includes(currentPath)) return true;
   
-      if (link.href === "/about" && aboutPages.includes(currentPath)) return true;
+      if (link.href === "/company" && aboutPages.includes(currentPath)) return true;
   
       return false;
     });
@@ -235,7 +238,7 @@ const Navbar = () => {
         onClose={() => setIsMobileMenuOpen(false)}
       />
 
-      <style jsx>{`
+      <style>{`
         .line-clamp-2 {
           overflow: hidden;
           display: -webkit-box;
