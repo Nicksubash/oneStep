@@ -94,7 +94,7 @@ const Navbar = () => {
         ]
       }
     },
-    { name: "チーム",subtitle: "Our Teams", href: "/teams" },
+    { name: "メンバー紹介",subtitle: "Our Teams", href: "/teams" },
     { name: "お問い合わせ", subtitle: "Contact Us",href: "/contact" }
   ];
 
@@ -109,8 +109,9 @@ const Navbar = () => {
   useEffect(() => {
     const currentPath = window.location.pathname;
   
-    const businessPages = ["/students", "/translation", "/import", "/recruitment"];
+    const businessPages = ["/students", "/translation", "/import", ];
     const aboutPages = ["/company", "/greeting", "/philosophy", "/faq"];
+    const contactPage= ["/contact", "/recruitment"];
   
     const currentLink = navLinks.find((link) => {
       if (link.href === currentPath) return true;
@@ -119,6 +120,7 @@ const Navbar = () => {
   
       if (link.href === "/company" && aboutPages.includes(currentPath)) return true;
   
+      if (link.href ==="/contact" && contactPage.includes(currentPath)) return true;
       return false;
     });
   

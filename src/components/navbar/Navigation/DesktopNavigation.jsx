@@ -45,7 +45,7 @@ const DesktopNavigation = ({
                 }}
               >
                 <span className="relative z-10 flex flex-col items-center leading-tight">
-                  <span className="text-2xl font-semibold">{link.name}</span>
+                  <span className="text-xl font-semibold">{link.name}</span>
                   {link.subtitle && (
                     <span className="text-xs text-gray-400 -mt-1">{link.subtitle}</span>
                   )}
