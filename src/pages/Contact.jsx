@@ -56,7 +56,7 @@ export default function Contact() {
           className="text-blue-100/30 z-0" 
         />
         
-        <section className="bg-white p-8 md:p-12 rounded-2xl shadow-lg relative z-10">
+        <section className="bg-white-30 p-8 md:p-12 rounded-2xl shadow-lg relative z-10">
           <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">アクセス・お問い合わせ</h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">

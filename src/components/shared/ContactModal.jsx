@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { XMarkIcon } from '@heroicons/react/24/solid';
 import CompanyContactForm from './CompanyContactForm';
-import StudentContact from './JobApplicationFrom';
+import JobApplicationForm from './JobApplicationFrom';
 
 const ContactModal = ({ selectedType, onClose }) => {
   if (!selectedType) return null;
@@ -37,7 +37,7 @@ const ContactModal = ({ selectedType, onClose }) => {
         {/* Modal Content */}
         <div>
           {selectedType === "company" && <CompanyContactForm />}
-          {selectedType === "student" && <StudentContact />}
+          {selectedType === "student" && <JobApplicationForm />}
         </div>
       </div>
     </div>

@@ -1,8 +1,9 @@
 import React from 'react';
 import Navbar from '../components/navbar/Navbar';
 import Footer from '../components/shared/Footer';
+import BackgroundText from '../components/shared/BackgroundText';
 
-export default function PrivacyPage() {
+export default function PrivacyPolicy() {
   const sectionTitleStyle = "text-xl sm:text-2xl font-bold text-gray-900 mb-4 border-l-4 border-blue-600 pl-4";
   const bodyTextStyle = "text-gray-800 leading-loose"; 
 
@@ -10,11 +11,13 @@ export default function PrivacyPage() {
     <>
       <Navbar />
 
-      <div className="bg-white py-16 sm:py-24">
+      <div className="relative bg-white py-16 sm:py-24">
         <div className="max-w-4xl mx-auto px-6">
-          
+          {/* Background Text */}
+          <BackgroundText text="PRIVACY" top="top-0" />
+
           {/* --- Page Title --- */}
-          <div className="text-center mb-12">
+          <div className="relative z-10 text-center mb-12">
             <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
               プライバシーポリシー
             </h1>
@@ -24,7 +27,7 @@ export default function PrivacyPage() {
           </div>
 
           {/* --- Main Content Area --- */}
-          <div className="space-y-10">
+          <div className="relative z-10 space-y-10">
 
             {/* Introduction */}
             <p className={bodyTextStyle}>

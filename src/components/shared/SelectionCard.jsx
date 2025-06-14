@@ -4,7 +4,7 @@ const SelectionCard = ({ icon, title, description, onClick }) => {
   return (
     <button
       onClick={onClick}
-      className="group w-full max-w-md text-left bg-white rounded-2xl shadow-lg p-8 border border-gray-200 hover:border-blue-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+      className="group w-full max-w-md text-left bg-white-70 rounded-2xl shadow-lg p-8 border border-gray-200 hover:border-blue-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
     >
       <div className="flex items-center gap-6">
         <div className="bg-blue-100 p-4 rounded-full">

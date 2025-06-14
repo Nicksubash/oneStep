@@ -69,7 +69,7 @@ const Footer = () => {
         <div>
           <h4 className="text-indigo-400 font-semibold mb-4">クイックリンク</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="/" className="hover:text-white">Home</a></li>
+            <li><a href="/" className="hover:text-white">ホーム</a></li>
             <li><a href="/about" className="hover:text-white">会社案内</a></li>
             <li><a href="/services" className="hover:text-white">事業内容</a></li>
             <li><a href="/contact" className="hover:text-white">お問い合わせ</a></li>
@@ -80,10 +80,10 @@ const Footer = () => {
         <div>
           <h4 className="text-indigo-400 font-semibold mb-4">事業一覧</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="/services#recruitment" className="hover:text-white">Recruitment & Staffing</a></li>
-            <li><a href="/services#student" className="hover:text-white">Student Consulting</a></li>
-            <li><a href="/services#translation" className="hover:text-white">Translation & Documentation</a></li>
-            <li><a href="/services#import" className="hover:text-white">Import & Export</a></li>
+            <li><a href="/services#recruitment" className="hover:text-white">人材紹介と派遣サービス</a></li>
+            <li><a href="/students" className="hover:text-white">留学サポートプログラム</a></li>
+            <li><a href="/translation" className="hover:text-white">多言語ドキュメントサービス</a></li>
+            <li><a href="/import" className="hover:text-white">国際貿易ソリューション</a></li>
 
             {/* <li><a href="/services#english" className="hover:text-white">English Language Courses</a></li>
             <li><a href="/services#jlpt" className="hover:text-white">JLPT Preparation</a></li> */}
@@ -95,8 +95,7 @@ const Footer = () => {
           <h4 className="text-indigo-400 font-semibold mb-4">その他</h4>
           <ul className="space-y-2 text-sm mb-4">
             <li><a href="/privacy" className="hover:text-white">個人情報保護方針</a></li>
-            <li><a href="/info" className="hover:text-white">関連国の情報</a></li>
-            <li><a href="/privacy" className="hover:text-white">プライバシーポリシー</a></li>
+            <li><a href="/privacy_policy" className="hover:text-white">プライバシーポリシー</a></li>
           </ul>
           <div className="flex space-x-4">
             {socials.map((social) => {
