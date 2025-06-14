@@ -1,378 +1,112 @@
 import React, { useState } from "react";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/shared/Footer";
-import data from "../data/data.json";
+import SelectionCard from "../components/shared/SelectionCard";
+import ContactModal from "../components/shared/ContactModal";
+import { BuildingOffice2Icon, UserIcon } from '@heroicons/react/24/solid';
+import InfoTitle from "../components/shared/InfoTitle";
+import BackgroundText from "../components/shared/BackgroundText";
 
-const Contact = () => {
-  const { name, contact } = data;
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-    privacy: false,
-  });
-  const [showSuccess, setShowSuccess] = useState(false);
-
-  const handleInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Validation
-    if (
-      !formData.name.trim() ||
-      !formData.email.trim() ||
-      !formData.message.trim()
-    ) {
-      alert("Please fill in all required fields.");
-      return;
-    }
-
-    if (!formData.privacy) {
-      alert("Please agree to the privacy policy.");
-      return;
-    }
-
-    // Show success message
-    setShowSuccess(true);
-
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: "",
-      privacy: false,
-    });
-
-    // Hide success message after 5 seconds
-    setTimeout(() => {
-      setShowSuccess(false);
-    }, 5000);
-  };
+export default function Contact() {
+  const [selectedType, setSelectedType] = useState(null);
+  
+  const closeModal = () => setSelectedType(null);
 
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-indigo-50">
+    <div className="bg-gradient-to-b from-gray-50 to-blue-50 min-h-screen relative">
       <Navbar />
-      <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-indigo-600 py-8 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-white/95 backdrop-blur-lg rounded-3xl shadow-2xl overflow-hidden grid lg:grid-cols-2 min-h-[600px]">
-            {/* Contact Information Section */}
-            <div className="bg-gradient-to-br from-slate-800 to-blue-600 text-white p-8 lg:p-12 flex flex-col justify-center">
-              <div className="space-y-8">
-                <div className="flex items-center space-x-4 animate-fade-in-left">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-xl">
-                    📍
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-1">Our Office</h3>
-                    <p className="text-white/90 text-sm leading-relaxed">
-                      {contact.address}
-                    </p>
-                  </div>
-                </div>
+      <InfoTitle
+        backgroundImage="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=&h=600&fit=crop&crop=center"
+        title="お問い合わせ"
+        description="ご用件に応じて、お問い合わせ窓口をお選びください。"
+        highlightText="担当者が迅速に対応させていただきます。"
+      />
+      
+      {/* Selection Cards Section with Background Text */}
+      <div className="relative flex flex-col items-center justify-center py-20 px-4 text-center overflow-hidden">
+        {/* Background Text positioned behind the cards */}
+        <BackgroundText 
+          text="CONTACT US" 
+          top="top-1/4" 
+          className="-translate-y-1/2 text-gray-200/30 z-0" 
+        />
+        
+        <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-8">
+          <SelectionCard
+            onClick={() => setSelectedType("company")}
+            icon={<BuildingOffice2Icon className="h-10 w-10 text-blue-700"/>}
+            title="企業ご担当者様"
+            description="人材派遣・採用に関するご相談はこちら"
+          />
+          <SelectionCard
+            onClick={() => setSelectedType("student")}
+            icon={<UserIcon className="h-10 w-10 text-blue-700"/>}
+            title="お仕事をお探しの方"
+            description="お仕事の紹介・キャリア相談はこちら"
+          />
+        </div>
+      </div>
 
-                <div className="flex items-center space-x-4 animate-fade-in-left animation-delay-200">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-xl">
-                    📞
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-1">
-                      Phone Support
-                    </h3>
-                    <p className="text-white/90 text-sm">
-                      <a
-                        href={`tel:${contact.phone}`}
-                        className="hover:text-white transition-colors"
-                      >
-                        {contact.phone}
-                      </a>
-                      <br />
-                      <span className="text-xs">
-                        Mon-Fri: 9:00 AM - 6:00 PM
-                      </span>
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4 animate-fade-in-left animation-delay-400">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-xl">
-                    ✉️
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-1">Email Us</h3>
-                    <p className="text-white/90 text-sm">
-                      <a
-                        href={`mailto:${contact.email}`}
-                        className="hover:text-white transition-colors"
-                      >
-                        {contact.email}
-                      </a>
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4 animate-fade-in-left animation-delay-600">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-xl">
-                    🌐
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-1">Website</h3>
-                    <p className="text-white/90 text-sm">
-                      <a
-                        href={contact.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-white transition-colors"
-                      >
-                        {contact.website}
-                      </a>
-                      <br />
-                      <span className="text-xs">
-                        Digital Solutions & Web Development
-                      </span>
-                    </p>
-                  </div>
+      {/* Contact Information and Map Section */}
+      <div className="max-w-6xl mx-auto px-6 py-20 relative">
+        {/* Background Text for Access Section */}
+        <BackgroundText 
+          text="ACCESS" 
+          top="top-0" 
+          className="text-blue-100/30 z-0" 
+        />
+        
+        <section className="bg-white p-8 md:p-12 rounded-2xl shadow-lg relative z-10">
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">アクセス・お問い合わせ</h2>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-6">
+              <div className="bg-blue-50 p-6 rounded-xl">
+                <h3 className="text-xl font-bold text-blue-800 mb-4">お問い合わせ</h3>
+                <div className="space-y-3">
+                  <p className="flex items-center text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    <span className="text-lg">052-123-4567</span>
+                  </p>
+                  <p className="flex items-center text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <span className="text-lg">info@onestep.co.jp</span>
+                  </p>
                 </div>
               </div>
-            </div>
-
-            {/* Contact Form Section */}
-            <div className="p-8 lg:p-12">
-              <div className="animate-fade-in-right">
-                <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                  Get In Touch
-                </h1>
-                <p className="text-gray-600 mb-8 leading-relaxed">
-                  Thank you for your interest in {name}. After reviewing your
-                  inquiry, our team will contact you promptly. Please fill in
-                  all fields and agree to our privacy policy before submitting.
+              <div className="bg-blue-50 p-6 rounded-xl">
+                <h3 className="text-xl font-bold text-blue-800 mb-4">アクセス</h3>
+                <p className="text-gray-700">
+                  愛知県名古屋市南区観音町5-25 観音ビル3c<br />
+                  <span className="text-sm text-gray-500">※地下鉄桜通線「桜本町駅」から徒歩5分</span>
                 </p>
               </div>
-
-              {showSuccess && (
-                <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-xl mb-6 animate-fade-in">
-                  Thank you for your message! We'll get back to you soon.
-                </div>
-              )}
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="animate-fade-in-right animation-delay-100">
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
-                  >
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-indigo-100 focus:border-indigo-500 transition-all duration-300 bg-gray-50 focus:bg-white hover:-translate-y-1"
-                  />
-                </div>
-
-                <div className="animate-fade-in-right animation-delay-200">
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
-                  >
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-indigo-100 focus:border-indigo-500 transition-all duration-300 bg-gray-50 focus:bg-white hover:-translate-y-1"
-                  />
-                </div>
-
-                <div className="animate-fade-in-right animation-delay-300">
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
-                  >
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-indigo-100 focus:border-indigo-500 transition-all duration-300 bg-gray-50 focus:bg-white hover:-translate-y-1"
-                  />
-                </div>
-
-                <div className="animate-fade-in-right animation-delay-400">
-                  <label
-                    htmlFor="subject"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
-                  >
-                    Inquiry Type
-                  </label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-indigo-100 focus:border-indigo-500 transition-all duration-300 bg-gray-50 focus:bg-white hover:-translate-y-1"
-                  >
-                    <option value="">Please select...</option>
-                    <option value="website">Website Development</option>
-                    <option value="consultation">General Consultation</option>
-                    <option value="support">Technical Support</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-
-                <div className="animate-fade-in-right animation-delay-500">
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
-                  >
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    rows={5}
-                    placeholder="Please describe your inquiry in detail..."
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-indigo-100 focus:border-indigo-500 transition-all duration-300 bg-gray-50 focus:bg-white hover:-translate-y-1 resize-vertical"
-                  />
-                </div>
-
-                <div className="flex items-start space-x-3 animate-fade-in-right animation-delay-600">
-                  <input
-                    type="checkbox"
-                    id="privacy"
-                    name="privacy"
-                    checked={formData.privacy}
-                    onChange={handleInputChange}
-                    required
-                    className="mt-1 w-5 h-5 text-indigo-600 border-2 border-gray-300 rounded focus:ring-indigo-500 focus:ring-2"
-                  />
-                  <label
-                    htmlFor="privacy"
-                    className="text-sm text-gray-600 leading-relaxed"
-                  >
-                    I agree to the{" "}
-                    <a
-                      href="privacy"
-                      className="text-indigo-600 font-semibold hover:underline"
-                    >
-                      Privacy Policy
-                    </a>{" "}
-                    and consent to the handling of my personal information.
-                  </label>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-4 px-8 rounded-full font-semibold text-lg hover:from-indigo-700 hover:to-purple-700 transform hover:-translate-y-1 hover:shadow-xl transition-all duration-300 focus:ring-4 focus:ring-indigo-100 relative overflow-hidden group animate-fade-in-right animation-delay-700"
-                >
-                  <span className="relative z-10">Send Message</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                </button>
-              </form>
+            </div>
+            <div className="h-[400px] rounded-xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.1234567890123!2d136.12345678901234!3d35.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDA3JzI0LjQiTiAxMzbCsDA3JzI0LjQiRQ!5e0!3m2!1sja!2sjp!4v1234567890123!5m2!1sja!2sjp"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
-        </div>
-
-        <style>{`
-          @keyframes fade-in-left {
-            from {
-              opacity: 0;
-              transform: translateX(-30px);
-            }
-            to {
-              opacity: 1;
-              transform: translateX(0);
-            }
-          }
-
-          @keyframes fade-in-right {
-            from {
-              opacity: 0;
-              transform: translateX(30px);
-            }
-            to {
-              opacity: 1;
-              transform: translateX(0);
-            }
-          }
-
-          @keyframes fade-in {
-            from {
-              opacity: 0;
-            }
-            to {
-              opacity: 1;
-            }
-          }
-
-          .animate-fade-in-left {
-            animation: fade-in-left 0.6s ease forwards;
-          }
-
-          .animate-fade-in-right {
-            animation: fade-in-right 0.6s ease forwards;
-          }
-
-          .animate-fade-in {
-            animation: fade-in 0.3s ease forwards;
-          }
-
-          .animation-delay-100 {
-            animation-delay: 0.1s;
-          }
-
-          .animation-delay-200 {
-            animation-delay: 0.2s;
-          }
-
-          .animation-delay-300 {
-            animation-delay: 0.3s;
-          }
-
-          .animation-delay-400 {
-            animation-delay: 0.4s;
-          }
-
-          .animation-delay-500 {
-            animation-delay: 0.5s;
-          }
-
-          .animation-delay-600 {
-            animation-delay: 0.6s;
-          }
-
-          .animation-delay-700 {
-            animation-delay: 0.7s;
-          }
-        `}</style>
+        </section>
       </div>
+
+      {/* Modal Component */}
+      <ContactModal 
+        selectedType={selectedType} 
+        onClose={closeModal} 
+      />
+      
       <Footer />
     </div>
   );
-};
-
-export default Contact;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import LogoImage from '../../image/logo.jpg';
 
 const Logo = () => {
   return (
@@ -7,17 +8,19 @@ const Logo = () => {
         {/* Logo Image */}
         <div className="relative">
           <div className="w-12 h-12 rounded-xl overflow-hidden shadow-lg border border-gray-200 transform transition-transform duration-300 group-hover:scale-105 group-hover:rotate-1">
-            <div className="w-full h-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg">
-              OS
-            </div>
+            <img
+              src={LogoImage}
+              alt="OneStep Logo"
+              className="w-full h-full object-cover"
+            />
           </div>
-          {/* effect */}
+          {/* subtle hover glow effect */}
           <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-blue-500 opacity-0 group-hover:opacity-20 blur-md transition-all duration-300"></div>
         </div>
 
         {/* Logo Text */}
         <div className="leading-tight">
-          <h1 className="text-xl sm:text-2xl font-extrabold bg-gradient-to-r from-gray-900 via-indigo-800 to-purple-800 bg-clip-text text-transparent tracking-wide">
+          <h1 className="text-xl sm:text-2xl font-extrabold text-gray-900 tracking-wide">
             株式会社 OneStep
           </h1>
           <p className="text-xs sm:text-sm text-gray-500 mt-0.5 tracking-wide">

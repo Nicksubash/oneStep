@@ -152,7 +152,7 @@ export default function Student() {
                 </div>
                 <div className="space-y-6 relative">
                   <h2 className="text-4xl font-bold text-gray-900 relative brush-stroke">
-                    日本での就職、<span className="text-red-600">一人で悩んでいませんか？</span>
+                    日本での就職、<span className="text-brand-primary">一人で悩んでいませんか？</span>
                   </h2>
                   <div className="space-y-4 text-gray-700 text-lg">
                     <p className="flex items-start space-x-3">
