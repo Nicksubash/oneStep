@@ -2,6 +2,7 @@ import React from "react";
 
 export default function CompanyCTA({
   showTag = true,
+  tagText = "企業様向け / For Companies",
   title = "まずはお気軽にご相談ください",
   description = "貴社の事業成長を加速させる最適な人材ソリューションをご提案いたします。人材に関するお悩みは、One Stepにお任せください。",
   buttonText = "ご相談・お問い合わせはこちら →",
@@ -56,7 +57,7 @@ export default function CompanyCTA({
         {showTag && (
           <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-gradient-to-r from-red-500 to-red-600 text-white text-sm font-bold px-6 py-2 rounded-full shadow-lg border-2 border-red-400 transform rotate-1">
             <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-red-400 rounded-full"></div>
-            企業様向け / For Companies
+            {tagText}
           </div>
         )}
 

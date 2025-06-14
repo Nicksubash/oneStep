@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ContactButton = ({ href = "/contact", children = "お問い合わせ" }) => {
+const ContactButton = ({ href = "/recruitment", children = "採用情報" }) => {
   return (
     <a
       href={href}

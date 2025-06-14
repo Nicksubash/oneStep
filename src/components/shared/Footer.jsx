@@ -14,6 +14,15 @@ const Footer = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Mapping for Font Awesome icons 
+  const iconMap = {
+    facebook: 'fab fa-facebook-f',
+    twitter: 'fab fa-x-twitter',
+    instagram: 'fab fa-instagram',
+    linkedin: 'fab fa-linkedin-in',
+    blog: 'fas fa-rss',
+  };
+
   return (
     <motion.footer
       className="text-gray-300 bg-gray-900 py-10 px-4 md:px-12 transition-all duration-300"
@@ -25,7 +34,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Company Info */}
         <div>
-          <h3 className="text-white text-lg font-semibold mb-4">{name}</h3>
+        <h3 className="text-lg font-semibold mb-4 bg-gradient-to-r from-indigo-500 to-blue-500 text-transparent bg-clip-text">{name}</h3>
           <ul className="text-sm space-y-1">
             <li>
               <span className="font-medium text-gray-400">Address:</span> {contact.address}
@@ -58,7 +67,7 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h4 className="text-white font-semibold mb-4">クイックリンク</h4>
+          <h4 className="text-indigo-400 font-semibold mb-4">クイックリンク</h4>
           <ul className="space-y-2 text-sm">
             <li><a href="/" className="hover:text-white">Home</a></li>
             <li><a href="/about" className="hover:text-white">会社案内</a></li>
@@ -69,40 +78,41 @@ const Footer = () => {
 
         {/* Services */}
         <div>
-          <h4 className="text-white font-semibold mb-4">事業一覧</h4>
+          <h4 className="text-indigo-400 font-semibold mb-4">事業一覧</h4>
           <ul className="space-y-2 text-sm">
             <li><a href="/services#recruitment" className="hover:text-white">Recruitment & Staffing</a></li>
-            <li><a href="/services#english" className="hover:text-white">English Language Courses</a></li>
-            <li><a href="/services#import" className="hover:text-white">Import & Export</a></li>
-            <li><a href="/services#translation" className="hover:text-white">Translation & Documentation</a></li>
             <li><a href="/services#student" className="hover:text-white">Student Consulting</a></li>
-            <li><a href="/services#jlpt" className="hover:text-white">JLPT Preparation</a></li>
+            <li><a href="/services#translation" className="hover:text-white">Translation & Documentation</a></li>
+            <li><a href="/services#import" className="hover:text-white">Import & Export</a></li>
+
+            {/* <li><a href="/services#english" className="hover:text-white">English Language Courses</a></li>
+            <li><a href="/services#jlpt" className="hover:text-white">JLPT Preparation</a></li> */}
           </ul>
         </div>
 
         {/* Legal & Social */}
         <div>
-          <h4 className="text-white font-semibold mb-4">その他</h4>
+          <h4 className="text-indigo-400 font-semibold mb-4">その他</h4>
           <ul className="space-y-2 text-sm mb-4">
             <li><a href="/privacy" className="hover:text-white">個人情報保護方針</a></li>
             <li><a href="/info" className="hover:text-white">関連国の情報</a></li>
+            <li><a href="/privacy" className="hover:text-white">プライバシーポリシー</a></li>
           </ul>
           <div className="flex space-x-4">
-            {socials.map((social) => (
-              <a
-                key={social.id}
-                href={social.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xl hover:text-cyan-500 transition-colors duration-300 text-cyan-400"
-              >
-                {social.title === 'Blog' ? (
-                  <i className="fas fa-rss"></i>
-                ) : (
-                  <i className={`fab fa-${social.title.toLowerCase()}`}></i>
-                )}
-              </a>
-            ))}
+            {socials.map((social) => {
+              const iconClass = iconMap[social.title.toLowerCase()] || 'fas fa-globe';
+              return (
+                <a
+                  key={social.id}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xl hover:text-blue-500 transition-colors duration-300 text-indigo-400"
+                >
+                  <i className={iconClass}></i>
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>

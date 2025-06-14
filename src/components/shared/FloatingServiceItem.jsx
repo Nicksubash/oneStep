@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const FloatingServiceItem = ({
   service,
   position,
@@ -8,7 +10,8 @@ const FloatingServiceItem = ({
   if (!position) return null;
 
   return (
-    <div
+    <Link
+      to={service.href || "#"}
       className={`absolute transition-all duration-500 ease-out cursor-pointer group ${isHovered ? 'z-50' : 'z-10'}`}
       style={{
         left: `${position.x}%`,
@@ -35,7 +38,7 @@ const FloatingServiceItem = ({
         </div>
 
         <div className="relative z-10 h-full">
-          {/* Icon - only visible when NOT hovered */}
+          {/* Icon */}
           <div className={`
             flex items-center justify-center text-2xl w-full h-full
             transition-all duration-500
@@ -44,7 +47,7 @@ const FloatingServiceItem = ({
             {service.icon}
           </div>
 
-          {/* Content - centered when hovered */}
+          {/* Content */}
           <div className={`
             absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4
             transition-all duration-500
@@ -66,7 +69,7 @@ const FloatingServiceItem = ({
           </>
         )}
       </div>
-    </div>
+    </Link>
   );
 };
 
