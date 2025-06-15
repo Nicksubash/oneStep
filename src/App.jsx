@@ -10,7 +10,8 @@ import Teams from './pages/Teams';
 import Student from './pages/Student';
 import CompanyContact from './pages/CompanyContact';
 import TranslationService from './pages/TranslationService';
-import PrivacyPage from './pages/PrivacyPage';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import Privacy from './pages/Privacy';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import FAQPage from './pages/FAQPage';
 import RecruitmentPage from './pages/RecruitmentPage';
@@ -101,10 +102,18 @@ export default function App() {
                     }
                 />
                 <Route
+                    path="/privacy_policy"
+                    element={
+                        <PageTransition>
+                            <PrivacyPolicy />
+                        </PageTransition>
+                    }
+                />
+                 <Route
                     path="/privacy"
                     element={
                         <PageTransition>
-                            <PrivacyPage />
+                            <Privacy />
                         </PageTransition>
                     }
                 />

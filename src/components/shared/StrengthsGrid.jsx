@@ -6,7 +6,7 @@ const StrengthsGrid = ({ title = "One Stepの強み", strengths = [] }) => {
 
   return (
     <AnimatedSection>
-      <section className="bg-indigo-50 rounded-xl p-12">
+      <section className="bg-brand-light rounded-xl p-12">
         <AnimatedSection delay={200}>
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">{title}</h2>
         </AnimatedSection>
