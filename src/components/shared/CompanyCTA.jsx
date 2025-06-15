@@ -72,11 +72,11 @@ export default function CompanyCTA({
             ))}
           </p>
           <div className="text-center">
-            <a
-              href={buttonLink}
-              className="inline-block bg-brand-primary hover:bg-brand-navy text-white font-semibold text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              {buttonText}
+            <a href={buttonLink}
+            className="relative inline-block text-white font-semibold text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg overflow-hidden group">
+              <span className="relative z-10">{buttonText}</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-brand-primary to-brand-navy z-0"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-brand-navy to-brand-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
             </a>
           </div>
         </div>

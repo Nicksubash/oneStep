@@ -1,6 +1,6 @@
 import React from 'react';
 import LanguageSwitcher from '../LanguageSwitcher';
-import ContactButton from '../ContactButton';
+import Button from '../../shared/Button';
 
 const MobileMenu = ({ isOpen, navLinks, activeLink, onLinkClick, onClose }) => {
   if (!isOpen) return null;
@@ -74,9 +74,9 @@ const MobileMenu = ({ isOpen, navLinks, activeLink, onLinkClick, onClose }) => {
                 </button>
               </div>
             </div>
-            <ContactButton href="/contact" onClick={onClose}>
+            <Button href="/contact" onClick={onClose}>
               お問い合わせ
-            </ContactButton>
+            </Button>
           </div>
         </div>
       </div>

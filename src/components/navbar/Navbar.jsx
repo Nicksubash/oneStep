@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import Logo from './Logo';
 import LanguageSwitcher from './LanguageSwitcher';
 import SearchButton from './SearchButton';
-import ContactButton from './ContactButton';
 import MobileMenuButton from './MobileMenuButton';
 import DesktopNavigation from './Navigation/DesktopNavigation';
 import MobileMenu from './Navigation/MobileMenu';
+import Button from "../shared/Button";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -202,7 +202,7 @@ const Navbar = () => {
               <div className="hidden md:flex items-center space-x-6">
                 <LanguageSwitcher />
                 <SearchButton />
-                <ContactButton />
+                <Button />
               </div>
 
               <MobileMenuButton 
