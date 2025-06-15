@@ -10,6 +10,7 @@ export default {
         brand: {
           primary: "#8b2555", // Maroon - main accent (e.g., buttons, headings)
           navy: "#1f1f54",    // Deep blue - strong backgrounds, footer
+          navyBright:"#1E40AF",
           light: "#f5f5f5",   // Light neutral background
         },
         "my-theme": "#8b99b3",

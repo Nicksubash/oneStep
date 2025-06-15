@@ -4,6 +4,7 @@ import Footer from '../components/shared/Footer';
 import InfoTitle from '../components/shared/InfoTitle';
 import TeamGrid from '../components/TeamMembers/TeamGrid';
 import RishiImage from '../image/rishi.png';
+import Member2 from '../image/sailendra.png';
 
 const Teams = () => {
   const teamMembers = [
@@ -20,24 +21,15 @@ const Teams = () => {
     },
     {
       id: 2,
-      image: RishiImage,
+      image: Member2,
       nameJp: "サイレンドラ・ラナバト",
-      nameEn: "Sailendra Ranabhat", 
-      titleJp: "人事戦略ディレクター",
-      aboutJp: `東京大学経済学部卒業後、大手人材会社にて10年間、国際人材の採用支援に従事してきました。特にアジア圏からの優秀な人材の日本企業への定着支援において豊富な経験を持ちます。
-      人事戦略ディレクターとして、企業の組織文化と海外人材のマッチングを重視し、単なる配置ではなく、長期的なキャリア形成を見据えたサポートを提供しています。
-      異文化コミュニケーションの専門知識を活かし、企業と人材の架け橋となることを使命としています。`
-    },
-    {
-      id: 3,
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-      nameJp: "佐藤 健太郎",
-      nameEn: "Kentaro Sato",
-      titleJp: "テクニカルリクルートメント・マネージャー", 
-      aboutJp: `慶應義塾大学理工学部情報工学科卒業。外資系IT企業でソフトウェアエンジニアとして5年間の実務経験を積んだ後、人材業界に転身しました。
-      技術職出身の強みを活かし、エンジニア採用の専門家として活動しています。
-      AI、データサイエンス、クラウドコンピューティングなど、最新技術分野における人材ニーズを的確に把握し、技術職の採用において高い成功率を誇ります。
-      技術者の視点から、スキルマッチングの精度向上に取り組んでいます。`
+      nameEn: "Sailendra Ranabhat",
+      titleJp: "取締役 / Director", 
+      aboutJp: `14年前に来日し、日本語学校・専門学校を経て、愛知文教大学を卒業しました。その後、企業に就職し、日本の社会や文化に深く触れる中で、日本への愛着が強まり、ついには日本国籍を取得しました。
+      2023年からは自身のビジネスを開始し、企業での就労や起業の経験を通じて、「人材不足」や「外国人の就職の難しさ」といった課題を肌で感じました。
+      そうした課題に対して、自分が“橋渡し”の存在になれたら――という想いから、「One Step株式会社」の設立に至りました。
+
+      日本語・ネパール語・英語・ヒンディー語の4か国語を操り、多様な人材と企業をつなぐグローバルなサポートを提供します。`
     }
   ];
 
