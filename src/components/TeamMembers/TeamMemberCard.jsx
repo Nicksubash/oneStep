@@ -25,7 +25,7 @@ export default function TeamMemberCard({ image, nameJp, nameEn, titleJp, aboutJp
         <div className="flex-1 min-w-0">
           {/* Name */}
           <h2
-            className={`text-3xl md:text-5xl font-bold text-blue-600 mb-2 ${
+            className={`text-3xl md:text-5xl font-bold text-brand-primary mb-2 ${
               isEven ? 'text-left' : 'text-left md:text-right'
             }`}
           >
@@ -34,7 +34,7 @@ export default function TeamMemberCard({ image, nameJp, nameEn, titleJp, aboutJp
 
           {/* English Name */}
           <p
-            className={`text-lg md:text-xl text-blue-400 mb-4 font-light ${
+            className={`text-lg md:text-xl text-brand-navyBright mb-4 font-light ${
               isEven ? 'text-left' : 'text-left md:text-right'
             }`}
           >
@@ -43,7 +43,7 @@ export default function TeamMemberCard({ image, nameJp, nameEn, titleJp, aboutJp
 
           {/* Title */}
           <h3
-            className={`text-base md:text-lg text-gray-700 mb-8 font-medium ${
+            className={`text-base md:text-lg text-brand-navy mb-8 font-medium ${
               isEven ? 'text-left' : 'text-left md:text-right'
             }`}
           >
