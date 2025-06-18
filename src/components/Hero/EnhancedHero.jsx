@@ -1,47 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FaShoePrints } from "react-icons/fa";
 import WalkingFootsteps from './WalkingFootsteps';
+import AnimatedText from '../shared/AnimatedText'; 
 
-const AnimatedText = ({ text, className = "", delay = 0, scrollScale = false }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, delay);
-    return () => clearTimeout(timer);
-  }, [delay]);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scaleValue = scrollScale ? Math.max(1, 1 + scrollY * 0.002) : 1;
-  const opacity = Math.max(0.3, 1 - scrollY * 0.003);
-
-  return (
-    <span
-      className={`inline-block transition-all duration-1000 ease-out ${
-        isVisible
-          ? 'opacity-100 translate-y-0'
-          : 'opacity-0 translate-y-8'
-      } ${className}`}
-      style={{
-        transform: scrollScale 
-          ? `translateY(${isVisible ? 0 : 32}px) scale(${scaleValue})`
-          : `translateY(${isVisible ? 0 : 32}px)`,
-        opacity: isVisible ? opacity : 0
-      }}
-    >
-      {text}
-    </span>
-  );
-};
-
-// Parallax Background Component
 const ParallaxBackground = () => {
   const [scrollY, setScrollY] = useState(0);
 
@@ -122,15 +83,15 @@ const EnhancedHero = () => {
               }}
             >
               <AnimatedText
-                text="ようこそ、ワンステップ株式会社へ。私たちは、日本における国際人材の有料職業紹介、語学教育、そして異文化サポートを提供する信頼できるパートナーです。世界中の優秀な人材と日本の企業をつなぎ、グローバルなキャリアの成功を全力でサポートします。"
+                text="ようこそ、OneStep株式会社へ。私たちは、日本における国際人材の有料職業紹介、語学教育、そして異文化サポートを提供する信頼できるパートナーです。世界中の優秀な人材と日本の企業をつなぎ、グローバルなキャリアの成功を全力でサポートします。"
                 className="text-base md:text-lg text-gray-600 leading-relaxed mb-8 block"
                 delay={1200}
               />
             </div>
 
-            {/* CTA Buttons with hover animations */}
+            {/* CTA Buttons */}
             <div 
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+              className="flex flex-col sm:flex-row gap-4 justify-center mt-12"
               style={{ 
                 opacity: 0, 
                 animation: 'fadeInUp 1s ease-out 1.5s forwards',
@@ -147,28 +108,12 @@ const EnhancedHero = () => {
               </button>
             </div>
 
-            {/* About Us Section with scroll effects */}
-            <div 
-              style={{
-                opacity: Math.max(0.3, 1 - scrollY * 0.003),
-                transform: `translateY(${scrollY * 0.15}px)`
-              }}
-            >
-              <AnimatedText
-                text="📘 One Step株式会社とは？"
-                className="text-xl font-semibold text-gray-700 mb-2 block"
-                delay={1600}
-              />
-              <AnimatedText
-                text="私たちは、日本で働きたい外国人と、信頼できる企業をつなぐ「人の架け橋」です。ただのマッチングではなく、「文化」「目標」「未来」までも支えることが、私たちのミッションです。"
-                className="text-base text-gray-600 leading-relaxed block"
-                delay={1800}
-              />
-            </div>
+            {/* About Us Section */}
+            
           </div>
         </div>
 
-        {/* Enhanced Scroll Indicator */}
+        {/* Scroll Indicator */}
         <div 
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10"
           style={{

@@ -32,7 +32,7 @@ const DesktopNavigation = ({
                 onClick={() => onLinkClick(link.name)}
                 className={`relative px-6 py-4 text-xl font-medium transition-all duration-300 flex items-center ${
                   activeLink === link.name
-                    ? "text-white bg-gradient-to-r from-indigo-600 to-purple-600 shadow-lg"
+                    ? "text-white bg-gradient-to-r from-brand-primary to-brand-navy shadow-lg"
                     : "text-gray-300 hover:text-white hover:bg-slate-700"
                 }`}
                 style={{

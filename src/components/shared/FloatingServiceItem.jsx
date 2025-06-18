@@ -23,12 +23,12 @@ const FloatingServiceItem = ({
     >
       <div className={`
         relative transition-all duration-500 ease-out
-        ${isHovered ? 'w-80 h-48 p-6' : 'w-16 h-16 p-0'}
+        ${isHovered ? 'w-80 h-48 p-6' : 'w-20 h-20 p-0'}
       `}>
         <div className={`
           absolute inset-0 bg-gradient-to-br ${service.gradient}
           ${isHovered ? 'rounded-2xl opacity-90' : 'rounded-full opacity-80'}
-          transition-all duration-500 shadow-2xl
+          transition-all duration-500 shadow-2xl border-2 border-white/30
         `}>
           <div className={`
             absolute inset-0 bg-gradient-to-br ${service.gradient}
@@ -38,13 +38,13 @@ const FloatingServiceItem = ({
         </div>
 
         <div className="relative z-10 h-full">
-          {/* Icon */}
+          {/* Text in circle */}
           <div className={`
-            flex items-center justify-center text-2xl w-full h-full
+            flex items-center justify-center text-white font-medium w-full h-full
             transition-all duration-500
             ${isHovered ? 'opacity-0 scale-0' : 'opacity-100 scale-100'}
           `}>
-            {service.icon}
+            <span className="text-xs font-bold text-center leading-tight px-1">{service.title}</span>
           </div>
 
           {/* Content */}

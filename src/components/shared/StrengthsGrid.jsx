@@ -8,7 +8,7 @@ const StrengthsGrid = ({ title = "One Stepの強み", strengths = [] }) => {
     <AnimatedSection>
       <section className="bg-brand-light rounded-xl p-12">
         <AnimatedSection delay={200}>
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">{title}</h2>
+          <h2 className="text-3xl font-bold text-center text-red-900 mb-12">{title}</h2>
         </AnimatedSection>
 
         <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-${Math.min(visibleStrengths.length, 4)} gap-8`}>
