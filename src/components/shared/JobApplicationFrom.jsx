@@ -213,7 +213,7 @@ export default function JobApplicationForm() {
       <div className="text-center mt-6">
         <button
           type="submit"
-          className="zen-border bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-10 py-4 rounded-full text-lg font-bold hover:from-indigo-700 hover:to-purple-800 transition-all transform hover:scale-105 japanese-shadow"
+          className="zen-border bg-gradient-to-r from-brand-primary to-brand-navyBright text-white px-10 py-4 rounded-full text-lg font-bold hover:from-brand-navyBright hover:to-brand-primary transition-all transform hover:scale-105 japanese-shadow"
         >
           📨 相談を申し込む / 送信する
         </button>

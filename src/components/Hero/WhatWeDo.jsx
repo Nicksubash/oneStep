@@ -1,30 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { services } from './ServiceData';
 import { useFloatingPositions } from '../CustomHooks/useFloatingPositions';
 import FloatingServiceItem from '../shared/FloatingServiceItem';
 import BackgroundEffects from '../shared/BackgroundEffect';
+import AnimatedText from '../shared/AnimatedText';
 
 const WhatWeDo = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const positions = useFloatingPositions(services.length);
 
+  // Add scroll tracking for scroll-based effects
+  const [scrollY, setScrollY] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 px-4 min-h-screen overflow-hidden relative">
+    <section className="bg-gradient-to-br from-brand-primary via-slate-800 to-slate-900 py-20 px-4 min-h-screen overflow-hidden relative">
       <BackgroundEffects />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent mb-4">
-          事業内容 <br />
-            <span className='text-4xl '>What We Do</span>
+        {/* Title Only */}
+        <div className="text-center mb-4">
+          <h2 className="text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent mb-2">
+            事業内容
           </h2>
-          
-          {/* <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-            We Provide Multiple Services to Our Customers
-          </p> */}
         </div>
 
-        <div className="relative h-[600px] bg-black/20 backdrop-blur-sm rounded-3xl border border-white/10 shadow-2xl overflow-hidden">
+        {/* AnimatedText Below h2, separate from heading */}
+        <div className="mb-12 max-w-4xl mx-auto px-4 text-center ">
+          <AnimatedText
+    text="📘 One Step株式会社とは？"
+    className="text-white text-xl font-semibold mb-2 block"
+    delay={1600}
+  />
+  <AnimatedText
+    text="私たちは、日本で働きたい外国人と、信頼できる企業をつなぐ「人の架け橋」です。ただのマッチングではなく、「文化」「目標」「未来」までも支えることが、私たちのミッションです。"
+    className="text-white text-base leading-relaxed block"
+    delay={1800}
+  />
+</div>
+
+
+
+        {/* Floating Services Box */}
+        <div className="relative h-[600px] bg-brand-navy backdrop-blur-sm rounded-3xl border border-white/10 shadow-2xl overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-transparent to-purple-500/10 rounded-3xl" />
 
           {services.map((service, index) => (

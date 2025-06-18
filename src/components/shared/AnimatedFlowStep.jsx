@@ -12,7 +12,7 @@ const AnimatedFlowStep = ({
 }) => {
   const colorClasses = {
     indigo: {
-      gradient: 'from-indigo-600 to-purple-600',
+      gradient: 'from-brand-primary to-brand-navy',
       ring: 'ring-indigo-300',
       text: 'text-indigo-600',
       dot: 'bg-indigo-600'

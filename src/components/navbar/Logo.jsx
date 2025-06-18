@@ -21,7 +21,7 @@ const Logo = () => {
         {/* Logo Text */}
         <div className="leading-tight">
           <h1 className="text-xl sm:text-2xl font-extrabold text-gray-900 tracking-wide">
-            株式会社 OneStep
+          OneStep株式会社
           </h1>
           <p className="text-xs sm:text-sm text-gray-500 mt-0.5 tracking-wide">
             Innovation & Excellence

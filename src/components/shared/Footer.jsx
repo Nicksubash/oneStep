@@ -20,7 +20,6 @@ const Footer = () => {
     twitter: 'fab fa-x-twitter',
     instagram: 'fab fa-instagram',
     linkedin: 'fab fa-linkedin-in',
-    blog: 'fas fa-rss',
   };
 
   return (
@@ -34,7 +33,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Company Info */}
         <div>
-        <h3 className="text-lg font-semibold mb-4 bg-gradient-to-r from-indigo-500 to-blue-500 text-transparent bg-clip-text">{name}</h3>
+        <h3 className="text-lg font-semibold mb-4 bg-gradient-to-r from-brand-primary to-brand-navyBright text-transparent bg-clip-text">{name}</h3>
           <ul className="text-sm space-y-1">
             <li>
               <span className="font-medium text-gray-400">Address:</span> {contact.address}
@@ -67,7 +66,7 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h4 className="text-indigo-400 font-semibold mb-4">クイックリンク</h4>
+          <h4 className="text-lg font-semibold mb-4 bg-gradient-to-r from-brand-primary to-brand-navyBright text-transparent bg-clip-text">クイックリンク</h4>
           <ul className="space-y-2 text-sm">
             <li><a href="/" className="hover:text-white">ホーム</a></li>
             <li><a href="/about" className="hover:text-white">会社案内</a></li>
@@ -78,7 +77,7 @@ const Footer = () => {
 
         {/* Services */}
         <div>
-          <h4 className="text-indigo-400 font-semibold mb-4">事業一覧</h4>
+          <h4 className="text-lg font-semibold mb-4 bg-gradient-to-r from-brand-primary to-brand-navyBright text-transparent bg-clip-text">事業一覧</h4>
           <ul className="space-y-2 text-sm">
             <li><a href="/services#recruitment" className="hover:text-white">人材紹介と派遣サービス</a></li>
             <li><a href="/students" className="hover:text-white">留学サポートプログラム</a></li>
@@ -92,27 +91,30 @@ const Footer = () => {
 
         {/* Legal & Social */}
         <div>
-          <h4 className="text-indigo-400 font-semibold mb-4">その他</h4>
+          <h4 className="text-lg font-semibold mb-4 bg-gradient-to-r from-brand-primary to-brand-navyBright text-transparent bg-clip-text">その他</h4>
           <ul className="space-y-2 text-sm mb-4">
             <li><a href="/privacy" className="hover:text-white">個人情報保護方針</a></li>
             <li><a href="/privacy_policy" className="hover:text-white">プライバシーポリシー</a></li>
           </ul>
           <div className="flex space-x-4">
-            {socials.map((social) => {
-              const iconClass = iconMap[social.title.toLowerCase()] || 'fas fa-globe';
-              return (
-                <a
-                  key={social.id}
-                  href={social.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xl hover:text-blue-500 transition-colors duration-300 text-indigo-400"
-                >
-                  <i className={iconClass}></i>
-                </a>
-              );
-            })}
-          </div>
+  {socials.slice(0, 4).map((social) => {
+    const iconClass = iconMap[social.title.toLowerCase()];
+    return (
+      <a
+        key={social.id}
+        href={social.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative"
+      >
+        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-brand-primary to-brand-navyBright flex items-center justify-center transition-all duration-300 group-hover:from-brand-navyBright group-hover:to-brand-primary transform group-hover:scale-105 shadow-lg">
+          <i className={`${iconClass} text-white text-lg`}></i>
+        </div>
+      </a>
+    );
+  })}
+</div>
+
         </div>
       </div>
 
