@@ -15,6 +15,7 @@ import Privacy from './pages/Privacy';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import FAQPage from './pages/FAQPage';
 import RecruitmentPage from './pages/RecruitmentPage';
+import News from './pages/News';
 
 
 export default function App() {
@@ -130,6 +131,14 @@ export default function App() {
                     element={
                         <PageTransition>
                             <RecruitmentPage />
+                        </PageTransition>
+                    }
+                />
+                <Route
+                    path="/news"
+                    element={
+                        <PageTransition>
+                            <News />
                         </PageTransition>
                     }
                 />

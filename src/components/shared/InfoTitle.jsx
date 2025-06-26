@@ -4,11 +4,11 @@ const InfoTitle = ({ backgroundImage, title, description, highlightText }) => {
   return (
     <section
       className="relative bg-cover bg-center bg-no-repeat py-16 px-4 text-center text-white"
-      style={{ minHeight: '200px' }} 
+      style={{ minHeight: '300px' }} 
     >
       {/* Blurred Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center filter blur-sm"
+        className="absolute inset-0 bg-cover bg-center filter "
         style={{ backgroundImage: `url('${backgroundImage}')`, zIndex: 0 }}
       ></div>
 

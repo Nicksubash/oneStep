@@ -7,67 +7,65 @@ import CompanyCTA from '../components/shared/CompanyCTA';
 import AnimatedSection from '../components/shared/AnimatedSection';
 import AnimatedFlowSection from '../components/shared/AnimatedFlowSection';
 import StrengthsGrid from '../components/shared/StrengthsGrid';
-import {CheckCircleIcon,UserGroupIcon,GlobeAltIcon,PuzzlePieceIcon} from '@heroicons/react/24/solid';
+import { CheckCircleIcon, UserGroupIcon, GlobeAltIcon, PuzzlePieceIcon } from '@heroicons/react/24/solid';
 
 export default function Service() {
   const strengths = [
     {
-      icon: <UserGroupIcon className="h-12 w-12 text-indigo-500" />,
+      icon: <UserGroupIcon className="h-12 w-12 text-white" />,
       title: '多様な人材ネットワーク',
-      description: '国籍を問わない豊富な人材ネットワークを活かし、貴社のニーズに最適な人材を迅速にご提案します。'
+      description: '国籍を問わない豊富な人材ネットワークを活かし、貴社のニーズに最適な人材をご紹介します。'
     },
     {
-      icon: <GlobeAltIcon className="h-12 w-12 text-indigo-500" />,
+      icon: <GlobeAltIcon className="h-12 w-12 text-white" />,
       title: 'グローバル基準のサポート',
       description: '日本文化やビジネスマナーに精通した外国人スタッフが多数在籍。異文化コミュニケーションも円滑です。'
     },
     {
-      icon: <PuzzlePieceIcon className="h-12 w-12 text-indigo-500" />,
+      icon: <PuzzlePieceIcon className="h-12 w-12 text-white" />,
       title: '柔軟なソリューション',
-      description: '短期派遣から紹介予定派遣、専門職の確保まで、採用課題に合わせた柔軟なプランをご提供します。'
+      description: '正社員、契約社員、専門職のご紹介まで、採用課題に合わせた柔軟なプランをご提供します。'
     }
   ];
 
   const jobTypes = ['製造業・物流業', '事務・CS', 'IT・エンジニア', '販売・接客', '通訳・翻訳', '介護・医療'];
 
-  // Flow data
   const flowSteps = ["お問い合わせ", "ヒアリング・ご提案", "ご契約・人選", "就業開始"];
   const flowDescriptions = [
     "Webフォームまたはお電話にて、お気軽にご相談ください。",
-    "担当者が業務内容やご要望を伺い、最適なプランをご提案します。",
-    "ご契約後、豊富な人材の中からスキル・条件に合うスタッフを選出します。",
-    "就業後も当社がスタッフをしっかりサポート。安心してご活用いただけます。"
+    "担当者が業務内容やご要望を伺い、最適な人材とご紹介方法をご提案します。",
+    "ご契約後、ご希望にマッチした候補者を厳選しご紹介します。",
+    "内定・就業後も定期的なフォローを実施し、継続的なサポートを行います。"
   ];
 
   return (
     <>
       <Helmet>
-        <title>人材派遣・派遣サービス | One Step株式会社</title>
+        <title>有料職業紹介サービス | One Step株式会社</title>
         <meta
           name="description"
-          content="One Step株式会社は、多国籍な人材ネットワークを活かし、企業様に最適な人材を迅速にご提供します。外国人スタッフの活用にも強みを持ち、信頼できる人材パートナーとして日本企業をサポートします。"
+          content="One Step株式会社は、有料職業紹介を通じて、優秀な外国人材と日本企業をつなぐ信頼のパートナーです。"
         />
         <meta
           name="keywords"
-          content="人材派遣, 派遣サービス, 外国人材, 人材紹介, 企業採用支援, 日本文化に理解のある外国人, グローバル人材, 短期人材, 技術人材, 派遣社員"
+          content="有料職業紹介, 外国人材紹介, グローバル人材, 日本就職, 人材紹介サービス, 国際採用支援"
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://your-domain.com/staffing" />
+        <link rel="canonical" href="https://your-domain.com/service" />
         <html lang="ja" />
       </Helmet>
 
       <Navbar />
-      
+
       <InfoTitle
         backgroundImage="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1600&h=600&fit=crop&crop=center"
-        title="人材派遣・派遣サービス"
-        description="Staffing & Dispatch Services"
-        highlightText="「人材の力で企業の成長を支える」"
+        title="有料職業紹介サービス"
+        description="Paid Employment Placement Service"
+        highlightText="「人」と「人」をつなぐ有料サービス"
       />
 
       <div className="bg-white">
         <div className="max-w-6xl mx-auto px-6 py-20 space-y-24 text-gray-800 leading-relaxed">
-          {/* 人材派遣とは */}
           <AnimatedSection>
             <section className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection delay={200}>
@@ -82,37 +80,40 @@ export default function Service() {
               <AnimatedSection delay={400}>
                 <div>
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                    <span className="text-indigo-600">人材派遣</span>とは？
+                    <span className="text-brand-navyBright">有料職業紹介</span>とは？
                   </h2>
                   <p className="text-gray-700">
-                    人材派遣とは、当社（One Step）が雇用するスタッフを貴社に派遣し、貴社の指揮命令のもとで業務を行うサービスです。
-                    採用活動や労務管理のコスト・手間を削減しつつ、必要な時に必要なスキルを持つ人材を迅速に確保できます。
-                    短期間の業務から長期のプロジェクトまで、貴社のニーズに柔軟に対応いたします。
+                    有料職業紹介とは、求職者と求人企業の間を仲介し、最適なマッチングを実現するサービスです。
+                    One Stepでは、日本で働きたい外国人材と、グローバル人材を求める企業様をつなぐ橋渡し役として、
+                    信頼と実績をもとに高品質な紹介を行っています。
                   </p>
                 </div>
               </AnimatedSection>
             </section>
           </AnimatedSection>
-          
-          {/* 当社の強み */}
+
           <StrengthsGrid strengths={strengths} />
-        
-          {/* ご利用の流れ - Using the reusable component */}
+
           <AnimatedFlowSection
-            title="ご利用開始までの流れ"
+            title="ご紹介の流れ"
             steps={flowSteps}
             descriptions={flowDescriptions}
             colorScheme="indigo"
           />
 
-          {/* 課題と職種 */}
           <AnimatedSection>
             <section className="grid md:grid-cols-2 gap-16 items-start">
               <AnimatedSection delay={200}>
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">こんな<span className="text-indigo-600">課題</span>に対応できます</h2>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">こんな<span className="text-indigo-600">課題</span>に対応します</h2>
                   <ul className="space-y-4">
-                    {["急な人手不足への対応", "繁忙期のみの短期スタッフの確保", "専門スキルを持つ人材の活用", "採用・労務コストの削減", "産休・育休の代替要員確保"].map((item, index) => (
+                    {[
+                      "即戦力となる外国人材を採用したい",
+                      "グローバルな視点を持つ人材が欲しい",
+                      "専門スキルを持った候補者が見つからない",
+                      "採用活動にかかるコストを抑えたい",
+                      "長期的に働ける信頼できる人材が必要"
+                    ].map((item, index) => (
                       <AnimatedSection key={item} delay={400 + index * 100}>
                         <li className="flex items-start hover:bg-gray-50 p-2 rounded-lg transition-colors duration-300">
                           <CheckCircleIcon className="h-6 w-6 text-green-500 mr-3 flex-shrink-0 mt-1" />
@@ -125,7 +126,7 @@ export default function Service() {
               </AnimatedSection>
               <AnimatedSection delay={400}>
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">対応<span className="text-indigo-600">業種・職種</span>例</h2>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">対応<span className="text-indigo-600">職種・業種</span>例</h2>
                   <div className="flex flex-wrap gap-3">
                     {jobTypes.map((type, index) => (
                       <AnimatedSection key={type} delay={600 + index * 100}>
@@ -149,9 +150,8 @@ export default function Service() {
             </section>
           </AnimatedSection>
 
-          {/* CTA */}
           <AnimatedSection delay={200}>
-          <CompanyCTA showTag={true} />
+            <CompanyCTA showTag={true} />
           </AnimatedSection>
         </div>
       </div>

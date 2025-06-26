@@ -67,7 +67,7 @@ const Navbar = () => {
             title: "Recruitment & Staffing",
             icon: "\ud83d\udc65",
             href: "/services#recruitment",
-            description: "人材紹介と派遣サービス",
+            description: "有料職業紹介サービス",
             image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=300&fit=crop&crop=center"
           },
           {
@@ -84,18 +84,19 @@ const Navbar = () => {
             description: "多言語ドキュメントサービス",
             image: "https://images.unsplash.com/photo-1516387938699-a93567ec168e?w=400&h=300&fit=crop&crop=center"
           },
-          {
-            title: "Import & Export",
-            icon: "\ud83d\udce6",
-            href: "/import",
-            description: "国際貿易ソリューション",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop&crop=center"
-          }
+          // {
+          //   title: "Import & Export",
+          //   icon: "\ud83d\udce6",
+          //   href: "/import",
+          //   description: "国際貿易ソリューション",
+          //   image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop&crop=center"
+          // }
         ]
       }
     },
     { name: "メンバー紹介",subtitle: "Our Teams", href: "/teams" },
-    { name: "お問い合わせ", subtitle: "Contact Us",href: "/contact" }
+    { name: "最新情報", subtitle: "News",href: "/news" },
+    { name: "お問い合わせ", subtitle: "Contact Us",href: "/contact" },
   ];
 
   useEffect(() => {
