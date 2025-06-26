@@ -2,9 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const newsItems = [
-  { date: '2025年7月1日', title: 'プライバシーポリシー更新のお知らせ', category: '新着情報' },
-  { date: '2025年7月1日', title: 'ホームぺージリニューアルのお知らせ', category: '新着情報' },
-  { date: '2025年7月1日', title: '年末年始のご案内', category: '新着情報' },
+  { date: '2025年7月1日', title: 'プライバシーポリシー更新のお知らせ', category: '新着情報', link: '/news',
+  },
+  { date: '2025年7月1日', title: 'ホームぺージリニューアルのお知らせ', category: '新着情報',link: '/news' },
+  { date: '2025年7月1日', title: '年末年始のご案内', category: '新着情報',link: '/news' },
 ];
 
 const NewsAndNotices = () => {
@@ -35,9 +36,12 @@ const NewsAndNotices = () => {
                     <span className="text-sm bg-brand-light -100 text-brand-primary px-2 py-1 rounded">{news.category}</span>
                     <span className="text-sm text-gray-500">{news.date}</span>
                   </div>
-                  <h3 className="text-lg font-medium mt-2 text-gray-800 hover:text-brand-primary cursor-pointer transition-colors duration-300">
-                    {news.title}
-                  </h3>
+                  <a href={news.link} 
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="block text-lg font-medium mt-2 text-gray-800 hover:text-brand-primary transition-colors duration-300">
+                      {news.title}
+                  </a>
                 </motion.div>
               ))}
             </div>

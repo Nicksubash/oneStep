@@ -3,21 +3,19 @@ import Navbar from '../components/navbar/Navbar';
 import Footer from '../components/shared/Footer';
 import InfoTitle from '../components/shared/InfoTitle';
 import TeamGrid from '../components/TeamMembers/TeamGrid';
-import RishiImage from '../image/rishi.png';
+import Member1 from '../image/ceo2.png';
 import Member2 from '../image/sailendra.png';
 
 const Teams = () => {
   const teamMembers = [
     {
       id: 1,
-      image: RishiImage,
-      nameJp: "リシ バラル",
-      nameEn: "Rishi Baral",
-      titleJp: "共同創業者 兼 グローバルコラボレーションディレクター",
-      aboutJp: `私はネパール出身で、現在は日本の北海道大学にて博士課程に在籍し、野生動物保全および肉食動物の生態に関する研究を行っています。
-      これまで10年以上にわたって、野外調査、国際共同研究、学術交流に従事しており、その経験から得たグローバルな視点を、人材育成や異文化間の連携に活かしています。
-      One Step株式会社の共同創業者 兼 グローバルコラボレーションディレクターとして、海外からの優秀な人材と、日本国内の信頼できる企業との橋渡しを担っています。
-      私たちは単に人材を紹介するのではなく、国境や文化を超えた「信頼と成長のつながり」を築くことを使命としています。`
+      image: Member1,
+      nameJp: "レグミ・スディプ",
+      nameEn: "Sudip Regmi",
+      titleJp: "取締役代表",
+      aboutJp: `14年前にネパールから来日し、日本語学校と専門学校での学びを経て、愛知文教大学を卒業しました。その後、日本企業での就業を通じて、日本社会の仕組みやビジネスマナー、文化への理解を深めてきました。
+      現在は日本国籍を取得し、「日本と外国人をつなぐ架け橋」となることを目指し、求職者と企業の双方を支援する活動に尽力しています。`
     },
     {
       id: 2,

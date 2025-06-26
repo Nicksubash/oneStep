@@ -16,7 +16,7 @@ export default function Contact() {
     <div className="bg-gradient-to-b from-gray-50 to-blue-50 min-h-screen relative">
       <Navbar />
       <InfoTitle
-        backgroundImage="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=&h=600&fit=crop&crop=center"
+        backgroundImage="https://images.unsplash.com/photo-1638262052640-82e94d64664a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         title="お問い合わせ"
         description="ご用件に応じて、お問い合わせ窓口をお選びください。"
         highlightText="担当者が迅速に対応させていただきます。"
@@ -34,13 +34,13 @@ export default function Contact() {
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-8">
           <SelectionCard
             onClick={() => setSelectedType("company")}
-            icon={<BuildingOffice2Icon className="h-10 w-10 text-blue-700"/>}
+            icon={<BuildingOffice2Icon className="h-10 w-10 text-white"/>}
             title="企業ご担当者様"
             description="人材派遣・採用に関するご相談はこちら"
           />
           <SelectionCard
             onClick={() => setSelectedType("student")}
-            icon={<UserIcon className="h-10 w-10 text-blue-700"/>}
+            icon={<UserIcon className="h-10 w-10 text-white"/>}
             title="お仕事をお探しの方"
             description="お仕事の紹介・キャリア相談はこちら"
           />

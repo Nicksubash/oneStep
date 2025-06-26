@@ -12,22 +12,22 @@ import CompanyCTA from '../components/shared/CompanyCTA';
 export default function TranslationService() {
   const strengths = [
     {
-      icon: <CheckBadgeIcon className="h-12 w-12 text-blue-600" />,
+      icon: <CheckBadgeIcon className="h-12 w-12 text-white" />,
       title: '専門分野 x ネイティブ品質',
       description: '各分野の専門知識を持つ翻訳者とネイティブスピーカーがチームを組み、正確で自然な翻訳を実現します。'
     },
     {
-      icon: <ClockIcon className="h-12 w-12 text-blue-600" />,
+      icon: <ClockIcon className="h-12 w-12 text-white" />,
       title: '迅速・柔軟な対応',
       description: 'お急ぎの案件にも柔軟に対応。お客様のビジネススケジュールに合わせたスピーディーな納品が可能です。'
     },
     {
-      icon: <DocumentTextIcon className="h-12 w-12 text-blue-600" />,
+      icon: <DocumentTextIcon className="h-12 w-12 text-white" />,
       title: '多様なドキュメント形式',
       description: '契約書や技術マニュアルから、Webサイト、マーケティング資料まで、あらゆる形式のドキュメントに対応します。'
     },
     {
-      icon: <LockClosedIcon className="h-12 w-12 text-blue-600" />,
+      icon: <LockClosedIcon className="h-12 w-12 text-white" />,
       title: '徹底した機密保持',
       description: 'お客様からお預かりした情報は最高レベルのセキュリティで管理。秘密保持契約（NDA）の締結も可能です。'
     }

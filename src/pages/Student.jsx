@@ -43,19 +43,19 @@ const AnimatedSection = ({ children, className = "", delay = 0 }) => {
 export default function Student() {
   const strengths = [
     {
-      icon: <DocumentTextIcon className="h-16 w-16 text-indigo-500" />,
+      icon: <DocumentTextIcon className="h-16 w-16 text-white" />,
       title: '履歴書添削 & 面接対策',
       description: '日本の就活で必須の履歴書・職務経歴書の書き方から、評価される面接の受け答えまで、専門のコンサルタントが徹底指導します。',
       color: 'from-indigo-500 to-purple-500'
     },
     {
-      icon: <BriefcaseIcon className="h-16 w-16 text-indigo-500" />,
+      icon: <BriefcaseIcon className="h-16 w-16 text-white" />,
       title: '留学生に理解のある企業紹介',
       description: '外国籍社員の採用実績が豊富で、多様性を重視する優良企業を厳選してご紹介。あなたの専門性や語学力が活かせる仕事が見つかります。',
       color: 'from-indigo-500 to-blue-500'
     },
     {
-      icon: <ChatBubbleLeftRightIcon className="h-16 w-16 text-indigo-500" />,
+      icon: <ChatBubbleLeftRightIcon className="h-16 w-16 text-white" />,
       title: 'ビザ・在留資格の相談',
       description: '就労ビザへの変更手続きなど、複雑な在留資格に関するお悩みもサポート。安心して就職活動に専念できる環境を整えます。',
       color: 'from-amber-500 to-purple-500'

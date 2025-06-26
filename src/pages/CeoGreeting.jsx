@@ -25,47 +25,41 @@ const CEOInfo = () => (
 
 const CEOMessage = ({ isVisible }) => (
   <div
-    className={`lg:w-2/3 transform transition-all duration-1000 ease-out ${
-      isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+    className={`lg:w-2/3 mx-auto transform transition-all duration-1000 ease-out ${
+      isVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
     }`}
   >
-    <div className="space-y-6 text-gray-800 leading-relaxed">
-      <h4 className="text-lg font-semibold text-gray-900 mt-8 mb-3">🎓【学歴・経歴】</h4>
-      <p>
-        14年前にネパールより来日。日本語学校・専門学校を経て、愛知文教大学を卒業。
-        <br />
-        その後、日本企業での就業経験を通じて、日本社会やビジネスマナー、文化を深く理解。
-        <br />
-        現在は日本国籍を取得し、「日本と外国人をつなぐ架け橋」となることを目指し、求職者と企業双方の支援に尽力している。
-      </p>
-
-      <h4 className="text-lg font-semibold text-gray-900 mt-8 mb-3">💬【代表メッセージ】</h4>
-      <p>
-        私はかつて、外国人として日本に来日し、言語の壁や文化の違い、仕事探しにおけるさまざまな困難を経験してまいりました。
+    <div className="space-y-8 text-gray-800 leading-relaxed">
+      <p className="text-lg text-left">
+        私はかつて、外国人として日本に来日し、<span className="font-semibold text-brand-navy">言語の壁や文化の違い、仕事探しにおけるさまざまな困難</span>を経験してまいりました。
         <br />
         日本語の習得、就職活動、そして職場での適応——それらすべてが簡単な道のりではありませんでしたが、
-        その一つひとつを乗り越えたことで、今の自分があります。
+        <span className="font-semibold text-brand-navy">その一つひとつを乗り越えたことで、今の自分があります。</span>
       </p>
-      <p>
-        だからこそ、これから日本で働こうとする方々の不安や期待に、誰よりも共感し、寄り添うことができると自負しています。
+
+      <p className="text-lg text-left">
+        だからこそ、これから日本で働こうとする方々の<span className="font-semibold text-brand-navy">不安や期待に、誰よりも共感し、寄り添う</span>ことができると自負しています。
       </p>
-      <p>
-        また、企業の皆さまにとっても、外国人採用にあたっては言語や文化、制度への理解不足など、
+
+      <p className="text-lg text-left">
+        また、企業の皆さまにとっても、外国人採用にあたっては<span className="font-semibold text-brand-navy">言語や文化、制度への理解不足</span>など、
         さまざまな不安や課題があるかと思います。
         <br />
-        私たちOne Step株式会社は、そうした“見えない壁”や“すれ違い”を丁寧に埋め、
-        信頼と安心のあるマッチングを実現することを使命としています。
+        私たち <span className="font-bold text-brand-navy text-xl">One Step株式会社</span> は、
+        そうした<span className="italic text-gray-700 font-medium">"見えない壁"や"すれ違い"</span>を丁寧に埋め、
+        <span className="font-semibold text-brand-navy">信頼と安心のあるマッチング</span>を実現することを使命としています。
       </p>
-      <p>
+
+      <p className="text-lg text-left">
         すでに日本社会に順応している立場として、私は単なる人材紹介にとどまらず、
         新卒者や初めて日本で働く方々に対しても、
         <br />
-        「就職後の定着」や「長期的な活躍」までを見据えた、きめ細やかな支援を提供してまいります。
+        <span className="font-semibold text-brand-navy">「就職後の定着」や「長期的な活躍」までを見据えた、きめ細やかな支援</span>を提供してまいります。
       </p>
 
-      <div className="text-center pt-6 border-t border-gray-200">
-        <p className="text-lg font-medium text-brand-navy">
-          皆さま一人ひとりの“大切な一歩”を、心を込めて応援いたします。
+      <div className="text-center pt-8 mt-8 border-t-2 border-brand-navy/20">
+        <p className="text-xl font-bold text-brand-navy leading-relaxed">
+          皆さま一人ひとりの<span className="text-red-600 text-2xl font-extrabold">"大切な一歩"</span>を、心を込めて応援いたします。
         </p>
       </div>
     </div>
@@ -109,8 +103,7 @@ const CeoGreeting = () => {
         }}
       >
         <div className="absolute inset-0 bg-white/70 backdrop-blur-sm" />
-        <BackgroundText text="CEO MESSAGE" />
-        <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="relative z-10 max-w-7xl mx-auto mt-10">
           <div className="backdrop-blur-sm rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
             <CEOInfo />
             <CEOMessage isVisible={isVisible} />

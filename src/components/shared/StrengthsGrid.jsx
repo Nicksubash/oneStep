@@ -15,12 +15,14 @@ const StrengthsGrid = ({ title = "One Stepの強み", strengths = [] }) => {
           {visibleStrengths.map((strength, index) => (
             <AnimatedSection key={index} delay={300 + index * 200}>
               <div className="h-full flex flex-col bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500 text-center">
-                <div className="flex justify-center mb-4 transform hover:scale-110 transition-transform duration-300">
-                  {strength.icon}
-                </div>
-                <h3 className="text-xl font-bold text-indigo-700 mb-3">{strength.title}</h3>
-                <p className="text-gray-600 text-sm flex-grow">{strength.description}</p>
-              </div>
+  <div className="flex justify-center mb-4 transform hover:scale-110 transition-transform duration-300">
+    <div className="bg-gradient-to-br from-brand-primary to-brand-navyBright rounded-full p-3 inline-flex items-center justify-center">
+      {strength.icon}
+    </div>
+  </div>
+  <h3 className="text-xl font-bold text-brand-navy mb-3">{strength.title}</h3>
+  <p className="text-gray-600 text-sm flex-grow">{strength.description}</p>
+</div>
             </AnimatedSection>
           ))}
         </div>
