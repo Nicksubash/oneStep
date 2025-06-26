@@ -16,11 +16,13 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import FAQPage from './pages/FAQPage';
 import RecruitmentPage from './pages/RecruitmentPage';
 import News from './pages/News';
+import LineContact from './components/shared/LineContact';
 
 
 export default function App() {
     return (
             <Router>
+            <LineContact />
             <Routes>  
                 <Route
                     path="/"
