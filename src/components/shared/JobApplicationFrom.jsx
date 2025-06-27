@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { EMAILJS_CONFIG, initializeEmailJS, sendEmail } from '../../config/emailjs';
 
 export default function JobApplicationForm() {
   const [formData, setFormData] = useState({
@@ -18,19 +19,77 @@ export default function JobApplicationForm() {
     resume: null,
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', null
+
+  // Initialize EmailJS
+  useEffect(() => {
+    initializeEmailJS();
+  }, []);
+
   const handleChange = (e) => {
     const { name, value, files } = e.target;
     setFormData({
       ...formData,
       [name]: files ? files[0] : value,
     });
+    // Clear status when user starts typing again
+    if (submitStatus) setSubmitStatus(null);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    alert("応募が送信されました。3営業日以内にご連絡いたします。");
-    // add submission logic here
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const templateParams = {
+        from_name: formData.fullName,
+        from_email: formData.email,
+        gender: formData.gender,
+        birth_date: formData.birthDate,
+        nationality: formData.nationality,
+        visa_type: formData.visaType,
+        japanese_level: formData.japaneseLevel,
+        desired_job: formData.desiredJob,
+        education_experience: formData.educationExperience,
+        contact: formData.contact,
+        self_intro: formData.selfIntro,
+        major_field: formData.majorField,
+        consultation: formData.consultation,
+        to_name: "One Step株式会社",
+        reply_to: formData.email,
+      };
+
+      const result = await sendEmail(
+        EMAILJS_CONFIG.TEMPLATES.JOB_APPLICATION,
+        templateParams
+      );
+
+      console.log('Job application sent successfully:', result);
+      setSubmitStatus('success');
+      setFormData({
+        fullName: "",
+        email: "",
+        gender: "",
+        birthDate: "",
+        nationality: "",
+        visaType: "",
+        japaneseLevel: "",
+        desiredJob: "",
+        educationExperience: "",
+        contact: "",
+        selfIntro: "",
+        majorField: "",
+        consultation: "",
+        resume: null,
+      });
+    } catch (error) {
+      console.error('Job application send failed:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -45,6 +104,47 @@ export default function JobApplicationForm() {
         💡 今すぐ日本の求人に応募しましょう。記入は日本語または英語でOKです。個人情報は厳重に管理します。
       </p>
 
+      {/* Success/Error Messages */}
+      {submitStatus === 'success' && (
+        <div className="bg-green-50 border border-green-200 rounded-md p-4 mb-4">
+          <div className="flex">
+            <div className="flex-shrink-0">
+              <svg className="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <p className="text-sm font-medium text-green-800">
+                応募が正常に送信されました！ / Your application has been sent successfully!
+              </p>
+              <p className="text-sm text-green-700 mt-1">
+                3営業日以内にご連絡いたします。 / We will contact you within 3 business days.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {submitStatus === 'error' && (
+        <div className="bg-red-50 border border-red-200 rounded-md p-4 mb-4">
+          <div className="flex">
+            <div className="flex-shrink-0">
+              <svg className="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <p className="text-sm font-medium text-red-800">
+                送信に失敗しました。 / Failed to send application.
+              </p>
+              <p className="text-sm text-red-700 mt-1">
+                しばらく時間をおいて再度お試しください。 / Please try again later.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="grid md:grid-cols-2 gap-6">
         {/* Full Name */}
         <InputField
@@ -54,6 +154,7 @@ export default function JobApplicationForm() {
           onChange={handleChange}
           placeholder="田中太郎"
           required
+          disabled={isSubmitting}
         />
 
         {/* Email */}
@@ -65,6 +166,7 @@ export default function JobApplicationForm() {
           onChange={handleChange}
           placeholder="example@email.com"
           required
+          disabled={isSubmitting}
         />
 
         {/* Gender */}
@@ -74,6 +176,7 @@ export default function JobApplicationForm() {
           value={formData.gender}
           onChange={handleChange}
           required
+          disabled={isSubmitting}
           options={[
             { value: "", label: "選択してください / Please select", disabled: true },
             { value: "male", label: "男性 / Male" },
@@ -90,6 +193,7 @@ export default function JobApplicationForm() {
           value={formData.birthDate}
           onChange={handleChange}
           required
+          disabled={isSubmitting}
         />
 
         {/* Nationality */}
@@ -100,6 +204,7 @@ export default function JobApplicationForm() {
           onChange={handleChange}
           placeholder="例: ネパール / Japan / Vietnam"
           required
+          disabled={isSubmitting}
         />
 
         {/* Visa Type */}
@@ -109,6 +214,7 @@ export default function JobApplicationForm() {
           value={formData.visaType}
           onChange={handleChange}
           required
+          disabled={isSubmitting}
           options={[
             { value: "", label: "選択してください / Please select" },
             { value: "留学生", label: "留学生 / Student Visa" },
@@ -125,6 +231,7 @@ export default function JobApplicationForm() {
           value={formData.japaneseLevel}
           onChange={handleChange}
           required
+          disabled={isSubmitting}
           options={[
             { value: "", label: "選択してください / Please select" },
             { value: "N1", label: "N1" },
@@ -143,6 +250,7 @@ export default function JobApplicationForm() {
           onChange={handleChange}
           placeholder="エンジニア, 介護, 販売など"
           required
+          disabled={isSubmitting}
         />
 
         {/* Contact */}
@@ -153,6 +261,7 @@ export default function JobApplicationForm() {
           onChange={handleChange}
           placeholder="080-1234-5678"
           required
+          disabled={isSubmitting}
         />
 
         {/* Major Field */}
@@ -162,6 +271,7 @@ export default function JobApplicationForm() {
           value={formData.majorField}
           onChange={handleChange}
           placeholder="コンピューターサイエンス"
+          disabled={isSubmitting}
         />
       </div>
 
@@ -172,6 +282,7 @@ export default function JobApplicationForm() {
         value={formData.educationExperience}
         onChange={handleChange}
         required
+        disabled={isSubmitting}
         placeholder="学歴・職歴を詳しく記入してください"
       />
 
@@ -182,6 +293,7 @@ export default function JobApplicationForm() {
         value={formData.selfIntro}
         onChange={handleChange}
         required
+        disabled={isSubmitting}
         placeholder="自己PRを記入してください"
       />
 
@@ -191,6 +303,7 @@ export default function JobApplicationForm() {
         name="consultation"
         value={formData.consultation}
         onChange={handleChange}
+        disabled={isSubmitting}
         placeholder="就職についてのご質問やご相談をお聞かせください"
       />
 
@@ -205,17 +318,30 @@ export default function JobApplicationForm() {
           accept="application/pdf"
           onChange={handleChange}
           required
-          className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+          disabled={isSubmitting}
+          className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all disabled:bg-gray-100 disabled:cursor-not-allowed"
         />
       </div>
 
       {/* Submit Button */}
       <div className="text-center mt-6">
         <button
-          type="submit"
-          className="zen-border bg-gradient-to-r from-brand-primary to-brand-navyBright text-white px-10 py-4 rounded-full text-lg font-bold hover:from-brand-navyBright hover:to-brand-primary transition-all transform hover:scale-105 japanese-shadow"
-        >
-          📨 相談を申し込む / 送信する
+        type="submit"
+        disabled={isSubmitting}
+        className={`font-semibold px-6 sm:px-8 py-3 rounded-full shadow-md transition-all duration-300 text-white text-base sm:text-lg
+          ${
+            isSubmitting
+            ? 'bg-gray-400 cursor-not-allowed'
+            : 'bg-gradient-to-r from-brand-primary to-brand-navyBright hover:from-brand-navyBright hover:to-brand-primary'
+          }`}>
+            {isSubmitting ? (
+              <div className="flex items-center justify-center">
+                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                送信中... / Sending...
+              </div>) : ('📨 相談を申し込む / 送信する')}
         </button>
       </div>
     </form>
@@ -223,7 +349,7 @@ export default function JobApplicationForm() {
 }
 
 // Reusable Input Component
-function InputField({ label, name, type = "text", value, onChange, placeholder, required = false }) {
+function InputField({ label, name, type = "text", value, onChange, placeholder, required = false, disabled = false }) {
   return (
     <div>
       <label className="block text-sm font-medium text-gray-700 mb-2">{label}</label>
@@ -234,14 +360,15 @@ function InputField({ label, name, type = "text", value, onChange, placeholder, 
         onChange={onChange}
         placeholder={placeholder}
         required={required}
-        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+        disabled={disabled}
+        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all disabled:bg-gray-100 disabled:cursor-not-allowed"
       />
     </div>
   );
 }
 
 // Reusable Select Component
-function SelectField({ label, name, value, onChange, options = [], required = false }) {
+function SelectField({ label, name, value, onChange, options = [], required = false, disabled = false }) {
   return (
     <div>
       <label className="block text-sm font-medium text-gray-700 mb-2">{label}</label>
@@ -250,10 +377,11 @@ function SelectField({ label, name, value, onChange, options = [], required = fa
         value={value}
         onChange={onChange}
         required={required}
-        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+        disabled={disabled}
+        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all disabled:bg-gray-100 disabled:cursor-not-allowed"
       >
-        {options.map(({ value, label, disabled = false }) => (
-          <option key={value} value={value} disabled={disabled}>
+        {options.map(({ value, label, disabled: optionDisabled = false }) => (
+          <option key={value} value={value} disabled={optionDisabled}>
             {label}
           </option>
         ))}
@@ -263,7 +391,7 @@ function SelectField({ label, name, value, onChange, options = [], required = fa
 }
 
 // Reusable TextArea Component
-function TextAreaField({ label, name, value, onChange, placeholder, required = false }) {
+function TextAreaField({ label, name, value, onChange, placeholder, required = false, disabled = false }) {
   return (
     <div>
       <label className="block text-sm font-medium text-gray-700 mb-2">{label}</label>
@@ -274,7 +402,8 @@ function TextAreaField({ label, name, value, onChange, placeholder, required = f
         rows={4}
         placeholder={placeholder}
         required={required}
-        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+        disabled={disabled}
+        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all disabled:bg-gray-100 disabled:cursor-not-allowed"
       />
     </div>
   );
