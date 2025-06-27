@@ -36,9 +36,9 @@ const AnimatedSection = ({ children, className = "", delay = 0 }) => {
 
 export default function RecruitmentPage() {
   const strengths = [
-    { icon: <HeartIcon className="h-16 w-16 text-indigo-500" />, title: '誠実な対応力', description: '応募者一人ひとりに真摯に向き合う姿勢を大切にしています。', color: 'from-blue-500 to-cyan-500' },
-    { icon: <ArrowTrendingUpIcon className="h-16 w-16 text-indigo-500" />, title: '成長意欲', description: '変化に柔軟に対応し、常に学ぶ姿勢を持つ人材を歓迎します。', color: 'from-indigo-500 to-blue-400' },
-    { icon: <UsersIcon className="h-16 w-16 text-indigo-500" />, title: '人と繋がる力', description: '人と人、企業と人をつなぐ情熱を持った方を求めています。', color: 'from-teal-500 to-green-400' },
+    { icon: <HeartIcon className="h-16 w-16 text-white" />, title: '誠実な対応力', description: '応募者一人ひとりに真摯に向き合う姿勢を大切にしています。', color: 'from-blue-500 to-cyan-500' },
+    { icon: <ArrowTrendingUpIcon className="h-16 w-16 text-white" />, title: '成長意欲', description: '変化に柔軟に対応し、常に学ぶ姿勢を持つ人材を歓迎します。', color: 'from-indigo-500 to-blue-400' },
+    { icon: <UsersIcon className="h-16 w-16 text-white" />, title: '人と繋がる力', description: '人と人、企業と人をつなぐ情熱を持った方を求めています。', color: 'from-teal-500 to-green-400' },
   ];
   const steps = ['書類選考', '一次面接', '二次面接', '内定'];
   const descriptions = ['履歴書と職務経歴書を確認し、書類選考を行います。','担当者との面接を通じて、スキルや志望動機を伺います。','最終面接では、企業理念への理解と熱意を確認します。','内定のご連絡をし、入社に向けた手続きを進めます。'];
@@ -60,12 +60,19 @@ export default function RecruitmentPage() {
       />
 
       <div className="max-w-6xl mx-auto px-6 py-20 space-y-24">
-        
         <AnimatedSection>
-            <h2 className="text-4xl font-bold text-brand-navy text-center mb-12">求める人物像</h2>
-            <StrengthsGrid strengths={strengths} />
+          <h2 className="text-4xl font-bold text-brand-navy text-center mb-6">
+            <span className="inline-block border-b-4 border-brand-primary pb-1">求める人物像</span>
+          </h2>
+          <p className="text-center max-w-3xl mx-auto text-gray-700 text-base sm:text-lg leading-relaxed mb-12">
+            One Step株式会社では、<br/>
+            <span className="font-semibold text-brand-navy">誠実で前向き</span>に取り組み、
+            <span className="font-semibold text-brand-navy">仲間との協調</span>を大切にできる方を歓迎しています。<br />
+            日本特有の<span className="font-semibold text-brand-navy">礼儀</span>や<span className="font-semibold text-brand-navy">思いやり</span>を重んじながら、
+            <span className="font-semibold text-brand-navy">自ら考え行動できる方</span>と共に成長していきたいと考えています。
+          </p>
+          <StrengthsGrid strengths={strengths} />
         </AnimatedSection>
-
         {/* --- RE-INTEGRATED: Job Listings Section --- */}
         <AnimatedSection delay={400}>
           <section>
