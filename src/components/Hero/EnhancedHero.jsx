@@ -24,12 +24,12 @@ const EnhancedHero = () => {
             <div className="mb-8">
               <AnimatedText
                 text="「人」と「人」をつなぐ"
-                className="text-2xl md:text-3xl font-medium text-white block mb-2 drop-shadow-lg"
+                className="text-lg sm:text-xl md:text-3xl font-medium text-white block mb-2 drop-shadow-lg"
                 delay={300}
               />
               <AnimatedText
                 text="有料職業紹介サービス"
-                className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent block mb-4 drop-shadow-lg"
+                className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent block mb-4 drop-shadow-lg"
                 delay={600}
                 scrollScale={true}
               />
@@ -38,12 +38,12 @@ const EnhancedHero = () => {
             {/* Hero Motivational Subtext */}
             <AnimatedText
               text="🌍 日本で働きたいあなたへ。その一歩が、あなたの未来を変える。"
-              className="text-lg md:text-xl text-blue-100 font-semibold mb-4 block drop-shadow-lg"
+              className="text-base sm:text-lg md:text-xl text-blue-100 font-semibold mb-4 block drop-shadow-lg"
               delay={800}
             />
             <AnimatedText
               text="🎯 就職、転職、キャリアアップ——One Stepは、日本で頑張るあなたのはじめの一歩を全力で応援します。"
-              className="text-lg md:text-xl text-purple-100 font-medium mb-8 block drop-shadow-lg"
+              className="text-base sm:text-lg md:text-xl text-purple-100 font-medium mb-8 block drop-shadow-lg"
               delay={1000}
             />
 
@@ -56,7 +56,7 @@ const EnhancedHero = () => {
             >
               <AnimatedText
                 text="ようこそ、OneStep株式会社へ。私たちは、日本における国際人材の有料職業紹介、語学教育、そして異文化サポートを提供する信頼できるパートナーです。世界中の優秀な人材と日本の企業をつなぎ、グローバルなキャリアの成功を全力でサポートします。"
-                className="text-base md:text-lg text-gray-200 leading-relaxed mb-8 block drop-shadow-lg"
+                className="text-sm sm:text-base md:text-lg text-gray-200 leading-relaxed mb-8 block drop-shadow-lg"
                 delay={1200}
               />
             </div>

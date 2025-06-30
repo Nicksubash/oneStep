@@ -64,7 +64,7 @@ const BackgroundCarousel = () => {
       <button
         type="button"
         onClick={prevImage}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-50 w-12 h-12 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center transition duration-300 group focus:outline-none"
+        className="hidden sm:flex absolute left-4 top-1/2 transform -translate-y-1/2 z-50 w-12 h-12 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full items-center justify-center transition duration-300 group focus:outline-none"
         aria-label="Previous"
       >
         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -75,7 +75,7 @@ const BackgroundCarousel = () => {
       <button
         type="button"
         onClick={nextImage}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-50 w-12 h-12 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center transition duration-300 group focus:outline-none"
+        className="hidden sm:flex absolute right-4 top-1/2 transform -translate-y-1/2 z-50 w-12 h-12 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full items-center justify-center transition duration-300 group focus:outline-none"
         aria-label="Next"
       >
         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,17 +90,12 @@ const BackgroundCarousel = () => {
             key={index}
             type="button"
             onClick={() => goToImage(index)}
-            className={`w-4 h-4 rounded-full border-2 border-white/50 hover:border-white focus:outline-none ${
-              index === currentImageIndex ? 'bg-white scale-125' : 'bg-white/30 hover:bg-white/50'
+            className={`w-2 h-2 sm:w-4 sm:h-4 rounded-full border-2 border-white/50 hover:border-white focus:outline-none transition-all duration-300 ${
+                index === currentImageIndex ? 'bg-white scale-125' : 'bg-white/30 hover:bg-white/50'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
-      </div>
-
-      {/* Slide Counter */}
-      <div className="absolute bottom-8 right-8 z-50 text-white/80 text-sm font-medium backdrop-blur-sm bg-black/20 px-3 py-1 rounded-full">
-        {currentImageIndex + 1} / {images.length}
       </div>
     </div>
   );
