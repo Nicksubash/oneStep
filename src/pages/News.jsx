@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import Navbar from '../components/navbar/Navbar'; // Assuming you have these
+import Navbar from '../components/navbar/Navbar'; 
 import Footer from '../components/shared/Footer';
 import { newsData } from '../data/newsData';
+import BackgroundText from '../components/shared/BackgroundText';
 
 // --- Helper Components (for demonstration) ---
 const InfoTitle = ({ backgroundImage, title, description, highlightText }) => (
@@ -72,10 +73,15 @@ export default function News() {
         description="News & Updates"
         highlightText="最新情報をご案内します"
       />
-
-      <div className="bg-gray-50 py-16 sm:py-24">
+      <div className="bg-gray-50 py-16 sm:py-24 relative overflow-hidden">
+        {/* BackgroundText added here */}
+        <BackgroundText
+        text="NEWS"
+        top="top-1/4"
+        className="text-gray-200/30 -translate-y-1/2 z-0"/>
         <AnimatedSection>
           <div className="max-w-4xl mx-auto px-4">
+            
             
             <ul className="space-y-4">
               {currentNotices.map((notice, index) => (

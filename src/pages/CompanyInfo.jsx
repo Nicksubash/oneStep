@@ -19,7 +19,7 @@ export default function CompanyInfo() {
 
       <div className="relative max-w-4xl mx-auto p-4">
         {/* Background Text for Company Section */}
-        <BackgroundText text="COMPANY" top="top-2" />
+        <BackgroundText text="COMPANY" top="top-0" />
 
         {/* 会社概要 */}
         <h2 className="relative z-10 text-4xl font-bold bg-gradient-to-r from-blue via-blue-100 to-white bg-clip-text mb-4 mt-5">
@@ -27,7 +27,7 @@ export default function CompanyInfo() {
           <span className="text-xl">Company Profile</span>
         </h2>
 
-        <table className="relative z-10 w-full text-left border border-gray-300 mb-10">
+        <table className="relative z-10 w-full text-left border border-gray-300 mb-10 mt-10">
           <tbody>
             <tr className="border-b">
               <th className="p-2 bg-gray-100 w-1/4">会社名</th>
