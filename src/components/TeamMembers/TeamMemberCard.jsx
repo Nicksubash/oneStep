@@ -80,9 +80,6 @@ export default function TeamMemberCard({ image, nameJp, nameEn, titleJp, aboutJp
 
           {/* Profile Section */}
           <div className="text-left">
-            <h4 className="text-blue-600 font-bold text-lg mb-6 tracking-wide">
-              PROFILE
-            </h4>
             <div className="text-gray-800 leading-relaxed text-base md:text-lg max-w-3xl">
               {formatAboutText(aboutJp)}
             </div>

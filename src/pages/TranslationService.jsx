@@ -8,6 +8,7 @@ import AnimatedFlowSection from '../components/shared/AnimatedFlowSection';
 import StrengthsGrid from '../components/shared/StrengthsGrid';
 import { CheckBadgeIcon, ClockIcon, DocumentTextIcon, LockClosedIcon, CheckCircleIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
 import CompanyCTA from '../components/shared/CompanyCTA';
+import BackgroundText from '../components/shared/BackgroundText';
 
 export default function TranslationService() {
   const strengths = [
@@ -67,8 +68,13 @@ export default function TranslationService() {
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
       </div>
 
-      <div className="bg-white">
-        <div className="max-w-6xl mx-auto px-6 py-20 space-y-24 text-gray-800 leading-relaxed">
+      <div className="relative bg-white">
+        <div className="max-w-6xl mx-auto px-6 py-14 md:space-y-24 md:py-8 lg:mt-10 text-gray-800 leading-relaxed mt-2">
+         <BackgroundText 
+          text="SERVICE" 
+          top="top-0 "
+          className="-translate-y-1/2 text-gray-300/30 z-0 mt-8" />
+        
 
           {/* --- SECTION 1: The Problem & Our Solution --- */}
           <AnimatedSection>
@@ -82,6 +88,7 @@ export default function TranslationService() {
                   />
                 </div>
               </AnimatedSection>
+              
               <AnimatedSection delay={400}>
                 <div>
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">

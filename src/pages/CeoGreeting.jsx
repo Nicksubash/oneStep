@@ -90,21 +90,29 @@ const CeoGreeting = () => {
       <InfoTitle
         backgroundImage="https://images.pexels.com/photos/327540/pexels-photo-327540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         title="代表メッセージ"
-        description="One Step株式会社は、国際人材と日本企業を結ぶ架け橋。\n言語教育と生活サポートを通じて、外国人が安心して働き、暮らせる未来を創ります。"
+        description="One Step株式会社は、国際人材と日本企業を結ぶ架け橋。言語教育と生活サポートを通じて、外国人が安心して働き、暮らせる未来を創ります。"
         highlightText="一人ひとりの'一歩'を、心から応援します。"
       />
-
       <section
         id="ceo-section"
-        className="relative w-full bg-cover bg-center bg-no-repeat py-16 lg:py-24 px-6 overflow-hidden"
+        className="relative w-full bg-cover bg-center bg-no-repeat py-2 lg:py-36 md:py-20 px-8 overflow-hidden"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80')",
         }}
       >
-        <div className="absolute inset-0 bg-white/70 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-white/50 backdrop-blur-sm" />
+        <BackgroundText 
+          text="CEO MESSAGE" 
+          top="top-0" 
+          className="translate-y-0 text-gray-200/30 z-0 " 
+          />
+         
         <div className="relative z-10 max-w-7xl mx-auto mt-10">
-          <div className="backdrop-blur-sm rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
+          
+
+          <div className="backdrop-blur-sm rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col lg:flex-row gap-10 lg:gap-16 items-start ">
+        
             <CEOInfo />
             <CEOMessage isVisible={isVisible} />
           </div>

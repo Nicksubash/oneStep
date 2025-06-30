@@ -7,6 +7,7 @@ import JobApplicationForm from '../components/shared/JobApplicationFrom';
 import CompanyCTA from '../components/shared/CompanyCTA';
 import AnimatedFlowSection from '../components/shared/AnimatedFlowSection';
 import StrengthsGrid from '../components/shared/StrengthsGrid';
+import BackgroundText from '../components/shared/BackgroundText';
 
 const useIntersectionObserver = (options = {}) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -150,6 +151,10 @@ export default function Student() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-red-50 via-transparent to-transparent pointer-events-none"></div>
                 </div>
+                <BackgroundText 
+                  text="SERVICE" 
+                  top="top-0" 
+                  className="-translate-y-1/2 text-gray-300/30 z-0" />
                 <div className="space-y-6 relative">
                   <h2 className="text-4xl font-bold text-gray-900 relative brush-stroke">
                     日本での就職、<span className="text-brand-primary">一人で悩んでいませんか？</span>
@@ -169,7 +174,7 @@ export default function Student() {
                     </p>
                   </div>
                   <div className="p-6 rounded-xl border-l-4 border-red-500 bg-red-100 text-gray-800 font-medium">
-                    多くの留学生が日本での就職に不安を感じています。私たちが全力でサポートします！
+                    多くの留学生が日本での就職に不安を感じています。<br/>私たちが全力でサポートします！
                   </div>
                 </div>
               </section>
