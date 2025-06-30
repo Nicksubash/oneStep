@@ -97,34 +97,37 @@ export default function JobApplicationForm() {
       onSubmit={handleSubmit}
       className="origami-fold bg-white rounded-2xl p-8 japanese-shadow max-w-4xl mx-auto space-y-6"
     >
-      <h2 className="text-3xl font-bold text-center mb-6 text-gray-800 brush-stroke">
+      <h2 className="md:text-3xl text-2xl font-bold text-center mb-6 text-brand-primary brush-stroke">
         🌸 就職相談申し込みフォーム / 求人応募フォーム
       </h2>
       <p className="text-gray-600 text-center mb-6">
-        💡 今すぐ日本の求人に応募しましょう。記入は日本語または英語でOKです。個人情報は厳重に管理します。
+        💡 今すぐ日本の求人に応募しましょう。<br/>記入は日本語または英語でOKです。個人情報は厳重に管理します。
       </p>
 
       {/* Success/Error Messages */}
       {submitStatus === 'success' && (
-        <div className="bg-green-50 border border-green-200 rounded-md p-4 mb-4">
-          <div className="flex">
-            <div className="flex-shrink-0">
-              <svg className="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+          <div className="bg-green-50 border border-green-200 rounded-md p-6 mb-4 text-center">
+            <div className="flex flex-col items-center space-y-2">
+              <svg
+               className="h-8 w-8 text-green-500"
+               viewBox="0 0 20 20"
+               fill="currentColor">
+              <path
+              fillRule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+              clipRule="evenodd"/>
               </svg>
-            </div>
-            <div className="ml-3">
-              <p className="text-sm font-medium text-green-800">
-                応募が正常に送信されました！ / Your application has been sent successfully!
-              </p>
-              <p className="text-sm text-green-700 mt-1">
-                3営業日以内にご連絡いたします。 / We will contact you within 3 business days.
+              <p className="text-lg font-semibold text-green-800">
+              お問い合わせありがとうございます
               </p>
             </div>
+            <p className="text-sm  text-green-800 mt-4">
+              応募が正常に送信されました！(Your application has been sent successfully!)
+            </p>
+            <p className="text-sm text-green-700 mt-1">3営業日以内にご連絡いたします。(We will contact you within 3 business days.)
+            </p>
           </div>
-        </div>
-      )}
-
+        )}
       {submitStatus === 'error' && (
         <div className="bg-red-50 border border-red-200 rounded-md p-4 mb-4">
           <div className="flex">
@@ -308,7 +311,7 @@ export default function JobApplicationForm() {
       />
 
       {/* Resume Upload */}
-      <div>
+      {/* <div>
         <label className="block mb-2 font-semibold text-gray-700">
           履歴書アップロード（PDF推奨）*
         </label>
@@ -321,7 +324,7 @@ export default function JobApplicationForm() {
           disabled={isSubmitting}
           className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all disabled:bg-gray-100 disabled:cursor-not-allowed"
         />
-      </div>
+      </div> */}
 
       {/* Submit Button */}
       <div className="text-center mt-6">
@@ -332,7 +335,7 @@ export default function JobApplicationForm() {
           ${
             isSubmitting
             ? 'bg-gray-400 cursor-not-allowed'
-            : 'bg-gradient-to-r from-brand-primary to-brand-navyBright hover:from-brand-navyBright hover:to-brand-primary'
+            : 'bg-gradient-to-r from-brand-primary to-brand-navy hover:from-brand-navy hover:to-brand-primary'
           }`}>
             {isSubmitting ? (
               <div className="flex items-center justify-center">

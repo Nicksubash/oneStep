@@ -190,7 +190,7 @@ export default function Student() {
             colorScheme="indigo"/>
                 
             {/* Testimonials */}
-            <AnimatedSection delay={400}>
+            {/* <AnimatedSection delay={400}>
               <section className="space-y-12">
                 <h2 className="text-4xl font-bold text-gray-900 text-center">利用者の声</h2>
                 <div className="grid md:grid-cols-2 gap-10">
@@ -216,7 +216,7 @@ export default function Student() {
                   ))}
                 </div>
               </section>
-            </AnimatedSection>
+            </AnimatedSection> */}
 
             {/* Job Application Form */}
             <AnimatedSection delay={600}>
