@@ -18,7 +18,9 @@ const WhatWeDo = () => {
   }, []);
 
   return (
-    <section className="bg-gradient-to-br from-brand-primary via-slate-800 to-slate-900 py-20 px-4 min-h-screen overflow-hidden relative">
+    <section 
+      className="bg-[url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=2070&q=80')] py-20 px-4 min-h-screen overflow-hidden relative">
+          <div className="absolute inset-0 bg-black bg-opacity-60 z-0 backdrop-blur-sm" />
       <BackgroundEffects />
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -32,21 +34,19 @@ const WhatWeDo = () => {
         {/* AnimatedText Below h2, separate from heading */}
         <div className="mb-12 max-w-4xl mx-auto px-4 text-center ">
           <AnimatedText
-    text="📘 One Step株式会社とは？"
-    className="text-white text-xl font-semibold mb-2 block"
-    delay={1600}
-  />
-  <AnimatedText
-    text="私たちは、日本で働きたい外国人と、信頼できる企業をつなぐ「人の架け橋」です。ただのマッチングではなく、「文化」「目標」「未来」までも支えることが、私たちのミッションです。"
-    className="text-white text-base leading-relaxed block"
-    delay={1800}
-  />
-</div>
-
-
+          text="📘 One Step株式会社とは？"
+          className="text-white text-xl font-semibold mb-2 block"
+          delay={1600}
+          />
+          <AnimatedText
+          text="私たちは、日本で働きたい外国人と、信頼できる企業をつなぐ「人の架け橋」です。ただのマッチングではなく、「文化」「目標」「未来」までも支えることが、私たちのミッションです。"
+          className="text-white text-base leading-relaxed block"
+          delay={1800}
+          />
+        </div>
 
         {/* Floating Services Box */}
-        <div className="relative h-[600px] bg-brand-navy backdrop-blur-sm rounded-3xl border border-white/10 shadow-2xl overflow-hidden">
+        <div className="relative h-[600px] bg-transparentm rounded-3xl border shadow-2xl overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-transparent to-purple-500/10 rounded-3xl" />
 
           {services.map((service, index) => (
@@ -60,7 +60,6 @@ const WhatWeDo = () => {
             />
           ))}
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/20 pointer-events-none rounded-3xl" />
         </div>
       </div>
 

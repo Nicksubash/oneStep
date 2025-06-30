@@ -23,7 +23,7 @@ const FloatingServiceItem = ({
     >
       <div className={`
         relative transition-all duration-500 ease-out
-        ${isHovered ? 'w-80 h-48 p-6' : 'w-20 h-20 p-0'}
+        ${isHovered ? 'w-96 h-56 p-6' : 'w-40 h-40 p-0'}
       `}>
         <div className={`
           absolute inset-0 bg-gradient-to-br ${service.gradient}
@@ -44,7 +44,10 @@ const FloatingServiceItem = ({
             transition-all duration-500
             ${isHovered ? 'opacity-0 scale-0' : 'opacity-100 scale-100'}
           `}>
-            <span className="text-xs font-bold text-center leading-tight px-1">{service.title}</span>
+            <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-center leading-tight px-1 whitespace-pre-line">
+            {service.titleLines ? service.titleLines.join('\n') : service.title}
+
+            </span>
           </div>
 
           {/* Content */}

@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { newsData } from '../../data/newsData';
 
-const newsItems = [
-  { date: '2025年7月1日', title: 'プライバシーポリシー更新のお知らせ', category: '新着情報', link: '/news',
-  },
-  { date: '2025年7月1日', title: 'ホームぺージリニューアルのお知らせ', category: '新着情報',link: '/news' },
-  { date: '2025年7月1日', title: '年末年始のご案内', category: '新着情報',link: '/news' },
-];
+const newsItems = newsData.map(item => ({
+  date: item.date.replace(/\./g, '年').replace(/(\d{4})年(\d{2})年(\d{2})/, '$1年$2月$3日'),
+  title: item.title,
+  category: '新着情報', 
+  link: '/news', 
+}));
 
 const NewsAndNotices = () => {
   return (
@@ -24,8 +25,8 @@ const NewsAndNotices = () => {
             <h2 className="text-3xl font-bold mb-8 border-b-2 border-red-600 pb-2">
               お知らせ
             </h2>
-            <div className="space-y-6">
-              {newsItems.map((news) => (
+            <div className="space-y-6 max-h-80 overflow-y-scroll pr-2 scrollbar-always px-8">
+            {newsItems.map((news) => (
                 <motion.div
                   key={news.title}
                   className="border-b border-gray-200 pb-4"
