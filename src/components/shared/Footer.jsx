@@ -69,8 +69,10 @@ const Footer = () => {
           <h4 className="text-lg font-semibold mb-4 bg-gradient-to-r from-brand-primary to-brand-navyBright text-transparent bg-clip-text">クイックリンク</h4>
           <ul className="space-y-2 text-sm">
             <li><a href="/" className="hover:text-white">ホーム</a></li>
-            <li><a href="/about" className="hover:text-white">会社案内</a></li>
+            <li><a href="/company" className="hover:text-white">会社案内</a></li>
             <li><a href="/services" className="hover:text-white">事業内容</a></li>
+            <li><a href="/teams" className="hover:text-white">メンバー紹介</a></li>
+            <li><a href="/news" className="hover:text-white">最新情報</a></li>
             <li><a href="/contact" className="hover:text-white">お問い合わせ</a></li>
           </ul>
         </div>
@@ -79,11 +81,9 @@ const Footer = () => {
         <div>
           <h4 className="text-lg font-semibold mb-4 bg-gradient-to-r from-brand-primary to-brand-navyBright text-transparent bg-clip-text">事業一覧</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="/services#recruitment" className="hover:text-white">人材紹介と派遣サービス</a></li>
-            <li><a href="/students" className="hover:text-white">留学サポートプログラム</a></li>
+            <li><a href="/services#recruitment" className="hover:text-white">有料職業紹介サービス</a></li>
+            <li><a href="/students" className="hover:text-white">留学生の就職サポート</a></li>
             <li><a href="/translation" className="hover:text-white">多言語ドキュメントサービス</a></li>
-            <li><a href="/import" className="hover:text-white">国際貿易ソリューション</a></li>
-
             {/* <li><a href="/services#english" className="hover:text-white">English Language Courses</a></li>
             <li><a href="/services#jlpt" className="hover:text-white">JLPT Preparation</a></li> */}
           </ul>
