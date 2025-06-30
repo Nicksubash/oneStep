@@ -35,7 +35,7 @@ export default function CompanyInfo() {
             </tr>
             <tr className="border-b">
               <th className="p-2 bg-gray-100">設立</th>
-              <td className="p-2">2024年〇月〇日</td>
+              <td className="p-2">2024年07月01日</td>
             </tr>
             <tr className="border-b">
               <th className="p-2 bg-gray-100">所在地</th>
@@ -47,7 +47,7 @@ export default function CompanyInfo() {
             </tr>
             <tr className="border-b">
               <th className="p-2 bg-gray-100">連絡先</th>
-              <td className="p-2">📞 052-829-1674　｜　📧 info@onestep.co.jp</td>
+              <td className="p-2">📞 052-829-1674　｜　📧 onestep.recruit.japan@gmail.com</td>
             </tr>
             <tr className="border-b">
               <th className="p-2 bg-gray-100">事業内容</th>
@@ -84,9 +84,9 @@ export default function CompanyInfo() {
               </td>
             </tr>
             <tr>
-              <th className="p-2 bg-gray-100">ロゴ・スローガン</th>
+              <th className="p-2 bg-gray-100">スローガン</th>
               <td className="p-2">
-                ロゴ：※ここにロゴ画像 ｜ スローガン：「その一歩が、未来を変える」
+               「その<span className="text-brand-primary">一歩</span>が、未来を変える」
               </td>
             </tr>
           </tbody>
@@ -99,7 +99,7 @@ export default function CompanyInfo() {
           <div className="relative z-10">
             <h3 className="font-semibold">One Step株式会社</h3>
             <p>〒457-0845 愛知県名古屋市南区観音町観音ビル</p>
-            <p>名鉄常滑線「道徳駅」から徒歩〇分</p>
+            <p>名鉄常滑線「道徳駅」から徒歩5分</p>
           </div>
         </div>
 

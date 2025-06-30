@@ -202,7 +202,7 @@ const Navbar = () => {
 
               <div className="hidden md:flex items-center space-x-6">
                 <LanguageSwitcher />
-                <SearchButton />
+                {/* <SearchButton /> */}
                 <Button />
               </div>
 
