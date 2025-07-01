@@ -26,19 +26,26 @@ export default function TeamMemberCard({ image, nameJp, nameEn, titleJp, aboutJp
       // For the first member (Rishi), apply similar formatting
       return (
         <div className="space-y-4">
-          <p>
-            私は<span className="font-semibold text-brand-navy">ネパール出身</span>で、現在は日本の<span className="font-semibold text-brand-navy">北海道大学にて博士課程</span>に在籍し、野生動物保全および肉食動物の生態に関する研究を行っています。
+          <p>私は<span className="font-semibold text-brand-navy">ネパール出身</span>で、14年前に来日し、日本語学校・専門学校を経て、
+          <span className="font-semibold text-brand-navy">愛知文教大学を卒業</span>いたしました。
           </p>
           <p>
-            これまで<span className="font-semibold text-brand-navy">10年以上にわたって、野外調査、国際共同研究、学術交流</span>に従事しており、その経験から得たグローバルな視点を、人材育成や異文化間の連携に活かしています。
-          </p>
-          <p>
-            <span className="font-bold text-brand-navy">One Step株式会社の共同創業者 兼 グローバルコラボレーションディレクター</span>として、海外からの優秀な人材と、日本国内の信頼できる企業との橋渡しを担っています。
-          </p>
+            その後、日本企業での勤務を通じて、
+            <span className="font-semibold text-brand-navy">日本の社会・文化・ビジネスマナー</span>を深く学びました。
+            現在は日本国籍を取得し、日本での生活基盤を築いております。
+            </p>
+            <p>
+              <span className="font-bold text-brand-navy">One Step株式会社の代表取締役</span>として、
+              外国人の就職支援と、企業の採用活動をサポートしております。私自身の経験を活かし、言語や文化の違いによる不安や課題に丁寧に寄り添いながら支援を行っています。
+            </p>
           <p className="pt-2 border-t border-gray-200">
-            私たちは単に人材を紹介するのではなく、<span className="italic text-gray-700 font-medium">国境や文化を超えた「信頼と成長のつながり」</span>を築くことを使命としています。
+            私たちは単なる人材紹介にとどまらず、
+            <span className="italic text-gray-700 font-medium">
+              「信頼に基づく出会い」と「長期的な活躍」を見据えたサポート
+            </span>を大切にしています。
           </p>
         </div>
+
       );
     }
   };
