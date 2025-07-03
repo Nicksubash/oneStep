@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/shared/Footer";
-import CEOImage from "../image/ceo.png";
+import CEOImage from "../image/ceo1.png";
 import InfoTitle from "../components/shared/InfoTitle";
 import BackgroundText from "../components/shared/BackgroundText";
 

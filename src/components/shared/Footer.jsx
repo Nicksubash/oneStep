@@ -51,6 +51,12 @@ const Footer = () => {
               </a>
             </li>
             <li>
+              <span className="font-medium text-gray-400">Fax:</span>{' '}
+              <a href={`tel:${contact.fax}`} className="hover:text-white">
+                {contact.fax}
+              </a>
+            </li>
+            <li>
               <span className="font-medium text-gray-400">Website:</span>{' '}
               <a
                 href={contact.website}
@@ -68,11 +74,9 @@ const Footer = () => {
         <div>
           <h4 className="text-lg font-semibold mb-4 bg-gradient-to-r from-brand-primary to-brand-navyBright text-transparent bg-clip-text">クイックリンク</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="/" className="hover:text-white">ホーム</a></li>
-            <li><a href="/company" className="hover:text-white">会社案内</a></li>
-            <li><a href="/services" className="hover:text-white">事業内容</a></li>
-            <li><a href="/teams" className="hover:text-white">メンバー紹介</a></li>
-            <li><a href="/news" className="hover:text-white">最新情報</a></li>
+          <li><a href="/greeting" className="hover:text-white">代表メッセージ</a></li>
+          <li><a href="/philosophy" className="hover:text-white">企業理念</a></li>
+          <li><a href="/faq" className="hover:text-white">よくあるご質問</a></li>
             <li><a href="/contact" className="hover:text-white">お問い合わせ</a></li>
           </ul>
         </div>
