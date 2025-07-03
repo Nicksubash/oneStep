@@ -19,17 +19,17 @@ export default function Philosophy() {
 
         {/* CEO Message */}
         <section>
-          <h2 className="text-2xl font-semibold mb-4">私たちの想い</h2>
-          <blockquote className="text-lg leading-relaxed border-l-4 border-blue-500 pl-4 italic">
+          <h2 className="text-2xl font-semibold mb-4 text-brand-primary">私たちの想い</h2>
+          <blockquote className="text-lg leading-relaxed border-l-4 border-brand-primary pl-4 italic text-brand-navy">
             「私自身もかつて、日本での&quot;最初の一歩&quot;に迷い、悩んだ一人です。だからこそ、今、日本で頑張ろうとする皆さんの背中を、誰よりも強く押してあげたい。あなたの&quot;一歩&quot;が未来を変えると信じて、私たちは寄り添い続けます。」
           </blockquote>
-          <p className="mt-4 font-semibold">— レグミ・スディプ（代表取締役）</p>
+          <p className="mt-4 font-semibold text-brand-primary">— レグミ・スディプ（代表取締役）</p>
         </section>
 
         {/* Mission */}
         <section>
-          <h2 className="text-xl font-bold mb-2">使命（Mission）</h2>
-          <p className="text-blue-600 font-semibold mb-4">人と企業を、一歩前へ導く。</p>
+          <h2 className="text-xl font-bold mb-2 text-brand-primary">使命（Mission）</h2>
+          <p className="text-brand-navyBright font-semibold mb-4">人と企業を、一歩前へ導く。</p>
           <p className="mb-2">
             日本では今、労働力不足が深刻化する一方で、国内外に多くの優秀な人材が活躍の場を求めています。One Stepは、有料職業紹介事業を通じて、
           </p>
@@ -42,8 +42,8 @@ export default function Philosophy() {
 
         {/* Vision */}
         <section>
-          <h2 className="text-xl font-bold mb-2">ビジョン（Vision）</h2>
-          <p className="text-indigo-600 font-semibold mb-4">多様な人材が、個性と能力を活かして活躍できる社会を創る。</p>
+          <h2 className="text-xl font-bold mb-2 text-brand-primary">ビジョン（Vision）</h2>
+          <p className="text-brand-navyBright font-semibold mb-4">多様な人材が、個性と能力を活かして活躍できる社会を創る。</p>
           <p>
             国籍や文化を越え、「人」としての価値が尊重される社会。
             One Stepは、そんな未来を目指し、&quot;人&quot;を中心にした価値創造を追求してまいります。
@@ -52,7 +52,7 @@ export default function Philosophy() {
 
         {/* Promises */}
         <section>
-          <h2 className="text-xl font-bold mb-6 text-center">私たちの約束</h2>
+          <h2 className="text-xl font-bold mb-6 text-center text-brand-primary">私たちの約束</h2>
           <ul className="space-y-4 text-center">
             <li>誠実に。丁寧に。寄り添って。</li>
             <li>一人ひとりの「人生」に向き合い、信頼と安心を提供します。</li>
@@ -62,8 +62,8 @@ export default function Philosophy() {
 
         {/* Slogan */}
         <section className="text-center space-y-6">
-          <h2 className="text-xl font-bold">スローガン</h2>
-          <p className="text-2xl text-blue-700 font-semibold">「その一歩が、未来を変える。」</p>
+          <h2 className="text-xl font-bold text-brand-primary">スローガン</h2>
+          <p className="text-2xl text-brand-navy font-semibold">「その<span className='text-brand-primary'>一歩</span>が、未来を変える。」</p>
           <p>
             私たちが大切にしているのは、&quot;一歩&quot;の力です。小さな一歩かもしれません。でもその一歩が、企業の未来を変え、人の人生を豊かにし、社会全体を動かす大きな原動力になるのです。
           </p>

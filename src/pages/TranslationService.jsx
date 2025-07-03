@@ -36,7 +36,7 @@ export default function TranslationService() {
 
   // Data for supported fields and languages
   const fields = ['IT・テクノロジー', '法律・契約書', '医療・医薬', '金融・IR', 'マーケティング', '技術マニュアル', 'Webサイト'];
-  const languages = ['英語', '中国語(簡体/繁体)', '韓国語', 'スペイン語', 'ドイツ語', 'フランス語', 'ベトナム語', 'その他多数'];
+  const languages = ['英語', '日本語','ネパール語','ヒンディー語', 'その他多数'];
 
   // Translation service flow data
   const translationSteps = [

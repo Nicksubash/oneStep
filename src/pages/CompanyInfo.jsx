@@ -22,7 +22,7 @@ export default function CompanyInfo() {
         <BackgroundText text="COMPANY" top="top-0" />
 
         {/* 会社概要 */}
-        <h2 className="relative z-10 text-4xl font-bold bg-gradient-to-r from-blue via-blue-100 to-white bg-clip-text mb-4 mt-5">
+        <h2 className="relative z-10 text-4xl font-bold bg-gradient-to-r from-blue via-blue-100 to-white bg-clip-text mb-4 mt-5 text-brand-primary">
           会社概要 <br />
           <span className="text-xl">Company Profile</span>
         </h2>
@@ -35,7 +35,7 @@ export default function CompanyInfo() {
             </tr>
             <tr className="border-b">
               <th className="p-2 bg-gray-100">設立</th>
-              <td className="p-2">2024年07月01日</td>
+              <td className="p-2">2025年03月28日</td>
             </tr>
             <tr className="border-b">
               <th className="p-2 bg-gray-100">所在地</th>
@@ -47,34 +47,38 @@ export default function CompanyInfo() {
             </tr>
             <tr className="border-b">
               <th className="p-2 bg-gray-100">連絡先</th>
-              <td className="p-2">📞 052-829-1674　｜　📧 onestep.recruit.japan@gmail.com</td>
+              <td className="p-2">📞 052-829-1674　｜　FAX番号：052-829-1684</td>
+            </tr>
+            <tr className="border-b">
+              <th className="p-2 bg-gray-100">メール先</th>
+              <td className="p-2">📧 info@onestep-group.co.jp</td>
             </tr>
             <tr className="border-b">
               <th className="p-2 bg-gray-100">事業内容</th>
               <td className="p-2">
                 <ul className="list-disc pl-5 space-y-1">
-                  <li>有料職業紹介事業（許可番号：〇〇-ユ-〇〇〇〇）</li>
+                  <li>有料職業紹介事業（許可番号：２３-ユ-３０３０９６）</li>
                   <li>外国人向け就職・転職支援</li>
                   <li>留学生の就職サポート</li>
                   <li>対応言語：日本語・英語・ネパール語</li>
                 </ul>
               </td>
             </tr>
-            <tr className="border-b">
+            {/* <tr className="border-b">
               <th className="p-2 bg-gray-100">取引銀行</th>
               <td className="p-2">三菱UFJ銀行、〇〇信用金庫ほか</td>
-            </tr>
+            </tr> */}
             <tr className="border-b">
               <th className="p-2 bg-gray-100">許可・登録</th>
               <td className="p-2">
-                有料職業紹介事業許可（厚生労働大臣 許可番号：〇〇-ユ-〇〇〇〇）｜
+                有料職業紹介事業許可（厚生労働大臣 許可番号：２３-ユ-３０３０９６）｜
                 その他関連業登録準備中
               </td>
             </tr>
             <tr className="border-b">
               <th className="p-2 bg-gray-100">ミッション</th>
               <td className="p-2">
-                「その一歩が、未来を変える」外国人と企業の架け橋となり、日本社会に信頼される人材流通を実現します。
+                <span className="text-brand-primary">「その一歩が、未来を変える」</span>外国人と企業の架け橋となり、日本社会に信頼される人材流通を実現します。
               </td>
             </tr>
             <tr className="border-b">

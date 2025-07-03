@@ -3,7 +3,7 @@ import Navbar from '../components/navbar/Navbar';
 import Footer from '../components/shared/Footer';
 import InfoTitle from '../components/shared/InfoTitle';
 import TeamGrid from '../components/TeamMembers/TeamGrid';
-import Member1 from '../image/ceo2.png';
+import Member1 from '../image/ceoTeams.png';
 import Member2 from '../image/sailendra.png';
 
 const Teams = () => {
