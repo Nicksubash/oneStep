@@ -25,17 +25,84 @@ const AnimatedSection = ({ children }) => (
 // Helper function to get category styles, now with new categories
 const getCategoryStyle = (category) => {
   switch (category) {
-    case '行政通達':
-      return 'bg-yellow-100 text-yellow-800 border-yellow-300';
+    case '会社情報':
+      return 'bg-gray-50 text-brand-primary border-brand-primary';
+    case '行政情報':
+      return 'bg-amber-50 text-amber-700 border-amber-200';
     case '法改正':
-      return 'bg-red-100 text-red-800 border-red-300';
+      return 'bg-red-50 text-red-700 border-red-200';
     case '行政発表':
-      return 'bg-purple-100 text-purple-800 border-purple-300';
+      return 'bg-purple-50 text-purple-700 border-purple-200';
     default:
-      return 'bg-gray-100 text-gray-800 border-gray-300';
+      return 'bg-gray-50 text-gray-700 border-gray-200';
   }
 };
 
+// New component for individual news items
+const NewsItem = ({ notice, index }) => {
+  const content = (
+    <div className="bg-white rounded-lg border border-gray-200 p-6 hover:border-gray-300 transition-all duration-300">
+      <div className="flex flex-col space-y-4">
+        {/* Header with date and category */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div className="flex items-center gap-3">
+            <time 
+              dateTime={notice.date.replace(/\./g, '-')} 
+              className="text-gray-500 font-medium text-sm bg-gray-50 px-3 py-1 rounded-full"
+            >
+              {notice.date}
+            </time>
+            <span className={`px-3 py-1 text-xs font-semibold rounded-full border ${getCategoryStyle(notice.category)}`}>
+              {notice.category}
+            </span>
+          </div>
+          <div className="flex items-center text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            {notice.link && (
+              <>
+                <span className="text-xs mr-2">詳細を見る</span>
+                <i className="fas fa-external-link-alt text-xs"></i>
+              </>
+            )}
+          </div>
+        </div>
+        
+        {/* Title */}
+        <h3 className="text-lg font-medium text-gray-800 group-hover:text-brand-primary transition-colors duration-300 leading-relaxed">
+          {notice.title}
+        </h3>
+        
+        {/* Summary or excerpt if available */}
+        {notice.summary && (
+          <p className="text-sm text-gray-600 line-clamp-2 leading-relaxed">
+            {notice.summary}
+          </p>
+        )}
+        
+        {/* Bottom border accent */}
+        <div className="h-1 bg-gradient-to-r from-brand-primary to-brand-navyBright rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+      </div>
+    </div>
+  );
+
+  return (
+    <li className="group">
+      {notice.link ? (
+        <a 
+          href={notice.link} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="block transition-all duration-300 hover:shadow-md"
+        >
+          {content}
+        </a>
+      ) : (
+        <div className="block transition-all duration-300 cursor-default opacity-80">
+          {content}
+        </div>
+      )}
+    </li>
+  );
+};
 
 export default function News() {
   const itemsPerPage = 5;
@@ -73,64 +140,60 @@ export default function News() {
         description="News & Updates"
         highlightText="最新情報をご案内します"
       />
+      
       <div className="bg-gray-50 py-16 sm:py-24 relative overflow-hidden">
         {/* BackgroundText added here */}
         <BackgroundText
-        text="NEWS"
-        top="top-1/4"
-        className="text-gray-200/30 -translate-y-1/2 z-0"/>
+          text="NEWS"
+          top="top-1/6"
+          className="text-gray-200/30 -translate-y-1/2 z-0"
+        />
+        
         <AnimatedSection>
           <div className="max-w-4xl mx-auto px-4">
+            {/* Page description */}
+            <div className="text-center mb-12">
+              <p className="text-gray-600 text-base leading-relaxed max-w-2xl mx-auto">
+                One Step株式会社からの重要なお知らせや最新情報をお届けします。
+                <br className="hidden sm:block" />
+                法改正や行政発表などの情報も随時更新しております。
+              </p>
+            </div>
             
-            
-            <ul className="space-y-4">
+            {/* News items with enhanced styling */}
+            <ul className="space-y-6">
               {currentNotices.map((notice, index) => (
-                <li key={index} className="border-b border-gray-200 pb-6">
-                  <a 
-                    href={notice.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="group block transition-colors duration-300"
-                  >
-                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                      <div className="flex items-center gap-4 flex-shrink-0 w-full sm:w-auto">
-                        <time dateTime={notice.date.replace(/\./g, '-')} className="text-gray-500 font-medium w-24">
-                          {notice.date}
-                        </time>
-                        <span className={`px-3 py-1 text-xs font-semibold rounded-full border ${getCategoryStyle(notice.category)}`}>
-                          {notice.category}
-                        </span>
-                      </div>
-                      <p className="text-base sm:text-lg font-medium text-gray-800 group-hover:text-brand-primary flex-grow">
-                        {notice.title}
-                      </p>
-                      <span className="text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ml-auto pl-4">
-                        <i className="fas fa-external-link-alt"></i>
-                      </span>
-                    </div>
-                  </a>
-                </li>
+                <NewsItem key={index} notice={notice} index={index} />
               ))}
             </ul>
 
+            {/* Enhanced pagination */}
             {totalPages > 1 && (
-              <div className="mt-12 flex justify-center items-center gap-6">
+              <div className="mt-16 flex justify-center items-center gap-6">
                 <button
                   onClick={handlePrevPage}
                   disabled={currentPage === 1}
-                  className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  className="flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:border-gray-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-sm"
                 >
+                  <i className="fas fa-chevron-left"></i>
                   前へ
                 </button>
-                <span className="text-sm text-gray-600 font-mono">
-                  {currentPage} / {totalPages}
-                </span>
+                
+                <div className="flex items-center gap-2 px-4 py-3 bg-white border border-gray-300 rounded-lg shadow-sm">
+                  <span className="text-sm text-gray-600">
+                    <span className="font-medium text-blue-600">{currentPage}</span>
+                    <span className="mx-2 text-gray-400">/</span>
+                    <span className="font-medium">{totalPages}</span>
+                  </span>
+                </div>
+                
                 <button
                   onClick={handleNextPage}
                   disabled={currentPage === totalPages}
-                  className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  className="flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:border-gray-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-sm"
                 >
                   次へ
+                  <i className="fas fa-chevron-right"></i>
                 </button>
               </div>
             )}

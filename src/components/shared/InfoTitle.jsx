@@ -1,9 +1,11 @@
 import React from 'react';
 
-const InfoTitle = ({ backgroundImage, title, description, highlightText }) => {
+const InfoTitle = ({ backgroundImage, title, description, highlightText, highlightAlign ='center'}) => {
+
+  const highlightAlignClass = highlightAlign === 'left' ? 'text-left' : 'text-center';
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat py-16 px-4 text-center text-white"
+      className="relative bg-cover bg-center bg-no-repeat py-16 px-2 text-center text-white"
       style={{ minHeight: '300px' }}
     >
       {/* Blurred Background Image */}
@@ -16,7 +18,7 @@ const InfoTitle = ({ backgroundImage, title, description, highlightText }) => {
       <div className="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
 
       {/* Text Content */}
-      <div className="relative z-20 max-w-4xl mx-auto px-4">
+      <div className="relative z-20 max-w-6xl mx-auto px-4">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
           {title}
         </h1>
@@ -26,7 +28,7 @@ const InfoTitle = ({ backgroundImage, title, description, highlightText }) => {
         </p>
 
         {highlightText && (
-          <p className="mt-6 text-lg sm:text-xl md:text-2xl font-semibold text-brand-light">
+          <p className={`mt-6 text-lg sm:text-xl md:text-2xl font-semibold text-brand-light ${highlightAlignClass}`}>
             {highlightText}
           </p>
         )}
