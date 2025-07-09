@@ -17,7 +17,7 @@ const BackgroundCarousel = () => {
       setCurrentImageIndex(prevIndex =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000);
+    }, 7000);
 
     return () => clearInterval(interval); // Cleanup
   }, []); // Run only on mount

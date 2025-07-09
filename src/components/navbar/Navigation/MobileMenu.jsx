@@ -12,7 +12,7 @@ const MobileMenu = ({ isOpen, navLinks, activeLink, onLinkClick, onClose }) => {
         onClick={onClose}
       ></div>
       <div className="fixed top-0 right-0 w-80 h-full bg-white shadow-2xl">
-        <div className="p-6">
+        <div className="p-6 flex flex-col h-full">
           <div className="flex items-center justify-between mb-8">
             <h3 className="text-lg font-semibold text-gray-900">
               メニュー
@@ -37,7 +37,7 @@ const MobileMenu = ({ isOpen, navLinks, activeLink, onLinkClick, onClose }) => {
             </button>
           </div>
 
-          <nav className="space-y-2">
+          <nav className="space-y-2 flex-1 overflow-y-auto">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -48,35 +48,32 @@ const MobileMenu = ({ isOpen, navLinks, activeLink, onLinkClick, onClose }) => {
                 }}
                 className={`block px-4 py-3 rounded-xl font-medium transition-all duration-200 ${
                   activeLink === link.name
-                    ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg"
-                    : "text-gray-700 hover:bg-gray-50 hover:text-indigo-600"
+                    ? "bg-gradient-to-r from-brand-primary to-brand-navy text-white shadow-lg"
+                    : "text-gray-700 hover:bg-brand-navy hover:text-brand-primary"
                 }`}
               >
                 <div className="flex flex-col">
                   <span className="text-base">{link.name}</span>
                   {link.subtitle && (
-                    <span className="text-xs text-gray-500">{link.subtitle}</span>
+                    <span className="text-xs text-white-500">{link.subtitle}</span>
                   )}
                 </div>
               </a>
             ))}
           </nav>
 
-          <div className="mt-8 pt-6 border-t border-gray-200 space-y-4">
-            <div className="flex items-center justify-between">
-              <span className="text-sm text-gray-600">言語 / Language</span>
-              <div className="flex space-x-2">
-                <button className="px-3 py-1 bg-indigo-600 text-white text-xs rounded-full">
-                  🇯🇵 JP
-                </button>
-                <button className="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
-                  🇺🇸 EN
-                </button>
-              </div>
-            </div>
-            <Button href="/contact" onClick={onClose}>
+          <div className="mt-4 pt-4 border-t border-gray-200 space-y-4">
+            <Button 
+              href="/contact" 
+              onClick={onClose} 
+              className="w-full block text-center mb-6 py-4 px-6 rounded-2xl text-lg font-bold shadow-lg bg-gradient-to-r from-brand-primary to-brand-navy hover:from-brand-navy hover:to-brand-primary"
+            >
               お問い合わせ
             </Button>
+            <div className="flex items-center justify-between mt-6">
+              <span className="text-sm text-gray-600">言語 / Language</span>
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       </div>
