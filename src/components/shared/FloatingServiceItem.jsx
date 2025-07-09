@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const FloatingServiceItem = ({
   service,
@@ -7,6 +8,7 @@ const FloatingServiceItem = ({
   onHover,
   onLeave,
 }) => {
+  const { t } = useTranslation();
   if (!position) return null;
 
   return (
@@ -45,8 +47,7 @@ const FloatingServiceItem = ({
             ${isHovered ? 'opacity-0 scale-0' : 'opacity-100 scale-100'}
           `}>
             <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-center leading-tight px-1 whitespace-pre-line">
-            {service.titleLines ? service.titleLines.join('\n') : service.title}
-
+            {service.titleLines ? service.titleLines.map((line, idx) => t(line)).join('\n') : t(service.title)}
             </span>
           </div>
 
@@ -56,8 +57,15 @@ const FloatingServiceItem = ({
             transition-all duration-500
             ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5 pointer-events-none'}
           `}>
-            <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-            <p className="text-sm text-white/90 leading-relaxed">{service.description}</p>
+            <h3 className="text-xl font-bold mb-3">{t(service.title)}</h3>
+            <p className="text-sm text-white/90 leading-relaxed">{t(service.description)}</p>
+            {service.points && (
+              <ul className="mt-2 text-xs text-white/80 list-disc list-inside">
+                {service.points.map((point, idx) => (
+                  <li key={idx}>{t(point)}</li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
 

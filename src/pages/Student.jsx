@@ -228,9 +228,9 @@ export default function Student() {
           </div>
         </div>
         <CompanyCTA showTag={true}
-         title="新卒の学生、第二新卒の方、または留学生の採用をご検討の企業様へ "
-         description={`まずはお気軽にご相談ください。貴社の採用ニーズに合わせた最適な人材ソリューションをご提案いたします。\n採用に関するお悩みは、One Stepにお任せください。`}
-         buttonText="ご相談・お問い合わせはこちら →"
+         title="cta.student.title"
+         description="cta.student.description"
+         buttonText="cta.student.buttonText"
          buttonLink="/company-contact"
          />
         <Footer />

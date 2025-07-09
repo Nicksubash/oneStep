@@ -1,14 +1,15 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function CompanyCTA({
   showTag = true,
-  tagText = "企業様向け / For Companies",
-  title = "まずはお気軽にご相談ください",
-  description =
-    "貴社の事業成長を加速させる最適な人材ソリューションをご提案いたします。人材に関するお悩みは、One Stepにお任せください。",
-  buttonText = "ご相談・お問い合わせはこちら →",
+  tagText = "companyCTA.tagText",
+  title = "companyCTA.title",
+  description = "companyCTA.description",
+  buttonText = "companyCTA.buttonText",
   buttonLink = "/company-contact",
 }) {
+  const { t } = useTranslation();
   // Check if the link is external (starts with http or https)
   const isExternalLink = buttonLink.startsWith('http');
 
@@ -53,17 +54,17 @@ export default function CompanyCTA({
         {/* Optional red tag */}
         {showTag && (
           <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-gradient-to-r from-red-500 to-red-600 text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg border border-red-400 transform rotate-0 whitespace-nowrap">
-            {tagText}
+            {t(tagText)}
           </div>
         )}
 
         {/* Content */}
         <div>
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center text-brand-navy mb-6">
-            {title}
+            {t(title)}
           </h2>
           <p className="text-gray-700 text-left max-w-2xl mx-auto mb-8 text-sm sm:text-base md:text-lg leading-relaxed">
-            {description.split("\n").map((line, idx) => (
+            {t(description).split("\n").map((line, idx) => (
               <span key={idx}>
                 {line}
                 <br />
@@ -77,7 +78,7 @@ export default function CompanyCTA({
               rel={isExternalLink ? "noopener noreferrer" : undefined}
               className="relative inline-block text-white font-semibold text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg overflow-hidden group"
             >
-              <span className="relative z-10">{buttonText}</span>
+              <span className="relative z-10">{t(buttonText)}</span>
               <div className="absolute inset-0 bg-gradient-to-r from-brand-primary to-brand-navy z-0"></div>
               <div className="absolute inset-0 bg-gradient-to-r from-brand-navy to-brand-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
             </a>

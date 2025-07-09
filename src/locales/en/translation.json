@@ -1,0 +1,199 @@
+{
+  "welcome": "Welcome",
+  "contact": "Contact us via web form or phone.",
+  "companyCTA": {
+    "tagText": "For Companies",
+    "title": "Feel free to contact us first",
+    "description": "We offer optimal human resource solutions to accelerate your business growth. For any concerns regarding personnel, leave it to One Step.",
+    "buttonText": "Contact us here →"
+  },
+  "enhancedHero": {
+    "headline1": "Connecting People to People",
+    "headline2": "Recruitment Services",
+    "subtext1": "🌍 For those who want to work in Japan. This first step can change your future.",
+    "subtext2": "🎯 Job search, career change, career advancement—One Step fully supports your first step in Japan.",
+    "subtitle": "Welcome to OneStep Co., Ltd. We are your trusted partner for international recruitment, language education, and cross-cultural support in Japan. We connect outstanding talent from around the world with Japanese companies and fully support global career success.",
+    "ctaCompany": "For Companies",
+    "ctaJobSeeker": "For Job Seekers",
+    "scrollHint": "Scroll to see more details"
+  },
+  "whatWeDo": {
+    "title": "Our Services",
+    "animated1": "📘 What is One Step Co., Ltd.?",
+    "animated2": "We are a 'bridge of people' connecting foreigners who want to work in Japan with trustworthy companies. Our mission is not just matching, but also supporting 'culture', 'goals', and 'the future'."
+  },
+  "newsAndNotices": {
+    "title": "News & Notices",
+    "category": "News",
+    "year": "/",
+    "month": "/",
+    "day": ""
+  },
+  "services": [
+    {
+      "title": "Recruitment Services",
+      "titleLine1": "Recruitment",
+      "titleLine2": "Services",
+      "description": "We provide recruitment services matching foreign job seekers with Japanese companies. We support various employment types such as full-time, part-time, and internships, ensuring a smooth hiring process.",
+      "point1": "Jobs in hotels, factories, restaurants, logistics, offices",
+      "point2": "Visa support and interview preparation",
+      "point3": "Multilingual recruitment consultants"
+    },
+    {
+      "title": "Support for International Students & Consulting",
+      "titleLine1": "International Student Support",
+      "titleLine2": "Consulting",
+      "description": "We help students from around the world find the best educational opportunities in Japan.",
+      "point1": "School and university introductions and admission procedures",
+      "point2": "Visa application support",
+      "point3": "Advice on finding housing and part-time jobs"
+    },
+    {
+      "title": "Translation & Document Support",
+      "titleLine1": "Translation & Document",
+      "titleLine2": "Support",
+      "description": "We provide professional translation and document creation support for the following documents.",
+      "point1": "Residence applications, work permits, company documents",
+      "point2": "School-related documents and certificates",
+      "point3": "Translation of birth certificates, marriage certificates, visa-related documents"
+    }
+  ],
+  "cta": {
+    "faq": {
+      "jobSeekers": {
+        "tagText": "For Job Seekers",
+        "title": "Consult us about job change or employment",
+        "description": "Our career consultants will support you carefully. Please feel free to contact us.",
+        "buttonText": "Go to Application Form"
+      },
+      "companies": {
+        "tagText": "For Companies",
+        "title": "Consult us about hiring foreign talent",
+        "description": "We will propose the best talent for your company. Please feel free to contact us.",
+        "buttonText": "Contact Us"
+      }
+    },
+    "recruitment": {
+      "applicants": {
+        "tagText": "For Applicants",
+        "title": "Take your first step here.",
+        "description": "Why not expand your possibilities with us?",
+        "buttonText": "Go to Application Form"
+      }
+    },
+    "student": {
+      "title": "For companies considering hiring new graduates, second new graduates, or international students",
+      "description": "Please feel free to contact us first. We will propose the best human resource solution according to your recruitment needs.\nFor any recruitment concerns, leave it to One Step.",
+      "buttonText": "Contact us here →"
+    },
+    "translation": {
+      "title": "Free Quote & Consultation",
+      "description": "Please let us know the outline, language, and deadline of the document you want to translate.\nA specialist coordinator will propose the best plan.",
+      "buttonText": "Request a Free Quote"
+    }
+  },
+  "companyInfo": {
+    "hero": {
+      "title": "Company Overview",
+      "description": "One Step Co., Ltd. is a bridge connecting international talent and Japanese companies.\nThrough language education and life support, we create a future where foreigners can work and live with peace of mind.",
+      "highlightText": "That first step is the beginning of a career that changes the world."
+    },
+    "profile": {
+      "title": "Company Overview",
+      "subtitle": "Company Profile"
+    },
+    "table": {
+      "companyName": "Company Name",
+      "companyNameValue": "One Step Co., Ltd.",
+      "established": "Established",
+      "establishedValue": "March 28, 2025",
+      "location": "Location",
+      "locationValue": "Kannon Building, Kannon-cho, Minami-ku, Nagoya, Aichi 457-0845, Japan",
+      "representative": "Representative",
+      "representativeValue": "CEO Sudip Regmi",
+      "contact": "Contact",
+      "contactValue": "📞 052-829-1674 | FAX: 052-829-1684",
+      "email": "Email",
+      "emailValue": "📧 info@onestep-group.co.jp",
+      "business": "Business Activities",
+      "business1": "Recruitment services (License No.: 23-Yu-303096)",
+      "business2": "Employment and career support for foreigners",
+      "business3": "Job support for international students",
+      "business4": "Supported languages: Japanese, English, Nepali",
+      "license": "Licenses & Registration",
+      "licenseValue": "Recruitment service license (Ministry of Health, Labour and Welfare No.: 23-Yu-303096) | Other registrations in preparation",
+      "mission": "Mission",
+      "missionHighlight": "\"That first step changes the future\"",
+      "missionText": "We serve as a bridge between foreigners and companies, realizing a trusted flow of talent in Japanese society.",
+      "vision": "Vision",
+      "visionValue": "Aiming for a society where diverse talent can thrive, we pursue value creation centered on people.",
+      "slogan": "Slogan",
+      "sloganValue": "\"That first step changes the future\""
+    },
+    "access": {
+      "title": "Access",
+      "companyName": "One Step Co., Ltd.",
+      "address": "Kannon Building, Kannon-cho, Minami-ku, Nagoya, Aichi 457-0845, Japan",
+      "station": "5 minutes walk from Meitetsu Tokoname Line 'Dotoku Station'"
+    }
+  },
+  "service": {
+    "meta": {
+      "title": "Paid Employment Placement Service | One Step Co., Ltd.",
+      "description": "One Step Co., Ltd. is your trusted partner connecting excellent foreign talent with Japanese companies through paid employment placement.",
+      "keywords": "employment placement, foreign talent, global talent, Japan jobs, recruitment service, international hiring support",
+      "lang": "en"
+    },
+    "infoTitle": {
+      "title": "Paid Employment Placement Service",
+      "description": "Paid Employment Placement Service",
+      "highlightText": "A paid service connecting people to people"
+    },
+    "heroImageAlt": "Business meeting",
+    "heroTitleHighlight": "Paid Employment Placement",
+    "heroTitleRest": " - What is it?",
+    "heroDescription": "Paid employment placement is a service that mediates between job seekers and employers to achieve optimal matching. At One Step, we act as a bridge connecting foreign talent who want to work in Japan with companies seeking global talent, providing high-quality introductions based on trust and proven results.",
+    "strengths": [
+      {
+        "title": "Diverse Talent Network",
+        "description": "We leverage a rich network of talent regardless of nationality to introduce the best candidates for your needs."
+      },
+      {
+        "title": "Global Standard Support",
+        "description": "Many foreign staff familiar with Japanese culture and business manners. Smooth cross-cultural communication."
+      },
+      {
+        "title": "Flexible Solutions",
+        "description": "From full-time to contract and specialist positions, we offer flexible plans tailored to your hiring challenges."
+      }
+    ],
+    "flow": {
+      "title": "Introduction Flow",
+      "steps": ["Inquiry", "Hearing & Proposal", "Contract & Selection", "Start of Work"],
+      "descriptions": [
+        "Feel free to contact us via web form or phone.",
+        "Our staff will listen to your business needs and propose the best talent and introduction method.",
+        "After contract, we carefully select and introduce candidates that match your requirements.",
+        "We provide regular follow-up and continuous support even after employment starts."
+      ]
+    },
+    "challengesTitle": "We solve these <span class=\"highlight\">challenges</span>",
+    "challenges": [
+      "Want to hire foreign talent who can contribute immediately",
+      "Want talent with a global perspective",
+      "Can't find candidates with specialized skills",
+      "Want to reduce recruitment costs",
+      "Need reliable talent for long-term employment"
+    ],
+    "jobTypesTitle": "Examples of <span class=\"text-indigo-600\">Job Types / Industries</span>",
+    "jobTypes": [
+      "Manufacturing & Logistics",
+      "Office & Customer Service",
+      "IT & Engineering",
+      "Sales & Retail",
+      "Interpretation & Translation",
+      "Nursing & Medical"
+    ],
+    "jobTypesImageAlt": "Diverse workplaces"
+  }
+} 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { services } from './ServiceData';
 import { useFloatingPositions } from '../CustomHooks/useFloatingPositions';
 import FloatingServiceItem from '../shared/FloatingServiceItem';
@@ -8,6 +9,7 @@ import AnimatedText from '../shared/AnimatedText';
 const WhatWeDo = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const positions = useFloatingPositions(services.length);
+  const { t } = useTranslation();
 
   // Add scroll tracking for scroll-based effects
   const [scrollY, setScrollY] = useState(0);
@@ -27,19 +29,19 @@ const WhatWeDo = () => {
         {/* Title Only */}
         <div className="text-center mb-4">
           <h2 className="text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent mb-2">
-            事業内容
+            {t('whatWeDo.title')}
           </h2>
         </div>
 
         {/* AnimatedText Below h2, separate from heading */}
         <div className="mb-12 max-w-4xl mx-auto px-4 text-center ">
           <AnimatedText
-          text="📘 One Step株式会社とは？"
+          text={t('whatWeDo.animated1')}
           className="text-white text-xl font-semibold mb-2 block"
           delay={1600}
           />
           <AnimatedText
-          text="私たちは、日本で働きたい外国人と、信頼できる企業をつなぐ「人の架け橋」です。ただのマッチングではなく、「文化」「目標」「未来」までも支えることが、私たちのミッションです。"
+          text={t('whatWeDo.animated2')}
           className="text-white text-base leading-relaxed block"
           delay={1800}
           />
