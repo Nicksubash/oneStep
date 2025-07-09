@@ -19,7 +19,7 @@ const LineContact = () => {
     // Current position (middle-left):
     return (
         <a
-            href="https://line.me/ti/p/your_line_id" 
+            href="https://qr-official.line.me/gs/M_038ounou_GW.png?oat_content=qr" 
             target="_blank"
             rel="noopener noreferrer"
             className="fixed left-0 top-1/2  z-50 bg-green-500 p-3 rounded-lg shadow-lg hover:bg-green-600 transition-colors duration-300"

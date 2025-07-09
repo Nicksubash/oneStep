@@ -62,7 +62,7 @@ export default function CompanyCTA({
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center text-brand-navy mb-6">
             {title}
           </h2>
-          <p className="text-gray-700 text-center max-w-2xl mx-auto mb-8 text-sm sm:text-base md:text-lg leading-relaxed">
+          <p className="text-gray-700 text-left max-w-2xl mx-auto mb-8 text-sm sm:text-base md:text-lg leading-relaxed">
             {description.split("\n").map((line, idx) => (
               <span key={idx}>
                 {line}

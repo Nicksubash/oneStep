@@ -81,9 +81,16 @@ export default function Contact() {
                   </p>
                   <p className="flex items-center text-gray-700">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-brand-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 9V4h12v5M6 14h12M6 10h12m-9 4v2m4-2v2m-7 3h10a2 2 0 002-2v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                    </svg>
+                    <a href="tel:052-829-1674" className="text-lg text-brand-navy hover:underline">052-829-1684</a>
+                    <span className="text-sm text-gray-500 ml-1">(FAX)</span>
+                  </p>
+                  <p className="flex items-center text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-brand-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <a href="mailto:onestep.recruit.japan@gmail.com" className="text-lg text-brand-navy hover:underline">onestep.recruit.japan@gmail.com</a>
+                    <a href="mailto:onestep.recruit.japan@gmail.com" className="text-lg text-brand-navy hover:underline">info@onestep-group.co.jp</a>
                   </p>
                 </div>
               </div>

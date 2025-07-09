@@ -49,7 +49,7 @@ const AnimatedFlowStep = ({
       }`}>
         {steps[index]}
       </h3>
-      <p className={`text-sm text-gray-600 text-center transition-all duration-500 ${
+      <p className={`text-sm text-gray-600 text-left transition-all duration-500 ${
         isHovered 
           ? 'text-gray-800 font-medium transform scale-105' 
           : 'text-gray-600'

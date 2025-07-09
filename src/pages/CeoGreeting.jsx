@@ -11,7 +11,7 @@ const CEOInfo = () => (
       <img
         src={CEOImage}
         alt="CEO Sudip Regmi"
-        className="w-72 h-auto mx-auto transition-transform duration-700 hover:scale-105 object-cover grayscale hover:grayscale-0"
+        className="w-72 h-auto mx-auto transition-transform duration-700 hover:scale-105 object-cover  hover:grayscale-0"
       />
     </div>
     <h2 className="text-xl font-bold text-brand-navy mb-2">代表取締役</h2>
