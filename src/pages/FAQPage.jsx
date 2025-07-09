@@ -63,18 +63,20 @@ export default function FAQPage() {
           {activeTab === 'jobSeekers' ? (
          <CompanyCTA
             showTag={true}
-            tagText="お仕事をお探しの方へ / For Job Seekers"
-            title="就職・転職に関するご相談は"
-            description="専門のキャリアコンサルタントが丁寧にサポートします。お気軽にご相談ください。"
+            tagText="cta.faq.jobSeekers.tagText"
+            title="cta.faq.jobSeekers.title"
+            description="cta.faq.jobSeekers.description"
+            buttonText="cta.faq.jobSeekers.buttonText"
             buttonLink="https://docs.google.com/forms/d/e/1FAIpQLSdh6uGf2hrGfCRTZUuTFYR6abVvsrEHH77TrBDEsXg2IPDSLA/viewform"
           />) : (
          <CompanyCTA
             showTag={true}
-            tagText="企業様向け / For Companies" 
-            title="外国人採用・人材に関するご相談は"
-            description="貴社に最適な人材提案を行います。まずはお気軽にお問い合わせください。"
-            buttonLink="/company-contact"
-            />
+            tagText="cta.faq.companies.tagText"
+            title="cta.faq.companies.title"
+            description="cta.faq.companies.description"
+            buttonText="cta.faq.companies.buttonText"
+            buttonLink="/contact"
+          />
           )}
 
         </div>

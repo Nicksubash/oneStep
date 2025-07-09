@@ -1,15 +1,17 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { newsData } from '../../data/newsData';
 
-const newsItems = newsData.map(item => ({
-  date: item.date.replace(/\./g, '年').replace(/(\d{4})年(\d{2})年(\d{2})/, '$1年$2月$3日'),
-  title: item.title,
-  category: '新着情報', 
-  link: '/news', 
-}));
-
 const NewsAndNotices = () => {
+  const { t } = useTranslation();
+  const newsItems = newsData.map(item => ({
+    date: item.date.replace(/\./g, t('newsAndNotices.year')).replace(/(\d{4})" + t('newsAndNotices.year') + "(\d{2})" + t('newsAndNotices.year') + "(\d{2})/, `$1${t('newsAndNotices.year')}$2${t('newsAndNotices.month')}$3${t('newsAndNotices.day')}`),
+    title: item.title,
+    category: t('newsAndNotices.category'),
+    link: '/news',
+  }));
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6">
@@ -23,7 +25,7 @@ const NewsAndNotices = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold mb-8 border-b-2 border-red-600 pb-2">
-              お知らせ
+              {t('newsAndNotices.title')}
             </h2>
             <div className="space-y-6 max-h-80 overflow-y-scroll pr-2 scrollbar-always px-8">
             {newsItems.map((news) => (

@@ -164,9 +164,9 @@ export default function TranslationService() {
 
         {/* --- ENHANCED CTA SECTION --- */}
         <CompanyCTA showTag={true}
-         title="無料お見積り・ご相談はこちら"
-         description={`翻訳したいドキュメントの概要や言語、納期などをお知らせください。\n専門のコーディネーターが最適なプランをご提案します。`}
-         buttonText="無料お見積りを依頼する"
+         title="cta.translation.title"
+         description="cta.translation.description"
+         buttonText="cta.translation.buttonText"
          buttonLink="/contact"
          />
         </div>

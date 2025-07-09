@@ -181,10 +181,10 @@ export default function RecruitmentPage() {
         {/* --- ENHANCED: Dedicated CTA Section --- */}
         <CompanyCTA
           showTag={true}
-          tagText="ご応募を検討されている方へ / For Applicants"
-          title="新しい一歩を、ここから。"
-          description="あなたの可能性を、ぜひ私たちと一緒に広げてみませんか。"
-          buttonText="応募フォームへ"
+          tagText="cta.recruitment.applicants.tagText"
+          title="cta.recruitment.applicants.title"
+          description="cta.recruitment.applicants.description"
+          buttonText="cta.recruitment.applicants.buttonText"
           buttonLink="https://docs.google.com/forms/d/e/1FAIpQLSdh6uGf2hrGfCRTZUuTFYR6abVvsrEHH77TrBDEsXg2IPDSLA/viewform"
         />
       </div>
