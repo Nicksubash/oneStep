@@ -71,7 +71,7 @@ export default function Contact() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
               <div className="bg-blue-50 p-6 rounded-xl">
-                <h3 className="text-xl font-bold text-brand-navyBright mb-4">お問い合わせ</h3>
+                <h3 className="text-xl font-bold text-brand-primary mb-4">お問い合わせ</h3>
                 <div className="space-y-3">
                   <p className="flex items-center text-gray-700">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-brand-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -95,10 +95,11 @@ export default function Contact() {
                 </div>
               </div>
               <div className="bg-blue-50 p-6 rounded-xl">
-                <h3 className="text-xl font-bold text-brand-navyBright mb-4">アクセス</h3>
+                <h3 className="text-xl font-bold text-brand-primary mb-4">アクセス</h3>
                 <p className="text-brand-navy">
-                  愛知県名古屋市南区観音町5-25 観音ビル3c<br />
-                  <span className="text-sm text-brand-navy">※地下鉄桜通線「桜本町駅」から徒歩5分</span>
+                  愛知県名古屋市南区観音町5-25 観音ビル3C<br />
+                  <span className="text-sm text-brand-navy">※名鉄常滑線「道徳駅下電」から徒歩8分</span> <br/>
+                  <span className="text-sm text-brand-navy">※名鉄常滑線「大江駅下電」から徒歩16分</span>
                 </p>
               </div>
             </div>
