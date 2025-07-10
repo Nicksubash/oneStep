@@ -1,6 +1,8 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function TeamMemberCard({ image, nameJp, nameEn, titleJp, aboutJp, index = 0 }) {
+  const { t } = useTranslation();
   const isEven = index % 2 === 0;
 
   // Format the about text with proper highlighting for key points
@@ -8,48 +10,21 @@ export default function TeamMemberCard({ image, nameJp, nameEn, titleJp, aboutJp
     if (index === 1) { // Sailendra's card - second member
       return (
         <div className="space-y-4">
-          <p>
-            <span className="font-semibold text-brand-navy">14年前に来日</span>し、日本語学校・専門学校を経て、愛知文教大学を卒業しました。その後、企業に就職し、日本の社会や文化に深く触れる中で、日本への愛着が強まり、ついには<span className="font-semibold text-brand-navy">日本国籍を取得</span>しました。
-            <span className="font-semibold text-brand-navy">2023年からは自身のビジネスを開始</span>し、企業での就労や起業の経験を通じて、
-            <span className='text-brand-primary'>「人材不足」</span>や
-            <span className='text-brand-primary'>「外国人の就職の難しさ」</span>
-            といった課題を肌で感じました。
-          </p>
-          <p>
-            そうした課題に対して、自分が<span className="italic text-brand-primary font-medium">"橋渡し"</span>の存在になれたら――という想いから、<span className="font-bold text-brand-navy"><br/>「One Step株式会社」の設立</span>に至りました。
-          </p>
-          <p className="pt-2 border-t border-gray-200">
-            <span className="font-semibold text-brand-navy">日本語・ネパール語・英語・ヒンディー語の4か国語を操り</span>、多様な人材と企業をつなぐグローバルなサポートを提供します。
-          </p>
+          <p dangerouslySetInnerHTML={{ __html: t('teamMemberCard.member2.formattedText.part1') }} />
+          <p dangerouslySetInnerHTML={{ __html: t('teamMemberCard.member2.formattedText.part2') }} />
+          <p dangerouslySetInnerHTML={{ __html: t('teamMemberCard.member2.formattedText.part3') }} />
+          <p className="pt-2 border-t border-gray-200" dangerouslySetInnerHTML={{ __html: t('teamMemberCard.member2.formattedText.part4') }} />
         </div>
       );
     } else {
       // For the first member (Rishi), apply similar formatting
       return (
         <div className="space-y-4">
-          <p>私は<span className="font-semibold text-brand-navy">ネパール出身</span>で、14年前に来日し、日本語学校・専門学校を経て、
-          <span className="font-semibold text-brand-navy">愛知文教大学を卒業</span>いたしました。
-          
-            その後、日本企業での勤務を通じて、
-            <span className="font-semibold text-brand-navy">日本の社会・文化・ビジネスマナー</span>を深く学びました。
-            現在は日本国籍を取得し、日本での生活基盤を築いております。
-            </p>
-            <p>
-              <span className="font-bold text-brand-navy">One Step株式会社の代表取締役</span>として、
-              外国人の就職支援と、企業の採用活動をサポートしております。私自身の経験を活かし、言語や文化の違いによる不安や課題に丁寧に寄り添いながら支援を行っています。
-            </p>
-          <p className="pt-2 border-t border-gray-200">
-            私たちは単なる人材紹介にとどまらず、
-            <span className="italic text-brand-primary font-medium">
-              「信頼に基づく出会い」
-            </span>と
-            <span className="italic text-brand-primary font-medium">
-              「長期的な活躍」
-            </span>
-            を見据えたサポートを大切にしています。
-          </p>
+          <p dangerouslySetInnerHTML={{ __html: t('teamMemberCard.member1.formattedText.part1') }} />
+          <p dangerouslySetInnerHTML={{ __html: t('teamMemberCard.member1.formattedText.part2') }} />
+          <p dangerouslySetInnerHTML={{ __html: t('teamMemberCard.member1.formattedText.part3') }} />
+          <p className="pt-2 border-t border-gray-200" dangerouslySetInnerHTML={{ __html: t('teamMemberCard.member1.formattedText.part4') }} />
         </div>
-
       );
     }
   };

@@ -1,6 +1,6 @@
 {
   "welcome": "Welcome",
-  "contact": "Contact us via web form or phone.",
+  "contacts": "Contact us via web form or phone.",
   "companyCTA": {
     "tagText": "For Companies",
     "title": "Feel free to contact us first",
@@ -41,7 +41,7 @@
     },
     {
       "title": "Support for International Students & Consulting",
-      "titleLine1": "International Student Support",
+      "titleLine1": "Student",
       "titleLine2": "Consulting",
       "description": "We help students from around the world find the best educational opportunities in Japan.",
       "point1": "School and university introductions and admission procedures",
@@ -134,7 +134,8 @@
       "title": "Access",
       "companyName": "One Step Co., Ltd.",
       "address": "Kannon Building, Kannon-cho, Minami-ku, Nagoya, Aichi 457-0845, Japan",
-      "station": "5 minutes walk from Meitetsu Tokoname Line 'Dotoku Station'"
+      "station1": "※8 minutes walk from 'Dotoku Station' on Meitetsu Tokoname Line",
+      "station2": "※16 minutes walk from 'Oe Station' on Meitetsu Tokoname Line"
     }
   },
   "service": {
@@ -195,5 +196,543 @@
       "Nursing & Medical"
     ],
     "jobTypesImageAlt": "Diverse workplaces"
+  },
+  "student": {
+    "meta": {
+      "title": "International Student Career Support | One Step Co., Ltd.",
+      "description": "One Step Co., Ltd. provides comprehensive career support for international students in Japan, including resume writing, interview preparation, and visa assistance.",
+      "keywords": "international student support, career counseling, resume writing, interview preparation, visa support, Japan job search",
+      "lang": "en"
+    },
+    "infoTitle": {
+      "title": "Career Support for International Students",
+      "description": "Career Support for International Students",
+      "highlightText": "Build your career in Japan with us!"
+    },
+    "heroImageAlt": "Worried international student",
+    "supportSection": {
+      "title": "Are you struggling with job hunting in Japan alone?",
+      "highlightText": "struggling with job hunting in Japan alone?",
+      "concerns": [
+        "I don't know how to write a Japanese resume",
+        "I'm worried about what to say in interviews",
+        "I can't find companies that can utilize my expertise"
+      ],
+      "message": "Many international students feel anxious about finding jobs in Japan. We will support you with all our might!"
+    },
+    "strengths": [
+      {
+        "title": "Resume Editing & Interview Preparation",
+        "description": "From writing Japanese resumes and job history documents required for Japanese job hunting to interview responses that get evaluated, our specialized consultants provide thorough guidance."
+      },
+      {
+        "title": "Company Introductions Understanding International Students",
+        "description": "We carefully select excellent companies with rich experience in hiring foreign employees and valuing diversity. You will find work that can utilize your expertise and language skills."
+      },
+      {
+        "title": "Visa & Residence Status Consultation",
+        "description": "We also support complex residence status concerns such as work visa change procedures. We create an environment where you can focus on job hunting with peace of mind."
+      }
+    ],
+    "flow": {
+      "title": "Service Flow",
+      "steps": ["Inquiry", "Career Counseling", "Company Introduction & Interview Preparation", "Job Offer & Visa Support"],
+      "descriptions": [
+        "Feel free to consult via web form or LINE. Our staff will contact you.",
+        "We think about career direction together based on experience, skills, and hopes.",
+        "We carefully select companies that understand foreign talent and support document applications and interview preparation.",
+        "We provide total support for job hunting, from follow-up after job offers to visa consultation."
+      ]
+    },
+    "testimonials": [
+      {
+        "quote": "They taught me the rules of Japanese job hunting that I couldn't understand alone, and I was able to attend interviews with confidence. I successfully received a job offer from my first choice IT company!",
+        "name": "Ms. Li",
+        "origin": "From China",
+        "flag": "🇨🇳"
+      },
+      {
+        "quote": "I was worried as a humanities graduate, but they introduced me to a sales position that could utilize my strengths. The follow-up after joining the company is also thorough, and I'm working happily every day.",
+        "name": "Maya",
+        "origin": "From Nepal",
+        "flag": "🇳🇵"
+      }
+    ],
+    "jobApplicationForm": {
+      "title": "Job Application Form"
+    }
+  },
+  "translationService": {
+    "meta": {
+      "title": "Translation & Documentation Services | One Step Co., Ltd.",
+      "description": "One Step Co., Ltd. provides professional translation and documentation services for businesses expanding globally, with expertise in multiple languages and specialized fields.",
+      "keywords": "translation services, document translation, professional translation, multilingual services, business translation, technical translation",
+      "lang": "en"
+    },
+    "infoTitle": {
+      "title": "Translation & Documentation Services",
+      "description": "Translation & Documentation Services",
+      "highlightText": "Breaking language barriers, expanding business globally."
+    },
+    "heroImageAlt": "Global business",
+    "problemSection": {
+      "title": "Do you face these translation challenges?",
+      "highlightText": "translation challenges",
+      "concerns": [
+        "Machine translation quality is too low for business use",
+        "Too many technical terms, can't find a company that can provide accurate translation",
+        "Want to expand to multiple languages but don't have time or resources"
+      ],
+      "solution": "One Step is your professional translation partner that accelerates your global expansion."
+    },
+    "strengths": [
+      {
+        "title": "Specialized Fields × Native Quality",
+        "description": "Translators with expertise in each field and native speakers form teams to achieve accurate and natural translations."
+      },
+      {
+        "title": "Fast & Flexible Response",
+        "description": "Flexible response to urgent projects. Quick delivery possible according to your business schedule."
+      },
+      {
+        "title": "Diverse Document Formats",
+        "description": "From contracts and technical manuals to websites and marketing materials, we handle all document formats."
+      },
+      {
+        "title": "Thorough Confidentiality",
+        "description": "Information entrusted by clients is managed with the highest level of security. Non-disclosure agreements (NDA) can also be concluded."
+      }
+    ],
+    "flow": {
+      "title": "Service Flow",
+      "steps": ["Inquiry & Quote", "Order & Document Submission", "Translation & Proofreading", "Delivery"],
+      "descriptions": [
+        "Contact us via web form. We will provide a quote within the same day.",
+        "After formal order, please send us the documents and materials to be translated.",
+        "Specialized translators translate, and another native speaker strictly checks quality.",
+        "Deliver translated data in your specified format. After-sales support is also complete."
+      ]
+    },
+    "supportedFields": {
+      "title": "Supported Fields",
+      "highlightText": "Fields",
+      "fields": ["IT & Technology", "Legal & Contracts", "Medical & Pharmaceutical", "Finance & IR", "Marketing", "Technical Manuals", "Websites"]
+    },
+    "supportedLanguages": {
+      "title": "Supported Languages",
+      "highlightText": "Languages",
+      "languages": ["English", "Japanese", "Nepali", "Hindi", "Many others"],
+      "imageAlt": "Multilingual support"
+    }
+  },
+  "teams": {
+    "meta": {
+      "title": "Our Team | One Step Co., Ltd.",
+      "description": "Meet the diverse team at One Step Co., Ltd. - international members who deeply understand Japanese culture and business practices.",
+      "keywords": "team, international team, Japanese business, multicultural team, One Step team",
+      "lang": "en"
+    },
+    "infoTitle": {
+      "title": "Our Team",
+      "description": "Meet Our Team",
+      "highlightText": "We are a team composed of international members, but we have lived in Japan for many years and deeply understand and respect Japanese culture and values through daily life and work. Some of our members have acquired Japanese nationality and value contributing to and harmonizing with Japanese society. One Step Co., Ltd. is not just a 'company run by foreigners' but aims to be a trusted partner as a 'partner who understands Japan and grows together with Japan' for Japanese companies."
+    },
+    "members": [
+      {
+        "nameJp": "レグミ・スディプ",
+        "nameEn": "Regmi Sudip",
+        "titleJp": "取締役代表",
+        "aboutJp": "14年前にネパールより来日し、日本語学校・専門学校を経て愛知文教大学を卒業しました。その後、日本企業での勤務を通じて、日本社会やビジネスマナー、文化を深く理解しました。現在は日本国籍を取得し、「日本と外国人をつなぐ架け橋」となることを使命に、求職者と企業の双方を支援しています。私自身もかつて外国人として日本に来日し、言語の壁や文化の違い、仕事探しにおいて多くの困難を経験しました。そうした経験を乗り越えてきたからこそ、日本で働こうとする皆さまの不安や期待に寄り添い、心からサポートできると自負しています。また、外国人採用における課題を抱える企業の皆さまに対しても、言語や文化、制度の違いによる\"すれ違い\"を丁寧に埋め、信頼あるマッチングを提供いたします。私は単なる有料職業紹介にとどまらず、就職後の定着や長期的な活躍を見据えたサポートを大切にし、一人ひとりの\"大切な一歩\"を心を込めて応援しています。"
+      },
+      {
+        "nameJp": "ラナバト・サイレンドラ",
+        "nameEn": "Ranabhat Sailendra",
+        "titleJp": "取締役 / Director",
+        "aboutJp": "14年前に来日し、日本語学校・専門学校を経て、愛知文教大学を卒業しました。その後、企業に就職し、日本の社会や文化に深く触れる中で、日本への愛着が強まり、ついには日本国籍を取得しました。2023年からは自身のビジネスを開始し、企業での就労や起業の経験を通じて、「人材不足」や「外国人の就職の難しさ」といった課題を肌で感じました。そうした課題に対して、自分が\"橋渡し\"の存在になれたら――という想いから、「One Step株式会社」の設立に至りました。日本語・ネパール語・英語・ヒンディー語の4か国語を操り、多様な人材と企業をつなぐグローバルなサポートを提供します。"
+      }
+    ]
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact Us | One Step Co., Ltd.",
+      "description": "Contact One Step Co., Ltd. for recruitment services, career support, and translation services. We're here to help with your business needs.",
+      "keywords": "contact, inquiry, recruitment, career support, translation services, One Step contact",
+      "lang": "en"
+    },
+    "infoTitle": {
+      "title": "Contact Us",
+      "description": "Please select the appropriate contact window based on your inquiry.",
+      "highlightText": "Our staff will respond promptly."
+    },
+    "pageIntro": {
+      "title": "Feel free to contact us",
+      "description": "One Step Co., Ltd. serves as a bridge connecting job seekers and companies. Please contact us from the options below according to your position."
+    },
+    "selectionCards": {
+      "company": {
+        "title": "For Company Representatives",
+        "description": "For inquiries about paid employment placement and recruitment"
+      },
+      "student": {
+        "title": "For Job Seekers",
+        "description": "For job introductions and career consultation"
+      }
+    },
+    "accessSection": {
+      "title": "Access & Contact Information",
+      "contact": {
+        "title": "Contact Information",
+        "phone": "052-829-1674",
+        "fax": "052-829-1684",
+        "email": "info@onestep-group.co.jp"
+      },
+      "access": {
+        "title": "Access",
+        "address": "5-25 Kannon-cho, Minami-ku, Nagoya, Aichi Prefecture, Kannon Building 3C",
+        "station1": "※ 8 minutes walk from \"Dotoku Station\" on Meitetsu Tokoname Line",
+        "station2": "※ 16 minutes walk from \"Oe Station\" on Meitetsu Tokoname Line"
+      }
+    }
+  },
+  "teamMemberCard": {
+    "member1": {
+      "formattedText": {
+        "part1": "I am <span class=\"font-semibold text-brand-navy\">from Nepal</span> and came to Japan 14 years ago, graduating from <span class=\"font-semibold text-brand-navy\">Aichi Bunkyo University</span> after attending Japanese language school and vocational school.",
+        "part2": "After that, through working at Japanese companies, I deeply learned <span class=\"font-semibold text-brand-navy\">Japanese society, culture, and business manners</span>. I have now acquired Japanese nationality and built a life foundation in Japan.",
+        "part3": "As the <span class=\"font-bold text-brand-navy\">CEO of One Step Co., Ltd.</span>, I support foreign job seekers and company recruitment activities. Utilizing my own experience, I provide support while carefully addressing anxieties and challenges caused by language and cultural differences.",
+        "part4": "We value support that looks toward <span class=\"italic text-brand-primary font-medium\">\"trust-based encounters\"</span> and <span class=\"italic text-brand-primary font-medium\">\"long-term success\"</span> rather than just personnel introduction."
+      }
+    },
+    "member2": {
+      "formattedText": {
+        "part1": "I came to Japan <span class=\"font-semibold text-brand-navy\">14 years ago</span> and graduated from Aichi Bunkyo University after attending Japanese language school and vocational school. After that, I got a job at a company and, while deeply experiencing Japanese society and culture, my attachment to Japan grew stronger, and I eventually acquired <span class=\"font-semibold text-brand-navy\">Japanese nationality</span>.",
+        "part2": "Since <span class=\"font-semibold text-brand-navy\">2023, I have started my own business</span>, and through my experience working at companies and starting businesses, I have personally felt challenges such as <span class=\"text-brand-primary\">\"labor shortage\"</span> and <span class=\"text-brand-primary\">\"difficulty for foreigners to find jobs.\"</span>",
+        "part3": "With the thought that I could become a <span class=\"italic text-brand-primary font-medium\">\"bridge\"</span> for such challenges, I established <span class=\"font-bold text-brand-navy\"><br/>\"One Step Co., Ltd.\"</span>",
+        "part4": "I speak <span class=\"font-semibold text-brand-navy\">four languages: Japanese, Nepali, English, and Hindi</span>, and provide global support connecting diverse talent and companies."
+      }
+    }
+  },
+  "ceoGreeting": {
+    "meta": {
+      "title": "CEO Message | One Step Co., Ltd.",
+      "description": "Message from the CEO of One Step Co., Ltd. - bridging international talent and Japanese companies through language education and life support.",
+      "keywords": "CEO message, One Step CEO, international talent, Japanese companies, language education",
+      "lang": "en"
+    },
+    "infoTitle": {
+      "title": "CEO Message",
+      "description": "One Step Co., Ltd. is a bridge connecting international talent and Japanese companies. Through language education and life support, we create a future where foreigners can work and live with peace of mind.",
+      "highlightText": "We support each person's 'first step' from the heart."
+    },
+    "ceoInfo": {
+      "title": "CEO",
+      "name": "Regmi Sudip",
+      "nationality": "🇯🇵 Japanese nationality (from Nepal)",
+      "languages": "🗣️ Japanese, English, Nepali, Hindi"
+    },
+    "ceoMessage": {
+      "part1": "I once came to Japan as a foreigner and experienced various difficulties such as language barriers, cultural differences, and job hunting challenges. Learning Japanese, job hunting, and workplace adaptation—none of these were easy paths, but I overcame each one to become who I am today. That's why I am confident that I can empathize with and support the anxieties and expectations of those who want to work in Japan more than anyone else.",
+      "part2": "Also, for companies, I believe there are various concerns and challenges when hiring foreigners, such as insufficient understanding of language, culture, and systems. We at One Step Co., Ltd. are committed to carefully bridging such \"invisible walls\" and \"misunderstandings\" and realizing trustworthy and secure matching.",
+      "part3": "From the position of someone who has already adapted to Japanese society, I will provide not just personnel introduction, but also detailed support that looks toward \"post-employment retention\" and \"long-term success\" for new graduates and those working in Japan for the first time.",
+      "part4": "I will support each person's <span class=\"text-brand-primary text-2xl font-extrabold\">\"Precious First Step\"</span> with all my heart."
+    }
+  },
+  "philosophy": {
+    "meta": {
+      "title": "Corporate Philosophy | One Step Co., Ltd.",
+      "description": "Learn about One Step's corporate philosophy, mission, vision, and commitment to supporting each person's first step toward a better future.",
+      "keywords": "corporate philosophy, mission, vision, One Step, international talent, Japanese companies",
+      "lang": "en"
+    },
+    "infoTitle": {
+      "title": "Corporate Philosophy",
+      "description": "Philosophy",
+      "highlightText": "\"That one step changes the future.\""
+    },
+    "ceoMessage": {
+      "title": "Our Thoughts",
+      "quote": "\"I myself was once one of those who was confused and troubled by my \"first step\" in Japan. That's why I want to support everyone who is trying hard in Japan now more strongly than anyone else. Believing that your \"step\" will change the future, we will continue to stand by you.\"",
+      "author": "— Regmi Sudip (CEO)"
+    },
+    "mission": {
+      "title": "Mission",
+      "subtitle": "Leading people and companies one step forward.",
+      "description1": "In Japan today, while the labor shortage is becoming serious, there are many excellent talents both domestically and internationally seeking opportunities to work. One Step is committed to providing through our paid employment placement business:",
+      "list": {
+        "item1": "For companies: reliable, ready-to-work talent",
+        "item2": "For job seekers: workplaces and environments where they can work with peace of mind"
+      },
+      "description2": "We are committed to providing these services."
+    },
+    "vision": {
+      "title": "Vision",
+      "subtitle": "Creating a society where diverse talents can thrive by utilizing their individuality and abilities.",
+      "description": "A society where human value is respected beyond nationality and culture. One Step aims for such a future and will pursue value creation centered on \"people.\""
+    },
+    "promises": {
+      "title": "Our Promises",
+      "list": [
+        "Honestly. Carefully. Standing by you.",
+        "We face each person's \"life\" and provide trust and peace of mind.",
+        "We face each company's \"challenges\" and realize sustainable talent retention."
+      ]
+    },
+    "slogan": {
+      "title": "Slogan",
+      "main": "\"That <span class=\"text-brand-primary\">step</span> changes the future.\"",
+      "description1": "What we value is the power of \"one step.\" It may be a small step. But that step becomes a great driving force that changes a company's future, enriches people's lives, and moves society as a whole.",
+      "description2": "One Step Co., Ltd. will move forward with everyone toward the future as a partner walking that step together."
+    }
+  },
+  "faq": {
+    "meta": {
+      "title": "FAQ | One Step Co., Ltd.",
+      "description": "Frequently asked questions about One Step's services for job seekers and companies. Find answers to common questions about our employment placement services.",
+      "keywords": "FAQ, frequently asked questions, job seekers, companies, employment services, One Step",
+      "lang": "en"
+    },
+    "infoTitle": {
+      "title": "Frequently Asked Questions",
+      "description": "FAQ",
+      "highlightText": "\"Please check here first for any questions about our services.\""
+    },
+    "tabs": {
+      "jobSeekers": "For Job Seekers",
+      "companies": "For Company Representatives"
+    },
+    "faqData": {
+      "jobSeekers": [
+        {
+          "question": "Is the service free to use?",
+          "answer": "Yes, we do not charge any fees from job seekers. From counseling to job introductions and post-employment follow-up, everything is available free of charge."
+        },
+        {
+          "question": "I'm still a student, can I register?",
+          "answer": "Yes, you can register. We can provide career consultations with an eye toward post-graduation and introduce internships, so please feel free to consult with us."
+        },
+        {
+          "question": "I'm not confident in Japanese, is that okay?",
+          "answer": "Please don't worry. We will introduce jobs that match your language level. We also support business Japanese training and interview preparation. First, please let us know your current level."
+        },
+        {
+          "question": "What is the process after registration?",
+          "answer": "After registration, a specialized career consultant will first conduct an interview to understand your wishes and experience. Then, we will introduce job openings that match you, and after document review and interview preparation, you will proceed to interviews with companies."
+        },
+        {
+          "question": "Do you provide visa support?",
+          "answer": "Yes, we also provide support for residence status matters such as procedures for switching to work visas after receiving job offers. We work with specialists to help with smooth procedures."
+        }
+      ],
+      "companies": [
+        {
+          "question": "What is the process for requesting personnel?",
+          "answer": "Please contact us first through our inquiry form. Our staff will conduct a detailed interview about your company's hiring challenges and desired candidate profile, and propose the best personnel introduction and plan."
+        },
+        {
+          "question": "What types of positions can you introduce personnel for?",
+          "answer": "We handle a wide range of positions including IT engineers, administrative staff, manufacturing/logistics, sales/customer service, interpretation/translation, etc. We particularly excel at introducing excellent foreign talent with high motivation to work in Japan."
+        },
+        {
+          "question": "Can you handle urgent requests (short-term dispatch, etc.)?",
+          "answer": "Yes, we can. We can respond quickly to your needs such as urgent vacancy filling or short-term staff for busy periods only. Please feel free to consult with us first."
+        },
+        {
+          "question": "What is the fee structure?",
+          "answer": "For personnel introduction, it is a success-based fee, and for personnel dispatch, the fee is based on the actual working hours of dispatched staff. Details will be quoted after understanding your requirements."
+        },
+        {
+          "question": "Is it possible to switch from dispatch to full-time employment (introduction-expected dispatch)?",
+          "answer": "Yes, it is possible. By using our \"introduction-expected dispatch\" service, you can switch to direct employment by mutual agreement after working as dispatched staff for a certain period. This is used by many companies as an effective means to prevent mismatches."
+        }
+      ]
+    }
+  },
+  "privacyPolicy": {
+    "meta": {
+      "title": "Privacy Policy | One Step Co., Ltd.",
+      "description": "One Step Co., Ltd. privacy policy. Learn about how we collect, use, and protect your personal information.",
+      "keywords": "privacy policy, personal information, data protection, One Step",
+      "lang": "en"
+    },
+    "pageTitle": {
+      "title": "Privacy Policy",
+      "subtitle": "Personal Information Protection Policy"
+    },
+    "introduction": "One Step Co., Ltd. recognizes the importance of personal information obtained through our services and establishes the following personal information protection policy to ensure appropriate management and protection.",
+    "sections": {
+      "section1": {
+        "title": "1. Collection of Personal Information",
+        "content": "We will collect personal information within the necessary scope by appropriate and fair means after clearly stating the purpose of use."
+      },
+      "section2": {
+        "title": "2. Purpose of Use of Personal Information",
+        "content": "We will use the collected personal information for the following purposes:",
+        "list": [
+          "Provision of paid employment placement services",
+          "Business related to contacting applicants, interviews, and job introductions",
+          "Matching business with companies",
+          "Various notifications and service information",
+          "Compliance with laws and regulations"
+        ]
+      },
+      "section3": {
+        "title": "3. Third-Party Provision of Personal Information",
+        "content": "We will not provide collected personal information to third parties except in the following cases:",
+        "list": [
+          "When there is consent from the individual",
+          "When required by law",
+          "When necessary to protect human life, body, or property"
+        ]
+      },
+      "section4": {
+        "title": "4. Management of Personal Information",
+        "content": "We will take necessary and appropriate security measures to prevent leakage, loss, falsification, and unauthorized access of personal information."
+      },
+      "section5": {
+        "title": "5. Disclosure, Correction, Deletion, etc. of Personal Information",
+        "content": "When we receive requests for disclosure, correction, addition, deletion, or suspension of use of personal information from the individual, we will respond appropriately."
+      },
+      "section6": {
+        "title": "6. Legal Compliance and Review",
+        "content": "We will comply with laws and regulations regarding personal information protection and other norms, and review and improve the content of this policy as appropriate."
+      },
+      "section7": {
+        "title": "7. Contact Information",
+        "content": "For inquiries regarding the handling of personal information, please contact us at the following:",
+        "companyInfo": {
+          "name": "One Step Co., Ltd.",
+          "address": "Address: 5-25 Kannon-cho, Minami-ku, Nagoya-shi, Aichi 457-0828, Kannon Building 3c",
+          "phone": "Phone: 052-829-1674",
+          "email": "Email: info@onestep.co.jp"
+        }
+      }
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacy Policy | One Step Co., Ltd.",
+      "description": "One Step Co., Ltd. privacy policy and basic principles for personal information protection. We are committed to protecting your privacy and earning your trust.",
+      "keywords": "privacy policy, personal information protection, One Step, data protection",
+      "lang": "en"
+    },
+    "infoTitle": {
+      "title": "Personal Information Protection Basic Policy",
+      "description": "One Step Co., Ltd. pledges to pay maximum attention to personal information protection and to be a company that responds to the trust of the individual.",
+      "highlightText": "Respect for privacy. That is the beginning of trust."
+    },
+    "mainTitle": "Basic Policy",
+    "introduction": "One Step Co., Ltd. deeply recognizes that personal information constitutes important information that makes up privacy, and believes that all personal information must be handled carefully under the principle of respecting individual dignity. In order to become a company that is trusted, loved, and proud of itself by all people including customers and business partners (hereinafter collectively referred to as \"the individual\"), we establish the following basic policy and strive for personal information protection.",
+    "sections": {
+      "section1": {
+        "title": "1. Purpose of Use of Personal Information",
+        "content": "When we receive personal information, we will use it within the scope of the purpose that was clearly stated when the personal information was provided."
+      },
+      "section2": {
+        "title": "2. Disclosure of Personal Information to Third Parties",
+        "content1": "We will not disclose personal information to any third party except in the following cases:",
+        "list": [
+          "When there is consent from the individual",
+          "When we determine that it is appropriate for our affiliated companies or agents to respond or handle inquiries from the individual",
+          "When it is necessary to disclose to business contractors or cooperating companies who have concluded confidentiality agreements in advance for the implementation of the collection purpose clearly stated to the individual",
+          "When it is necessary to disclose personal information to financial institutions for payment of fees for product purchases or paid services",
+          "When disclosure is made in a state where the individual cannot be identified (statistical materials, etc.)",
+          "When disclosure to third parties is permitted by laws, guidelines, etc."
+        ],
+        "content2": "In addition, when we provide or entrust personal information held by our company to third parties, we will give sufficient consideration to the selection of the provider or contractor, and strive to provide necessary supervision to ensure that appropriate and reliable protection measures are taken in the same manner as our handling."
+      },
+      "section3": {
+        "title": "3. Management of Personal Information",
+        "content": "We will appropriately manage the individual's personal information and take preventive measures and security measures against unauthorized access, loss, destruction, falsification, and leakage of personal information. We will also continue to implement in-house education regarding the protection and appropriate handling of personal information."
+      },
+      "section4": {
+        "title": "4. Inquiries Regarding Personal Information",
+        "content": "When an individual wishes to inquire, modify, or delete their own personal information, we will respond promptly based on our prescribed procedures."
+      },
+      "section5": {
+        "title": "5. Compliance with Laws and Standards and Review",
+        "content": "We will comply with applicable laws and standards regarding personal information and strive for continuous improvement and enhancement of personal information protection efforts."
+      }
+    },
+    "signature": {
+      "company": "One Step Co., Ltd.",
+      "ceo": "CEO Regmi Sudip"
+    }
+  },
+  "common": {
+    "recruitmentButton": "Recruitment"
+  },
+  "recruitment": {
+    "meta": {
+      "title": "Recruitment | One Step Co., Ltd.",
+      "description": "Join One Step Co., Ltd. and help create the future together. See our recruitment information, job requirements, and application process.",
+      "keywords": "recruitment, jobs, careers, One Step, application, employment",
+      "lang": "en"
+    },
+    "infoTitle": {
+      "title": "Recruitment Information",
+      "description": "RECRUITMENT",
+      "highlightText": "Would you like to create the future with us?"
+    },
+    "desiredTitle": "Ideal Candidate Profile",
+    "desiredText": "At One Step Co., Ltd., we welcome those who can work sincerely and positively, and value cooperation with colleagues. While respecting Japanese manners and consideration, we want to grow together with those who can think and act independently.",
+    "strengths": [
+      {
+        "title": "Sincere Response",
+        "description": "We value a sincere attitude toward each applicant."
+      },
+      {
+        "title": "Desire to Grow",
+        "description": "We welcome people who are flexible to change and always eager to learn."
+      },
+      {
+        "title": "Ability to Connect with People",
+        "description": "We are looking for people who are passionate about connecting people and companies."
+      }
+    ],
+    "requirementsTitle": "Job Requirements",
+    "requirementsTable": {
+      "position": "Position",
+      "positionValue": "Career Consultant (HR Coordinator)",
+      "jobDescription": "Job Description",
+      "jobDescriptionValue": "Career counseling for job seekers, job introductions, talent proposals to companies, interview preparation, post-employment follow-up, etc.",
+      "salary": "Salary",
+      "salaryValue": "Monthly salary: 250,000 - 400,000 JPY (determined based on experience and ability)",
+      "location": "Location",
+      "locationValue": "3c Kannon Building, 5-25 Kannon-cho, Minami-ku, Nagoya-shi, Aichi"
+    },
+    "flowTitle": "Selection Process",
+    "steps": ["Document Screening", "First Interview", "Second Interview", "Job Offer"],
+    "descriptions": [
+      "We review your resume and work history for document screening.",
+      "We ask about your skills and motivation in an interview with our staff.",
+      "In the final interview, we confirm your understanding and enthusiasm for our corporate philosophy.",
+      "We will contact you with a job offer and proceed with the onboarding process."
+    ],
+    "interviewTitle": "Employee Interview",
+    "interview": [
+      {
+        "q": "Q. What is the most rewarding part of this job?",
+        "a": "The happiest moment is when a job seeker I supported receives a job offer and reports back with a big smile, saying 'Thank you so much!' It's a job with great responsibility and reward, as you can be present at important turning points in people's lives."
+      },
+      {
+        "q": "Q. Please give a message to applicants.",
+        "a": "One Step is a company that embraces diversity and supports individual challenges. If you are someone who can be passionate for others, let's create many 'first steps toward the future' together!"
+      }
+    ],
+    "contactTitle": "Access & Contact",
+    "contactSection": {
+      "contact": "Contact",
+      "phone": "052-123-4567",
+      "email": "info@onestep.co.jp",
+      "access": "Access",
+      "address": "3c Kannon Building, 5-25 Kannon-cho, Minami-ku, Nagoya-shi, Aichi",
+      "note": "*5 minutes walk from Sakurahonmachi Station on the Sakura-dori subway line"
+    },
+    "faqTitle": "FAQ",
+    "faqs": [
+      {"question": "Are there any qualifications required to apply?", "answer": "Basic PC skills and business-level Japanese are required."},
+      {"question": "Can non-Japanese nationals apply?", "answer": "Yes, you can apply if you have a valid residence status."},
+      {"question": "Is it okay to apply with no experience?", "answer": "We focus on personality, so even those with no experience are welcome."}
+    ]
   }
 } 
