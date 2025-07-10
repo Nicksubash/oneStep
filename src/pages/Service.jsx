@@ -136,7 +136,7 @@ export default function Service() {
                     <h2 className="text-3xl font-bold text-gray-900 mb-6">
                       <Trans
                         i18nKey="service.challengesTitle"
-                        components={{ span: <span className="text-indigo-600" /> }}
+                        components={{ span: <span className="text-brand-primary" /> }}
                       />
                     </h2>
                     <ul className="space-y-4">
@@ -155,13 +155,13 @@ export default function Service() {
                   <div>
                     <h2 className="text-3xl font-bold text-gray-900 mb-6">
                       <Trans
-                      i18nKey="service.jobTypesTitle" components={{span: <span className='text-indigo-600'/>}} />
+                      i18nKey="service.jobTypesTitle" components={{span: <span className='text-brand-primary'/>}} />
                   
                       </h2>
                     <div className="flex flex-wrap gap-3">
                       {jobTypes.map((type, index) => (
                         <AnimatedSection key={type} delay={600 + index * 100}>
-                          <span className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-semibold shadow-sm hover:bg-indigo-200 hover:shadow-md hover:scale-105 transition-all duration-300 cursor-pointer">
+                          <span className="bg-gray-100 text-brand-primary  px-4 py-2 rounded-full font-semibold shadow-sm hover:bg-red-100 hover:shadow-md hover:scale-105 transition-all duration-300 cursor-pointer">
                             {type}
                           </span>
                         </AnimatedSection>

@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import Navbar from '../components/navbar/Navbar';
 import Footer from '../components/shared/Footer';
 import FAQItem from '../components/shared/FAQItems';
 import CompanyCTA from '../components/shared/CompanyCTA';
-import faqData from '../data//faqData.json';
 import InfoTitle from '../components/shared/InfoTitle';
 
 export default function FAQPage() {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState('jobSeekers');
 
   const renderFAQItems = (list) =>
@@ -21,9 +22,9 @@ export default function FAQPage() {
       <Navbar />
       <InfoTitle
           backgroundImage="https://images.pexels.com/photos/1887995/pexels-photo-1887995.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-        title="よくあるご質問"
-        description="FAQ"
-        highlightText="「サービスに関するご不明点は、まずはこちらをご確認ください。」"
+        title={t('faq.infoTitle.title')}
+        description={t('faq.infoTitle.description')}
+        highlightText={t('faq.infoTitle.highlightText')}
       />
       <div className="bg-white">
         {/* Content */}
@@ -34,29 +35,29 @@ export default function FAQPage() {
               onClick={() => setActiveTab('jobSeekers')}
               className={`py-3 px-8 text-lg font-semibold ${
                 activeTab === 'jobSeekers'
-                  ? 'border-b-2 border-blue-600 text-blue-600'
-                  : 'text-gray-500 hover:text-blue-500'
+                  ? 'border-b-2 border-brand-primary text-brand-primary'
+                  : 'text-gray-500 hover:text-brand-primary hover:font-bold'
               }`}
             >
-              お仕事をお探しの方へ
+              {t('faq.tabs.jobSeekers')}
             </button>
             <button
               onClick={() => setActiveTab('companies')}
               className={`py-3 px-8 text-lg font-semibold ${
                 activeTab === 'companies'
-                  ? 'border-b-2 border-blue-600 text-blue-600'
-                  : 'text-gray-500 hover:text-blue-500'
+                  ? 'border-b-2 border-brand-primary text-brand-primary'
+                  : 'text-gray-500 hover:text-brand-primary hover:font-bold'
               }`}
             >
-              企業ご担当者様へ
+              {t('faq.tabs.companies')}
             </button>
           </div>
 
           {/* FAQ List */}
           <div className="space-y-4">
             {activeTab === 'jobSeekers'
-              ? renderFAQItems(faqData.faq.jobSeekers)
-              : renderFAQItems(faqData.faq.companies)}
+              ? renderFAQItems(t('faq.faqData.jobSeekers', { returnObjects: true }))
+              : renderFAQItems(t('faq.faqData.companies', { returnObjects: true }))}
           </div>
 
           {/* CTA */}

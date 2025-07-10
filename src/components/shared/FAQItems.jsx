@@ -11,14 +11,14 @@ const FAQItems = ({ question, children }) => {
         className="w-full flex justify-between items-center text-left"
       >
         <h3 className="text-lg font-semibold text-gray-800">
-          <span className="text-blue-600 font-bold mr-2">Q.</span>
+          <span className="text-brand-primary font-bold mr-2">Q.</span>
           {question}
         </h3>
         <span>
           {isOpen ? (
-            <MinusIcon className="h-6 w-6 text-blue-600" />
+            <MinusIcon className="h-6 w-6 text-red-600" />
           ) : (
-            <PlusIcon className="h-6 w-6 text-gray-500" />
+            <PlusIcon className="h-6 w-6 text-brand-navyBright" />
           )}
         </span>
       </button>
@@ -29,7 +29,7 @@ const FAQItems = ({ question, children }) => {
       >
         <div className="p-4 bg-gray-50 rounded-md">
             <p className="text-gray-700 leading-relaxed">
-                <span className="text-red-600 font-bold mr-2">A.</span>
+                <span className="text-brand-navyBright font-bold mr-2">A.</span>
                 {children}
             </p>
         </div>

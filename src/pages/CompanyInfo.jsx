@@ -95,7 +95,8 @@ export default function CompanyInfo() {
           <div className="relative z-10">
             <h3 className="font-semibold">{t("companyInfo.access.companyName")}</h3>
             <p>{t("companyInfo.access.address")}</p>
-            <p>{t("companyInfo.access.station")}</p>
+            <p>{t("companyInfo.access.station1")}</p>
+            <p>{t("companyInfo.access.station2")}</p>
           </div>
         </div>
 
