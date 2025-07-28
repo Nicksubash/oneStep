@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 import Navbar from '../components/navbar/Navbar'; 
 import Footer from '../components/shared/Footer';
 import { newsData } from '../data/newsData';
@@ -11,8 +12,8 @@ const InfoTitle = ({ backgroundImage, title, description, highlightText }) => (
     <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
     <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 to-green-800/60"></div>
     <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-4">
-      <p className="text-sm md:text-base font-semibold tracking-widest uppercase">{description}</p>
       <h1 className="text-4xl md:text-6xl font-bold my-2">{title}</h1>
+      {/* <p className="text-sm md:text-base font-semibold tracking-widest uppercase">{description}</p> */}
       <p className="text-lg md:text-xl">{highlightText}</p>
     </div>
   </div>
@@ -24,6 +25,7 @@ const AnimatedSection = ({ children }) => (
 
 // Helper function to get category styles, now with new categories
 const getCategoryStyle = (category) => {
+  // Use original Japanese category names for styling logic
   switch (category) {
     case '会社情報':
       return 'bg-gray-50 text-brand-primary border-brand-primary';
@@ -40,6 +42,24 @@ const getCategoryStyle = (category) => {
 
 // New component for individual news items
 const NewsItem = ({ notice, index }) => {
+  const { t } = useTranslation();
+  
+  // Map Japanese category names to translation keys
+  const getCategoryTranslation = (category) => {
+    switch (category) {
+      case '会社情報':
+        return t('news.categories.companyInfo');
+      case '行政情報':
+        return t('news.categories.administrativeInfo');
+      case '法改正':
+        return t('news.categories.legalAmendment');
+      case '行政発表':
+        return t('news.categories.administrativeAnnouncement');
+      default:
+        return category;
+    }
+  };
+  
   const content = (
     <div className="bg-white rounded-lg border border-gray-200 p-6 hover:border-gray-300 transition-all duration-300">
       <div className="flex flex-col space-y-4">
@@ -53,13 +73,13 @@ const NewsItem = ({ notice, index }) => {
               {notice.date}
             </time>
             <span className={`px-3 py-1 text-xs font-semibold rounded-full border ${getCategoryStyle(notice.category)}`}>
-              {notice.category}
+              {getCategoryTranslation(notice.category)}
             </span>
           </div>
           <div className="flex items-center text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             {notice.link && (
               <>
-                <span className="text-xs mr-2">詳細を見る</span>
+                <span className="text-xs mr-2">{t('news.viewDetails')}</span>
                 <i className="fas fa-external-link-alt text-xs"></i>
               </>
             )}
@@ -105,6 +125,7 @@ const NewsItem = ({ notice, index }) => {
 };
 
 export default function News() {
+  const { t } = useTranslation();
   const itemsPerPage = 5;
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(newsData.length / itemsPerPage);
@@ -125,20 +146,20 @@ export default function News() {
   return (
     <>
       <Helmet>
-        <title>お知らせ | One Step株式会社</title>
-        <meta name="description" content="One Step株式会社からのお知らせや法改正などの新着情報をご案内します。" />
-        <meta name="keywords" content="お知らせ, 新着情報, 法改正, 行政通達, One Step株式会社" />
+        <title>{t('news.meta.title')}</title>
+        <meta name="description" content={t('news.meta.description')} />
+        <meta name="keywords" content={t('news.meta.keywords')} />
         <meta name="robots" content="index, follow" />
-        <html lang="ja" />
+        <html lang={t('news.meta.lang')} />
       </Helmet>
 
       <Navbar />
 
       <InfoTitle
         backgroundImage="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=1600&h=600&q=80"
-        title="お知らせ"
-        description="News & Updates"
-        highlightText="最新情報をご案内します"
+        title={t('news.infoTitle.title')}
+        description={t('news.infoTitle.description')}
+        highlightText={t('news.infoTitle.highlightText')}
       />
       
       <div className="bg-gray-50 py-16 sm:py-24 relative overflow-hidden">
@@ -154,9 +175,7 @@ export default function News() {
             {/* Page description */}
             <div className="text-center mb-12">
               <p className="text-gray-600 text-base leading-relaxed max-w-2xl mx-auto">
-                One Step株式会社からの重要なお知らせや最新情報をお届けします。
-                <br className="hidden sm:block" />
-                法改正や行政発表などの情報も随時更新しております。
+                {t('news.pageDescription')}
               </p>
             </div>
             
@@ -176,13 +195,13 @@ export default function News() {
                   className="flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:border-gray-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-sm"
                 >
                   <i className="fas fa-chevron-left"></i>
-                  前へ
+                  {t('news.pagination.previous')}
                 </button>
                 
                 <div className="flex items-center gap-2 px-4 py-3 bg-white border border-gray-300 rounded-lg shadow-sm">
                   <span className="text-sm text-gray-600">
                     <span className="font-medium text-blue-600">{currentPage}</span>
-                    <span className="mx-2 text-gray-400">/</span>
+                    <span className="mx-2 text-gray-400">{t('news.pagination.of')}</span>
                     <span className="font-medium">{totalPages}</span>
                   </span>
                 </div>
@@ -192,7 +211,7 @@ export default function News() {
                   disabled={currentPage === totalPages}
                   className="flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:border-gray-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-sm"
                 >
-                  次へ
+                  {t('news.pagination.next')}
                   <i className="fas fa-chevron-right"></i>
                 </button>
               </div>
