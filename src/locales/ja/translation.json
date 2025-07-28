@@ -62,13 +62,13 @@
   "cta": {
     "faq": {
       "jobSeekers": {
-        "tagText": "お仕事をお探しの方へ / For Job Seekers",
+        "tagText": "お仕事をお探しの方へ",
         "title": "就職・転職に関するご相談は",
         "description": "専門のキャリアコンサルタントが丁寧にサポートします。お気軽にご相談ください。",
         "buttonText": "応募フォームへ"
       },
       "companies": {
-        "tagText": "企業様向け / For Companies",
+        "tagText": "企業様向け",
         "title": "外国人採用・人材に関するご相談は",
         "description": "貴社に最適な人材提案を行います。まずはお気軽にお問い合わせください。",
         "buttonText": "お問い合わせ"
@@ -661,6 +661,33 @@
   },
   "common": {
     "recruitmentButton": "採用情報"
+  },
+  "news": {
+    "meta": {
+      "title": "お知らせ | One Step株式会社",
+      "description": "One Step株式会社からのお知らせや法改正などの新着情報をご案内します。",
+      "keywords": "お知らせ, 新着情報, 法改正, 行政通達, One Step株式会社",
+      "lang": "ja"
+    },
+    "infoTitle": {
+      "title": "お知らせ",
+      "description": "News & Updates",
+      "highlightText": "最新情報をご案内します。"
+    },
+    "pageDescription": "One Step株式会社からの重要なお知らせや最新情報をお届けします。法改正や行政発表などの情報も随時更新しております。",
+    "pagination": {
+      "previous": "前へ",
+      "next": "次へ",
+      "page": "ページ",
+      "of": "/"
+    },
+    "categories": {
+      "companyInfo": "会社情報",
+      "administrativeInfo": "行政情報",
+      "legalAmendment": "法改正",
+      "administrativeAnnouncement": "行政発表"
+    },
+    "viewDetails": "詳細を見る"
   },
   "recruitment": {
     "meta": {

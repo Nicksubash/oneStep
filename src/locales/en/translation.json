@@ -662,6 +662,33 @@
   "common": {
     "recruitmentButton": "Recruitment"
   },
+  "news": {
+    "meta": {
+      "title": "News & Updates | One Step Co., Ltd.",
+      "description": "Stay updated with the latest news, announcements, and regulatory changes from One Step Co., Ltd. Get important information about our services and industry updates.",
+      "keywords": "news, updates, announcements, regulatory changes, One Step news, company updates",
+      "lang": "en"
+    },
+    "infoTitle": {
+      "title": "News & Updates",
+      "description": "News & Updates",
+      "highlightText": "Stay informed with our latest information"
+    },
+    "pageDescription": "We provide important announcements and latest information from One Step Co., Ltd. We also update information such as legal amendments and administrative announcements from time to time.",
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page",
+      "of": "of"
+    },
+    "categories": {
+      "companyInfo": "Company Information",
+      "administrativeInfo": "Administrative Information",
+      "legalAmendment": "Legal Amendment",
+      "administrativeAnnouncement": "Administrative Announcement"
+    },
+    "viewDetails": "View Details"
+  },
   "recruitment": {
     "meta": {
       "title": "Recruitment | One Step Co., Ltd.",
