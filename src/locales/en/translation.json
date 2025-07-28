@@ -367,12 +367,13 @@
     },
     "pageIntro": {
       "title": "Feel free to contact us",
-      "description": "One Step Co., Ltd. serves as a bridge connecting job seekers and companies. Please contact us from the options below according to your position."
+      "description": "One Step Co., Ltd. serves as a bridge connecting job seekers and companies. Please contact us from the options below according to your position.",
+      "remark":"※ We will reply within three days of receiving your inquiry."
     },
     "selectionCards": {
       "company": {
         "title": "For Company Representatives",
-        "description": "For inquiries about paid employment placement and recruitment"
+        "description": "For inquiries about employment placement and recruitment"
       },
       "student": {
         "title": "For Job Seekers",
