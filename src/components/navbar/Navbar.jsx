@@ -27,28 +27,32 @@ const Navbar = () => {
       megaMenu: {
         sections: [
           {
-            title: "会社情報",
+            title: "Company Information",
+            subtitle: "会社情報",
             icon: "\ud83c\udfe2",
             href: "/company",
             description: "組織概要と沿革",
             image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop&crop=center"
           },
           {
-            title: "代表挨拶",
+            title: "CEO Message",
+            subtitle: "代表挨拶",
             icon: "\ud83d\udcf0",
             href: "/greeting",
             description: "社長からの温かい言葉",
             image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=300&fit=crop&crop=center"
           },
           {
-            title: "企業理念",
+            title: "Corporate Philosophy",
+            subtitle: "企業理念",
             icon: "\ud83d\udcab",
             href: "/philosophy",
             description: "私たちの価値観と使命",
             image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=300&fit=crop&crop=center"
           },
           {
-            title: "よくある質問",
+            title: "FAQ",
+            subtitle: "よくある質問",
             icon: "❓",
             href: "/faq",
             description: "お客様からのご質問",
@@ -67,15 +71,15 @@ const Navbar = () => {
             title: "Recruitment & Staffing",
             icon: "\ud83d\udc65",
             href: "/services#recruitment",
-            description: "有料職業紹介サービス",
+            description: "職業紹介サービス",
             image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=300&fit=crop&crop=center"
           },
           {
-            title: "Student Recruitment & Consulting",
+            title: "Student Recruitment Support",
             icon: "\ud83c\udf93",
             href: "/students",
             description: "留学サポートプログラム",
-            image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=300&fit=crop&crop=center"
+            image: "https://images.unsplash.com/photo-1698047681432-006d2449c631?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           },
           {
             title: "Translation & Documentation",
@@ -86,6 +90,7 @@ const Navbar = () => {
           },
           // {
           //   title: "Import & Export",
+          //   subtitle: "輸出入",
           //   icon: "\ud83d\udce6",
           //   href: "/import",
           //   description: "国際貿易ソリューション",

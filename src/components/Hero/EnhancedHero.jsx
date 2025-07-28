@@ -30,9 +30,15 @@ const EnhancedHero = () => {
                 delay={300}
               />
               <AnimatedText
-                text={t('enhancedHero.headline2')}
-                className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent block mb-4 drop-shadow-lg"
+                text={t('enhancedHero.headline2' )}
+                className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent block mb-2 drop-shadow-lg"
                 delay={600}
+                scrollScale={true}
+              />
+              <AnimatedText
+                text={t('enhancedHero.headlineSubline')}
+                className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent block mb-2 drop-shadow-lg"
+                delay={900}
                 scrollScale={true}
               />
             </div>

@@ -85,7 +85,7 @@ const Footer = () => {
         <div>
           <h4 className="text-lg font-semibold mb-4 bg-gradient-to-r from-brand-primary to-brand-navyBright text-transparent bg-clip-text">事業一覧</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="/services#recruitment" className="hover:text-white">有料職業紹介サービス</a></li>
+            <li><a href="/services#recruitment" className="hover:text-white">職業紹介サービス</a></li>
             <li><a href="/students" className="hover:text-white">留学生の就職サポート</a></li>
             <li><a href="/translation" className="hover:text-white">多言語ドキュメントサービス</a></li>
             {/* <li><a href="/services#english" className="hover:text-white">English Language Courses</a></li>

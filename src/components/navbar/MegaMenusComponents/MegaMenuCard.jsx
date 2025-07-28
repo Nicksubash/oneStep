@@ -28,9 +28,14 @@ const MegaMenuCard = ({ section, index }) => {
       
       {/* Content */}
       <div className="p-4">
-        <h3 className="font-semibold text-gray-900 mb-2 group-hover/card:text-indigo-600 transition-colors duration-200">
+        <h3 className="font-semibold text-gray-900 mb-1 group-hover/card:text-brand-primary transition-colors duration-200">
           {section.title}
         </h3>
+        {section.subtitle && (
+          <p className="text-xs text-gray-500 mb-2 font-medium border-b border-gray-200 pb-1 group-hover/card:text-brand-primary group-hover/card:border-brand-primary transition-colors duration-200">
+            {section.subtitle}
+          </p>
+        )}
         <p className="text-sm text-gray-600 leading-relaxed">
           {section.description}
         </p>
@@ -38,7 +43,7 @@ const MegaMenuCard = ({ section, index }) => {
       
       {/* Hover Arrow */}
       <div className="absolute bottom-4 right-4 opacity-0 group-hover/card:opacity-100 transition-opacity duration-200">
-        <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
         </svg>
       </div>
