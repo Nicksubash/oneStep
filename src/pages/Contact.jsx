@@ -30,8 +30,11 @@ export default function Contact() {
         <h1 className="text-3xl md:text-4xl font-bold text-brand-primary mb-4">
           {t('contact.pageIntro.title')}
         </h1>
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+        <p className="text-lg text-gray-700 leading-relaxed ">
           {t('contact.pageIntro.description')}
+        </p>
+        <p className="text-sm text-brand-primary leading-relaxed mb-6">
+          {t('contact.pageIntro.remark')}
         </p>
       </div>
       {/* Selection Cards Section with Background Text */}
