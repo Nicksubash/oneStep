@@ -13,7 +13,7 @@ export const newsData = [
     },
     {
       date: '2025.06.06',
-      category: '行政通達',
+      category: '行政発表',
       title: '滋賀労働局、派遣先に「派遣料金の配慮義務」遵守を要請',
       link: 'https://www.rodo.co.jp/news/200608/',
     },
