@@ -8,8 +8,9 @@
     "buttonText": "Contact us here →"
   },
   "enhancedHero": {
-    "headline1": "Connecting People to People",
-    "headline2": "Recruitment Services",
+    "headline1": "Connecting People to Companies",
+    "headline2": "The optimal Professional ",
+    "headlineSubline":"Recruitment Service",
     "subtext1": "🌍 For those who want to work in Japan. This first step can change your future.",
     "subtext2": "🎯 Job search, career change, career advancement—One Step fully supports your first step in Japan.",
     "subtitle": "Welcome to OneStep Co., Ltd. We are your trusted partner for international recruitment, language education, and cross-cultural support in Japan. We connect outstanding talent from around the world with Japanese companies and fully support global career success.",
@@ -140,20 +141,20 @@
   },
   "service": {
     "meta": {
-      "title": "Paid Employment Placement Service | One Step Co., Ltd.",
-      "description": "One Step Co., Ltd. is your trusted partner connecting excellent foreign talent with Japanese companies through paid employment placement.",
+      "title": "Employment Placement Service | One Step Co., Ltd.",
+      "description": "One Step Co., Ltd. is your trusted partner connecting excellent foreign talent with Japanese companies through employment placement.",
       "keywords": "employment placement, foreign talent, global talent, Japan jobs, recruitment service, international hiring support",
       "lang": "en"
     },
     "infoTitle": {
-      "title": "Paid Employment Placement Service",
-      "description": "Paid Employment Placement Service",
-      "highlightText": "A paid service connecting people to people"
+      "title": "Employment Placement Service",
+      "description": "Employment Placement Service",
+      "highlightText": "A service connecting people to people"
     },
     "heroImageAlt": "Business meeting",
-    "heroTitleHighlight": "Paid Employment Placement",
+    "heroTitleHighlight": "Employment Placement",
     "heroTitleRest": " - What is it?",
-    "heroDescription": "Paid employment placement is a service that mediates between job seekers and employers to achieve optimal matching. At One Step, we act as a bridge connecting foreign talent who want to work in Japan with companies seeking global talent, providing high-quality introductions based on trust and proven results.",
+    "heroDescription": "employment placement is a service that mediates between job seekers and employers to achieve optimal matching. At One Step, we act as a bridge connecting foreign talent who want to work in Japan with companies seeking global talent, providing high-quality introductions based on trust and proven results.",
     "strengths": [
       {
         "title": "Diverse Talent Network",
@@ -342,7 +343,7 @@
         "nameJp": "レグミ・スディプ",
         "nameEn": "Regmi Sudip",
         "titleJp": "取締役代表",
-        "aboutJp": "14年前にネパールより来日し、日本語学校・専門学校を経て愛知文教大学を卒業しました。その後、日本企業での勤務を通じて、日本社会やビジネスマナー、文化を深く理解しました。現在は日本国籍を取得し、「日本と外国人をつなぐ架け橋」となることを使命に、求職者と企業の双方を支援しています。私自身もかつて外国人として日本に来日し、言語の壁や文化の違い、仕事探しにおいて多くの困難を経験しました。そうした経験を乗り越えてきたからこそ、日本で働こうとする皆さまの不安や期待に寄り添い、心からサポートできると自負しています。また、外国人採用における課題を抱える企業の皆さまに対しても、言語や文化、制度の違いによる\"すれ違い\"を丁寧に埋め、信頼あるマッチングを提供いたします。私は単なる有料職業紹介にとどまらず、就職後の定着や長期的な活躍を見据えたサポートを大切にし、一人ひとりの\"大切な一歩\"を心を込めて応援しています。"
+        "aboutJp": "14年前にネパールより来日し、日本語学校・専門学校を経て愛知文教大学を卒業しました。その後、日本企業での勤務を通じて、日本社会やビジネスマナー、文化を深く理解しました。現在は日本国籍を取得し、「日本と外国人をつなぐ架け橋」となることを使命に、求職者と企業の双方を支援しています。私自身もかつて外国人として日本に来日し、言語の壁や文化の違い、仕事探しにおいて多くの困難を経験しました。そうした経験を乗り越えてきたからこそ、日本で働こうとする皆さまの不安や期待に寄り添い、心からサポートできると自負しています。また、外国人採用における課題を抱える企業の皆さまに対しても、言語や文化、制度の違いによる\"すれ違い\"を丁寧に埋め、信頼あるマッチングを提供いたします。私は単なる職業紹介にとどまらず、就職後の定着や長期的な活躍を見据えたサポートを大切にし、一人ひとりの\"大切な一歩\"を心を込めて応援しています。"
       },
       {
         "nameJp": "ラナバト・サイレンドラ",
@@ -457,7 +458,7 @@
     "mission": {
       "title": "Mission",
       "subtitle": "Leading people and companies one step forward.",
-      "description1": "In Japan today, while the labor shortage is becoming serious, there are many excellent talents both domestically and internationally seeking opportunities to work. One Step is committed to providing through our paid employment placement business:",
+      "description1": "In Japan today, while the labor shortage is becoming serious, there are many excellent talents both domestically and internationally seeking opportunities to work. One Step is committed to providing through our employment placement business:",
       "list": {
         "item1": "For companies: reliable, ready-to-work talent",
         "item2": "For job seekers: workplaces and environments where they can work with peace of mind"
@@ -568,7 +569,7 @@
         "title": "2. Purpose of Use of Personal Information",
         "content": "We will use the collected personal information for the following purposes:",
         "list": [
-          "Provision of paid employment placement services",
+          "Provision of employment placement services",
           "Business related to contacting applicants, interviews, and job introductions",
           "Matching business with companies",
           "Various notifications and service information",
@@ -634,7 +635,7 @@
           "When there is consent from the individual",
           "When we determine that it is appropriate for our affiliated companies or agents to respond or handle inquiries from the individual",
           "When it is necessary to disclose to business contractors or cooperating companies who have concluded confidentiality agreements in advance for the implementation of the collection purpose clearly stated to the individual",
-          "When it is necessary to disclose personal information to financial institutions for payment of fees for product purchases or paid services",
+          "When it is necessary to disclose personal information to financial institutions for payment of fees for product purchases or services",
           "When disclosure is made in a state where the individual cannot be identified (statistical materials, etc.)",
           "When disclosure to third parties is permitted by laws, guidelines, etc."
         ],
