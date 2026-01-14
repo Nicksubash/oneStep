@@ -11,6 +11,8 @@ import StrengthsGrid from '../components/shared/StrengthsGrid';
 import { CheckCircleIcon, UserGroupIcon, GlobeAltIcon, PuzzlePieceIcon } from '@heroicons/react/24/solid';
 import BackgroundText from '../components/shared/BackgroundText';
 import { Trans } from 'react-i18next';
+import WhatWeDo from '../components/Hero/WhatWeDo';
+import FloatingServices from '../components/shared/FloatingServices';
 
 export default function Service() {
   const { t } = useTranslation();
@@ -75,7 +77,7 @@ export default function Service() {
           content={t('service.meta.keywords')}
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://your-domain.com/service" />
+        <link rel="canonical" href="https://onestep-group.co.jp/service"/>
         <html lang={t('service.meta.lang')} />
       </Helmet>
 
@@ -180,6 +182,26 @@ export default function Service() {
                 </AnimatedSection>
               </section>
             </AnimatedSection>
+            {/* ================= Floating Services Full Width ================= */}
+<section className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-32 overflow-hidden">
+
+{/* Background */}
+<div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-black" />
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.15),transparent_60%)]" />
+
+{/* Content */}
+<div className="relative z-10 py-32">
+  <h2 className="text-center text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent mb-16">
+    {t('whatWeDo.title')}
+  </h2>
+
+  <FloatingServices
+    height={700}
+    className="max-w-none"
+  />
+</div>
+</section>
+
 
             <AnimatedSection delay={200}>
               <CompanyCTA showTag={true} />

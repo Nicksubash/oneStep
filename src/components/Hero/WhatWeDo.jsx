@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { services } from './ServiceData';
 import { useFloatingPositions } from '../CustomHooks/useFloatingPositions';
-import FloatingServiceItem from '../shared/FloatingServiceItem';
+import FloatingServices from '../shared/FloatingServices';
 import BackgroundEffects from '../shared/BackgroundEffect';
 import AnimatedText from '../shared/AnimatedText';
 
@@ -25,7 +25,7 @@ const WhatWeDo = () => {
           <div className="absolute inset-0 bg-black bg-opacity-60 z-0 backdrop-blur-sm" />
       <BackgroundEffects />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="mx-auto relative z-10">
         {/* Title Only */}
         <div className="text-center mb-4">
           <h2 className="text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent mb-2">
@@ -51,16 +51,7 @@ const WhatWeDo = () => {
         <div className="relative h-[600px] bg-transparentm rounded-3xl border shadow-2xl overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-transparent to-purple-500/10 rounded-3xl" />
 
-          {services.map((service, index) => (
-            <FloatingServiceItem
-              key={index}
-              service={service}
-              position={positions[index]}
-              isHovered={hoveredIndex === index}
-              onHover={() => setHoveredIndex(index)}
-              onLeave={() => setHoveredIndex(null)}
-            />
-          ))}
+          <FloatingServices/>
 
         </div>
       </div>

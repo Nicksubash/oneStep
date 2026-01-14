@@ -16,6 +16,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import FAQPage from './pages/FAQPage';
 import RecruitmentPage from './pages/RecruitmentPage';
 import News from './pages/News';
+import VisaSupport from './pages/VisaSupport';
+import FoodHospitality from './pages/FoodHospitality';
 import LineContact from './components/shared/LineContact';
 
 
@@ -141,6 +143,22 @@ export default function App() {
                     element={
                         <PageTransition>
                             <News />
+                        </PageTransition>
+                    }
+                />
+                <Route
+                    path="/visa-support"
+                    element={
+                        <PageTransition>
+                            <VisaSupport />
+                        </PageTransition>
+                    }
+                />
+                <Route
+                    path="/food-hospitality"
+                    element={
+                        <PageTransition>
+                            <FoodHospitality />
                         </PageTransition>
                     }
                 />

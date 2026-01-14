@@ -19,9 +19,9 @@
     "scrollHint": "Scroll to see more details"
   },
   "whatWeDo": {
-    "title": "Our Services",
+    "title": "Our Business Sectors",
     "animated1": "📘 What is One Step Co., Ltd.?",
-    "animated2": "We are a 'bridge of people' connecting foreigners who want to work in Japan with trustworthy companies. Our mission is not just matching, but also supporting 'culture', 'goals', and 'the future'."
+    "animated2": "One Step Co., Ltd. operates across multiple sectors, providing practical, reliable, and compliant solutions in visa support, education, human resources, support services, and food & hospitality. We are strongly committed to supporting international individuals and institutions in Japan."
   },
   "newsAndNotices": {
     "title": "News & Notices",
@@ -32,31 +32,48 @@
   },
   "services": [
     {
-      "title": "Recruitment Services",
-      "titleLine1": "Recruitment",
-      "titleLine2": "Services",
-      "description": "We provide recruitment services matching foreign job seekers with Japanese companies. We support various employment types such as full-time, part-time, and internships, ensuring a smooth hiring process.",
-      "point1": "Jobs in hotels, factories, restaurants, logistics, offices",
-      "point2": "Visa support and interview preparation",
-      "point3": "Multilingual recruitment consultants"
+      "title": "SSW & Engineer Visa Support",
+      "titleLine1": "SSW & Engineer",
+      "titleLine2": "Visa Support",
+      "description": "Comprehensive visa support for Specified Skilled Worker (SSW) and Engineer / Specialist in Humanities / International Services applicants, both overseas and in Japan.",
+      "point1": "SSW visa support in agriculture, caregiving, and food service",
+      "point2": "Engineer / Specialist visa support for bachelor's degree holders",
+      "point3": "Certified organization supporting SSW and Gijinkoku workers"
+    },    
+    {
+      "title": "Education Sector",
+      "titleLine1": "Education",
+      "titleLine2": "Sector",
+      "description": "We collaborate with Japanese language schools in Japan to recruit and prepare international students. Our partner group in Nepal operates three educational institutions.",
+      "point1": "Japanese language education up to JLPT N5–N4",
+      "point2": "Structured pathways for enrollment in Japanese language schools",
+      "point3": "Education support for international children in Nagoya (Elementary to Junior High)"
     },
     {
-      "title": "Support for International Students & Consulting",
-      "titleLine1": "Student",
-      "titleLine2": "Consulting",
-      "description": "We help students from around the world find the best educational opportunities in Japan.",
-      "point1": "School and university introductions and admission procedures",
-      "point2": "Visa application support",
-      "point3": "Advice on finding housing and part-time jobs"
-    },
-    {
-      "title": "Translation & Document Support",
-      "titleLine1": "Translation & Document",
+      "title": "HR & Career Support",
+      "titleLine1": "HR & Career",
       "titleLine2": "Support",
-      "description": "We provide professional translation and document creation support for the following documents.",
-      "point1": "Residence applications, work permits, company documents",
-      "point2": "School-related documents and certificates",
-      "point3": "Translation of birth certificates, marriage certificates, visa-related documents"
+      "description": "We support international students who have graduated from Japanese language schools by offering career counseling, job matching, and assistance with transitioning from student status to work visas.",
+      "point1": "Career counseling and job guidance",
+      "point2": "Job-matching support with Japanese companies",
+      "point3": "Assistance with transitioning from student status to work visas"
+    },
+    {
+      "title": "Documentation & Language Services",
+      "titleLine1": "Docs &",
+      "titleLine2": "Language",
+      "description": "Practical documentation, translation, and daily-life support for individuals and businesses in Japan.",
+      "point1": "Administrative documentation",
+      "point2": "Translation & interpretation",
+      "point3": "Daily-life assistance" },    
+    {
+      "title": "Food & Hospitality Sector",
+      "titleLine1": "Food &",
+      "titleLine2": "Hospitality",
+      "description": "We operate two restaurants in Japan: a Nepalese Restaurant and an Izakaya Restaurant, emphasizing quality, cultural exchange, and community connection.",
+      "point1": "Nepalese Restaurant (1 location)",
+      "point2": "Izakaya Restaurant (1 location)",
+      "point3": "Creating spaces that bring people together through food"
     }
   ],
   "cta": {
@@ -689,6 +706,113 @@
       "administrativeAnnouncement": "Administrative Announcement"
     },
     "viewDetails": "View Details"
+  },
+  "visaSupport": {
+    "meta": {
+      "title": "SSW & Engineer Visa Support | One Step Co., Ltd.",
+      "description": "Comprehensive visa support for Specified Skilled Worker (SSW) and Engineer/Specialist in Humanities/International Services visa applicants. Certified organization authorized to support SSW and Gijinkoku workers in Japan.",
+      "keywords": "SSW visa, Specified Skilled Worker, Engineer visa, Gijinkoku visa, visa support, Japan visa, immigration support",
+      "lang": "en"
+    },
+    "infoTitle": {
+      "title": "SSW & Engineer / Specialist Visa Support",
+      "description": "Visa Support Services",
+      "highlightText": "Comprehensive visa support for your journey to Japan"
+    },
+    "heroImageAlt": "Visa documentation and support",
+    "heroTitle": "SSW & Engineer / Specialist in Humanities / International Services (Bachelor's Pass) Visa Support",
+    "heroDescription": "We provide comprehensive visa support for Specified Skilled Worker (SSW) and Engineer / Specialist in Humanities / International Services (Bachelor's Pass / Gijinkoku) applicants from overseas and within Japan.",
+    "strengths": [
+      {
+        "title": "End-to-End Support",
+        "description": "Complete support from recruitment and screening to visa application and post-arrival assistance in Japan."
+      },
+      {
+        "title": "Certified Organization",
+        "description": "We are a certified organization authorized to support SSW and Gijinkoku workers in Japan, ensuring compliance and reliability."
+      },
+      {
+        "title": "Multi-Sector Expertise",
+        "description": "SSW visa support in Agriculture, Caregiving, Food Service, and related fields. Engineer visa support for professionals in engineering, business, IT, interpretation, and education."
+      }
+    ],
+    "sswServices": {
+      "title": "SSW (Specified Skilled Worker) Support Services",
+      "description": "We offer end-to-end support for SSW candidates applying from overseas and within Japan.",
+      "certified": "✅ We are a certified organization authorized to support SSW workers in Japan.",
+      "list": [
+        "Recruitment and screening of skilled workers",
+        "SSW visa support in sectors such as Agriculture, Caregiving, Food Service, and related fields",
+        "Skill test and Japanese language preparation (via our partner language center in Nepal)",
+        "Job matching with certified Japanese companies",
+        "Visa application and immigration documentation support",
+        "Pre-departure orientation and post-arrival support in Japan"
+      ]
+    },
+    "engineerServices": {
+      "title": "Engineer / Specialist in Humanities / International Services (Bachelor's Pass – Gijinkoku Visa) Support",
+      "description": "We support foreign professionals eligible for the Engineer / Specialist in Humanities / International Services visa.",
+      "certified": "✅ We are a certified organization authorized to support Gijinkoku workers in Japan.",
+      "list": [
+        "Career consultation for bachelor's degree holders",
+        "Job matching with Japanese companies",
+        "Support for new visa applications or status changes",
+        "Documentation, translation, and administrative support",
+        "Guidance on employment contracts and workplace adaptation"
+      ]
+    },
+    "idealFor": {
+      "title": "Ideal For",
+      "description": "This service is ideal for professionals seeking careers in engineering, business, IT, interpretation, education, and international services in Japan."
+    }
+  },
+  "foodHospitality": {
+    "meta": {
+      "title": "Food & Hospitality Sector | One Step Co., Ltd.",
+      "description": "One Step Co., Ltd. operates restaurants in Japan, including Nepalese Restaurant and Izakaya, emphasizing quality, cultural exchange, and community connection.",
+      "keywords": "restaurant, hospitality, Nepalese restaurant, Izakaya, food service, Japan restaurant, cultural exchange",
+      "lang": "en"
+    },
+    "infoTitle": {
+      "title": "Food & Hospitality Sector",
+      "description": "Restaurant Business",
+      "highlightText": "Creating spaces that bring people together through food"
+    },
+    "heroImageAlt": "Restaurant interior and hospitality",
+    "heroTitle": "Restaurant Business",
+    "heroDescription": "We operate two restaurants in Japan: a Nepalese Restaurant and an Izakaya Restaurant. Our food and hospitality business emphasizes quality, cultural exchange, and community connection, creating spaces that bring people together through food.",
+    "strengths": [
+      {
+        "title": "Quality & Excellence",
+        "description": "We emphasize quality in every dish, ensuring authentic flavors and exceptional dining experiences for our guests."
+      },
+      {
+        "title": "Cultural Exchange",
+        "description": "Our restaurants serve as bridges between cultures, bringing people together through the universal language of food."
+      },
+      {
+        "title": "Community Connection",
+        "description": "We create welcoming spaces that foster community connections and meaningful interactions among diverse groups of people."
+      }
+    ],
+    "restaurantsTitle": "Our Restaurants",
+    "restaurants": [
+      {
+        "name": "Nepalese Restaurant",
+        "description": "Experience authentic Nepalese cuisine with traditional flavors and warm hospitality.",
+        "location": "1 location in Japan",
+        "icon": "🍛"
+      },
+      {
+        "name": "Izakaya Restaurant",
+        "description": "Enjoy Japanese-style pub dining with a welcoming atmosphere and delicious food.",
+        "location": "1 location in Japan",
+        "icon": "🍺"
+      }
+    ],
+    "photosNote": "📷 Restaurant photos and Izakaya name will be provided.",
+    "missionTitle": "Our Mission",
+    "missionDescription": "Our food and hospitality business emphasizes quality, cultural exchange, and community connection, creating spaces that bring people together through food."
   },
   "recruitment": {
     "meta": {

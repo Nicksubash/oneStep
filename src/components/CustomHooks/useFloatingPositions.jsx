@@ -3,7 +3,10 @@ import { useEffect, useState } from "react";
 export const useFloatingPositions = (count) => {
   const [positions, setPositions] = useState([]);
 
+  // Initialize positions
   useEffect(() => {
+    if (count === 0) return;
+    
     setPositions(
       Array.from({ length: count }).map(() => ({
         x: Math.random() * 70 + 10,
@@ -14,10 +17,14 @@ export const useFloatingPositions = (count) => {
     );
   }, [count]);
 
+  // Animate positions
   useEffect(() => {
+    if (positions.length === 0) return;
+
     const interval = setInterval(() => {
-      setPositions((prev) =>
-        prev.map((pos) => {
+      setPositions((prev) => {
+        if (prev.length === 0) return prev;
+        return prev.map((pos) => {
           let newX = pos.x + pos.dx;
           let newY = pos.y + pos.dy;
           let newDx = pos.dx;
@@ -32,12 +39,12 @@ export const useFloatingPositions = (count) => {
             dx: newDx,
             dy: newDy,
           };
-        })
-      );
+        });
+      });
     }, 50);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [positions.length]);
 
   return positions;
 };

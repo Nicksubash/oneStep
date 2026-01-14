@@ -88,6 +88,21 @@ const Navbar = () => {
             description: "多言語ドキュメントサービス",
             image: "https://images.unsplash.com/photo-1516387938699-a93567ec168e?w=400&h=300&fit=crop&crop=center"
           },
+          {
+            title: "SSW & Engineer Visa Support",
+            icon: "\ud83d\udcbc",
+            href: "/visa-support",
+            description: "特定技能・技術・人文知識・国際業務ビザサポート",
+            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop&crop=center"
+          },
+          {
+            title: "Food & Hospitality",
+            subtitle: "飲食・ホスピタリティ",
+            icon: "\ud83c\udf7d\ufe0f",
+            href: "/food-hospitality",
+            description: "レストラン事業とホスピタリティサービス",
+            image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop&crop=center"
+          }
           // {
           //   title: "Import & Export",
           //   subtitle: "輸出入",
@@ -115,7 +130,7 @@ const Navbar = () => {
   useEffect(() => {
     const currentPath = window.location.pathname;
   
-    const businessPages = ["/students", "/translation", "/import", ];
+    const businessPages = ["/students", "/translation", "/visa-support", "/food-hospitality", "/import"];
     const aboutPages = ["/company", "/greeting", "/philosophy", "/faq"];
     const contactPage= ["/contact", "/recruitment"];
   
