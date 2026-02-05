@@ -1,22 +1,38 @@
-import React from 'react';
-import { useLanguagePersistence } from '../CustomHooks/useLanguagePersistence';
+import { motion } from "framer-motion";
+import { useLanguagePersistence } from "../CustomHooks/useLanguagePersistence";
 
 const LanguageSwitcher = () => {
   const { changeLanguage, currentLanguage } = useLanguagePersistence();
 
+  const isJa = currentLanguage === "ja";
+
   return (
-    <div className="flex items-center bg-gray-50 rounded-full p-1">
+    <div className="relative flex items-center w-[110px] h-9 bg-gray-100 rounded-full p-1">
+      {/* Sliding indicator */}
+      <motion.div
+        className="absolute top-1 left-1 w-[50px] h-7 bg-white rounded-full shadow-sm"
+        animate={{ x: isJa ? 0 : 52 }}
+        transition={{ type: "spring", stiffness: 500, damping: 30 }}
+      />
+
+      {/* JP */}
       <button
-        className={`px-3 py-1.5 text-sm font-medium rounded-full shadow-sm transition-all duration-200 hover:shadow-md ${currentLanguage === 'ja' ? 'bg-white text-indigo-600' : 'text-gray-600 hover:text-indigo-600'}`}
-        onClick={() => changeLanguage('ja')}
-        disabled={currentLanguage === 'ja'}
+        onClick={() => changeLanguage("ja")}
+        className={`relative z-10 w-[50px] h-7 text-sm font-medium flex items-center justify-center rounded-full transition-colors ${
+          isJa ? "text-indigo-600" : "text-gray-500 hover:text-indigo-600"
+        }`}
+        aria-label="日本語"
       >
         🇯🇵 JP
       </button>
+
+      {/* EN */}
       <button
-        className={`px-3 py-1.5 text-sm font-medium rounded-full transition-colors duration-200 ${currentLanguage === 'en' ? 'bg-white text-indigo-600 shadow-sm' : 'text-gray-600 hover:text-indigo-600'}`}
-        onClick={() => changeLanguage('en')}
-        disabled={currentLanguage === 'en'}
+        onClick={() => changeLanguage("en")}
+        className={`relative z-10 w-[50px] h-7 text-sm font-medium flex items-center justify-center rounded-full transition-colors ${
+          !isJa ? "text-indigo-600" : "text-gray-500 hover:text-indigo-600"
+        }`}
+        aria-label="English"
       >
         🇺🇸 EN
       </button>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import Logo from './Logo';
 import LanguageSwitcher from './LanguageSwitcher';
 import SearchButton from './SearchButton';
@@ -8,6 +9,7 @@ import MobileMenu from './Navigation/MobileMenu';
 import Button from "../shared/Button";
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("Home");
@@ -16,11 +18,13 @@ const Navbar = () => {
   const [currentPage, setCurrentPage] = useState({});
 
   const navLinks = [
-    { name: "ホーム",
-      subtitle:"Home", 
-      href: "/", },
     {
-      name: "会社案内",
+      name: t('navbar.home'),
+      subtitle: "Home",
+      href: "/",
+    },
+    {
+      name: t('navbar.company'),
       subtitle: "Company",
       href: "/company",
 
@@ -62,7 +66,7 @@ const Navbar = () => {
       }
     },
     {
-      name: "事業内容",
+      name: t('navbar.services'),
       subtitle: "Services",
       href: "/services",
       megaMenu: {
@@ -103,20 +107,24 @@ const Navbar = () => {
             description: "レストラン事業とホスピタリティサービス",
             image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop&crop=center"
           }
-          // {
-          //   title: "Import & Export",
-          //   subtitle: "輸出入",
-          //   icon: "\ud83d\udce6",
-          //   href: "/import",
-          //   description: "国際貿易ソリューション",
-          //   image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop&crop=center"
-          // }
         ]
       }
     },
-    { name: "メンバー紹介",subtitle: "Our Teams", href: "/teams" },
-    { name: "最新情報", subtitle: "News",href: "/news" },
-    { name: "お問い合わせ", subtitle: "Contact Us",href: "/contact" },
+    {
+      name: t('navbar.teams'),
+      subtitle: "Our Teams",
+      href: "/teams"
+    },
+    {
+      name: t('navbar.news'),
+      subtitle: "News",
+      href: "/news"
+    },
+    {
+      name: t('navbar.contact'),
+      subtitle: "Contact Us",
+      href: "/contact"
+    },
   ];
 
   useEffect(() => {
@@ -129,27 +137,27 @@ const Navbar = () => {
 
   useEffect(() => {
     const currentPath = window.location.pathname;
-  
+
     const businessPages = ["/students", "/translation", "/visa-support", "/food-hospitality", "/import"];
     const aboutPages = ["/company", "/greeting", "/philosophy", "/faq"];
-    const contactPage= ["/contact", "/recruitment"];
-  
+    const contactPage = ["/contact", "/recruitment"];
+
     const currentLink = navLinks.find((link) => {
       if (link.href === currentPath) return true;
-  
+
       if (link.href === "/services" && businessPages.includes(currentPath)) return true;
-  
+
       if (link.href === "/company" && aboutPages.includes(currentPath)) return true;
-  
-      if (link.href ==="/contact" && contactPage.includes(currentPath)) return true;
+
+      if (link.href === "/contact" && contactPage.includes(currentPath)) return true;
       return false;
     });
-  
+
     if (currentLink) {
       setActiveLink(currentLink.name);
     }
-  }, []);
-  
+  }, [t]); // Update active link when language changes
+
 
   const handleLinkClick = (linkName) => {
     setActiveLink(linkName);
@@ -209,11 +217,10 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`fixed top-0 w-full z-[9999] transition-all duration-300 ${
-          isScrolled
+        className={`fixed top-0 w-full z-[9999] transition-all duration-300 ${isScrolled
             ? "bg-white shadow-xl border-b border-gray-200/50"
             : "bg-white shadow-lg border-b border-gray-100"
-        }`}
+          }`}
       >
         <div className="border-b border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -223,10 +230,10 @@ const Navbar = () => {
               <div className="hidden md:flex items-center space-x-6">
                 <LanguageSwitcher />
                 {/* <SearchButton /> */}
-                <Button />
+                <Button>{t('navbar.consultation')}</Button>
               </div>
 
-              <MobileMenuButton 
+              <MobileMenuButton
                 isOpen={isMobileMenuOpen}
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               />

@@ -1,4 +1,26 @@
 {
+  "navbar": {
+    "home": "Home",
+    "company": "Company",
+    "services": "Services",
+    "teams": "Our Teams",
+    "news": "News",
+    "contact": "Contact Us",
+    "consultation": "Recruitment"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "other": "Other"
+  },
+  "home": {
+    "meta": {
+      "title": "One Step Co., Ltd. | International Recruitment & Support in Japan",
+      "description": "One Step Co., Ltd. is a bridge connecting international talent with Japanese companies. We provide recruitment, language education, and visa support.",
+      "keywords": "recruitment, foreign talent, job support, visa application, Japanese education, One Step",
+      "lang": "en"
+    }
+  },
   "welcome": "Welcome",
   "contacts": "Contact us via web form or phone.",
   "companyCTA": {
@@ -10,7 +32,7 @@
   "enhancedHero": {
     "headline1": "Connecting People to Companies",
     "headline2": "The optimal Professional ",
-    "headlineSubline":"Recruitment Service",
+    "headlineSubline": "Recruitment Service",
     "subtext1": "🌍 For those who want to work in Japan. This first step can change your future.",
     "subtext2": "🎯 Job search, career change, career advancement—One Step fully supports your first step in Japan.",
     "subtitle": "Welcome to OneStep Co., Ltd. We are your trusted partner for international recruitment, language education, and cross-cultural support in Japan. We connect outstanding talent from around the world with Japanese companies and fully support global career success.",
@@ -39,7 +61,7 @@
       "point1": "SSW visa support in agriculture, caregiving, and food service",
       "point2": "Engineer / Specialist visa support for bachelor's degree holders",
       "point3": "Certified organization supporting SSW and Gijinkoku workers"
-    },    
+    },
     {
       "title": "Education Sector",
       "titleLine1": "Education",
@@ -65,7 +87,8 @@
       "description": "Practical documentation, translation, and daily-life support for individuals and businesses in Japan.",
       "point1": "Administrative documentation",
       "point2": "Translation & interpretation",
-      "point3": "Daily-life assistance" },    
+      "point3": "Daily-life assistance"
+    },
     {
       "title": "Food & Hospitality Sector",
       "titleLine1": "Food &",
@@ -126,6 +149,8 @@
       "established": "Established",
       "establishedValue": "March 28, 2025",
       "location": "Location",
+      "capital": "Capital",
+      "capitalValue": "20 million yen",
       "locationValue": "Kannon Building, Kannon-cho, Minami-ku, Nagoya, Aichi 457-0845, Japan",
       "representative": "Representative",
       "representativeValue": "CEO Sudip Regmi",
@@ -139,7 +164,9 @@
       "business3": "Job support for international students",
       "business4": "Supported languages: Japanese, English, Nepali",
       "license": "Licenses & Registration",
-      "licenseValue": "Recruitment service license (Ministry of Health, Labour and Welfare No.: 23-Yu-303096) | Other registrations in preparation",
+      "license1": "Fee-charging Employment Placement Business License (Ministry of Health, Labour and Welfare License No.: 23-Yu-303096)",
+      "license2": "Domestic, Nepal",
+      "license3": "Registered Support Organization (Immigration Services Agency 25-Tou-012612)",
       "mission": "Mission",
       "missionHighlight": "\"That first step changes the future\"",
       "missionText": "We serve as a bridge between foreigners and companies, realizing a trusted flow of talent in Japanese society.",
@@ -188,7 +215,12 @@
     ],
     "flow": {
       "title": "Introduction Flow",
-      "steps": ["Inquiry", "Hearing & Proposal", "Contract & Selection", "Start of Work"],
+      "steps": [
+        "Inquiry",
+        "Hearing & Proposal",
+        "Contract & Selection",
+        "Start of Work"
+      ],
       "descriptions": [
         "Feel free to contact us via web form or phone.",
         "Our staff will listen to your business needs and propose the best talent and introduction method.",
@@ -254,7 +286,12 @@
     ],
     "flow": {
       "title": "Service Flow",
-      "steps": ["Inquiry", "Career Counseling", "Company Introduction & Interview Preparation", "Job Offer & Visa Support"],
+      "steps": [
+        "Inquiry",
+        "Career Counseling",
+        "Company Introduction & Interview Preparation",
+        "Job Offer & Visa Support"
+      ],
       "descriptions": [
         "Feel free to consult via web form or LINE. Our staff will contact you.",
         "We think about career direction together based on experience, skills, and hopes.",
@@ -323,7 +360,12 @@
     ],
     "flow": {
       "title": "Service Flow",
-      "steps": ["Inquiry & Quote", "Order & Document Submission", "Translation & Proofreading", "Delivery"],
+      "steps": [
+        "Inquiry & Quote",
+        "Order & Document Submission",
+        "Translation & Proofreading",
+        "Delivery"
+      ],
       "descriptions": [
         "Contact us via web form. We will provide a quote within the same day.",
         "After formal order, please send us the documents and materials to be translated.",
@@ -334,12 +376,26 @@
     "supportedFields": {
       "title": "Supported Fields",
       "highlightText": "Fields",
-      "fields": ["IT & Technology", "Legal & Contracts", "Medical & Pharmaceutical", "Finance & IR", "Marketing", "Technical Manuals", "Websites"]
+      "fields": [
+        "IT & Technology",
+        "Legal & Contracts",
+        "Medical & Pharmaceutical",
+        "Finance & IR",
+        "Marketing",
+        "Technical Manuals",
+        "Websites"
+      ]
     },
     "supportedLanguages": {
       "title": "Supported Languages",
       "highlightText": "Languages",
-      "languages": ["English", "Japanese", "Nepali", "Hindi", "Many others"],
+      "languages": [
+        "English",
+        "Japanese",
+        "Nepali",
+        "Hindi",
+        "Many others"
+      ],
       "imageAlt": "Multilingual support"
     }
   },
@@ -385,7 +441,7 @@
     "pageIntro": {
       "title": "Feel free to contact us",
       "description": "One Step Co., Ltd. serves as a bridge connecting job seekers and companies. Please contact us from the options below according to your position.",
-      "remark":"※ We will reply within three days of receiving your inquiry."
+      "remark": "※ We will reply within three days of receiving your inquiry."
     },
     "selectionCards": {
       "company": {
@@ -854,7 +910,12 @@
       "locationValue": "3c Kannon Building, 5-25 Kannon-cho, Minami-ku, Nagoya-shi, Aichi"
     },
     "flowTitle": "Selection Process",
-    "steps": ["Document Screening", "First Interview", "Second Interview", "Job Offer"],
+    "steps": [
+      "Document Screening",
+      "First Interview",
+      "Second Interview",
+      "Job Offer"
+    ],
     "descriptions": [
       "We review your resume and work history for document screening.",
       "We ask about your skills and motivation in an interview with our staff.",
@@ -883,9 +944,18 @@
     },
     "faqTitle": "FAQ",
     "faqs": [
-      {"question": "Are there any qualifications required to apply?", "answer": "Basic PC skills and business-level Japanese are required."},
-      {"question": "Can non-Japanese nationals apply?", "answer": "Yes, you can apply if you have a valid residence status."},
-      {"question": "Is it okay to apply with no experience?", "answer": "We focus on personality, so even those with no experience are welcome."}
+      {
+        "question": "Are there any qualifications required to apply?",
+        "answer": "Basic PC skills and business-level Japanese are required."
+      },
+      {
+        "question": "Can non-Japanese nationals apply?",
+        "answer": "Yes, you can apply if you have a valid residence status."
+      },
+      {
+        "question": "Is it okay to apply with no experience?",
+        "answer": "We focus on personality, so even those with no experience are welcome."
+      }
     ]
   }
-} 
+}

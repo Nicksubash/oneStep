@@ -4,6 +4,8 @@ import WhatWeDo from './WhatWeDo';
 import CompanyCTA from '../shared/CompanyCTA';
 import EnhancedHero from './EnhancedHero';
 import NewsAndNotices from './NewsAndNotice';
+import AccessSection from '../../section/Section';
+
 const Hero = () => {
   const { name, contact } = Data;
 
@@ -12,6 +14,7 @@ const Hero = () => {
       <EnhancedHero />
       <WhatWeDo/>
       <NewsAndNotices />
+      <AccessSection/>
       <CompanyCTA />
     </section>
   );

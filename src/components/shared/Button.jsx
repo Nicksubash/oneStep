@@ -15,7 +15,7 @@ const Button = ({
       href={href}
       className={`group px-8 py-4 bg-gradient-to-r ${gradientFrom} ${gradientTo} text-white font-semibold rounded-full 
         hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 transition-all duration-300 
-        relative overflow-hidden backdrop-blur-sm bg-opacity-90`}
+        relative overflow-hidden backdrop-blur-sm bg-opacity-90 flex items-center justify-center min-w-[200px]`}
     >
       <span className="relative z-10">{children || t('common.recruitmentButton')}</span>
       <div

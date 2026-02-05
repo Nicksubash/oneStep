@@ -37,17 +37,22 @@ export default function CompanyInfo() {
               <td className="p-2">{t("companyInfo.table.companyNameValue")}</td>
             </tr>
             <tr className="border-b">
-              <th className="p-2 bg-gray-100">{t("companyInfo.table.established")}</th>
-              <td className="p-2">{t("companyInfo.table.establishedValue")}</td>
+              <th className="p-2 bg-gray-100">{t("companyInfo.table.representative")}</th>
+              <td className="p-2">{t("companyInfo.table.representativeValue")}</td>
             </tr>
             <tr className="border-b">
               <th className="p-2 bg-gray-100">{t("companyInfo.table.location")}</th>
               <td className="p-2">{t("companyInfo.table.locationValue")}</td>
             </tr>
             <tr className="border-b">
-              <th className="p-2 bg-gray-100">{t("companyInfo.table.representative")}</th>
-              <td className="p-2">{t("companyInfo.table.representativeValue")}</td>
+              <th className="p-2 bg-gray-100">{t("companyInfo.table.established")}</th>
+              <td className="p-2">{t("companyInfo.table.establishedValue")}</td>
             </tr>
+            <tr className="border-b">
+              <th className="p-2 bg-gray-100">{t("companyInfo.table.capital")}</th>
+              <td className="p-2">{t("companyInfo.table.capitalValue")}</td>
+            </tr>
+
             <tr className="border-b">
               <th className="p-2 bg-gray-100">{t("companyInfo.table.contact")}</th>
               <td className="p-2">{t("companyInfo.table.contactValue")}</td>
@@ -69,7 +74,13 @@ export default function CompanyInfo() {
             </tr>
             <tr className="border-b">
               <th className="p-2 bg-gray-100">{t("companyInfo.table.license")}</th>
-              <td className="p-2">{t("companyInfo.table.licenseValue")}</td>
+              <td className="p-2">
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>{t("companyInfo.table.license1")}</li>
+                  <li>{t("companyInfo.table.license2")}</li>
+                  <li>{t("companyInfo.table.license3")}</li>
+                </ul>
+              </td>
             </tr>
             <tr className="border-b">
               <th className="p-2 bg-gray-100">{t("companyInfo.table.mission")}</th>
