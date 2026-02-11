@@ -17,7 +17,7 @@ export const services = [
     titleLines: ['services.1.titleLine1', 'services.1.titleLine2'],
     icon: '🎓',
     gradient: 'from-pink-400 to-brand-primary',
-    href: '/students',
+    href: '/services#education',
     description: 'services.1.description',
     points: [
       'services.1.point1',
@@ -30,7 +30,7 @@ export const services = [
     titleLines: ['services.2.titleLine1', 'services.2.titleLine2'],
     icon: '👥',
     gradient: 'from-brand-primary to-purple-600',
-    href: '/services#recruitment',
+    href: '/students',
     description: 'services.2.description',
     points: [
       'services.2.point1',
