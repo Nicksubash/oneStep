@@ -46,6 +46,10 @@
     "ctaJobSeeker": "For Job Seekers",
     "scrollHint": "Scroll to see more details"
   },
+  "companyhub": {
+    "moreAboutUs": "Corporate Outline",
+    "description": "Information about OneStep Co., Ltd.'s management policies and organization."
+  },
   "whatWeDo": {
     "title": "Our Business Sectors",
     "animated1": "📘 What is One Step Co., Ltd.?",

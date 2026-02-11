@@ -33,7 +33,7 @@ const Navbar = () => {
           {
             title: "Company Information",
             subtitle: "会社情報",
-            icon: "\ud83c\udfe2",
+            icon: "🏢",
             href: "/company",
             description: "組織概要と沿革",
             image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop&crop=center"
@@ -41,7 +41,7 @@ const Navbar = () => {
           {
             title: "CEO Message",
             subtitle: "代表挨拶",
-            icon: "\ud83d\udcf0",
+            icon: "📋",
             href: "/greeting",
             description: "社長からの温かい言葉",
             image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=300&fit=crop&crop=center"
@@ -49,10 +49,18 @@ const Navbar = () => {
           {
             title: "Corporate Philosophy",
             subtitle: "企業理念",
-            icon: "\ud83d\udcab",
+            icon: "💫",
             href: "/philosophy",
             description: "私たちの価値観と使命",
             image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=300&fit=crop&crop=center"
+          },
+          {
+            title: "Our Teams",
+            subtitle: "私たちのチーム",
+            icon: "👥",
+            href: "/teams",
+            description: "プロフェッショナルなメンバー紹介",
+            image: "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?w=400&h=300&fit=crop&crop=center"
           },
           {
             title: "FAQ",
@@ -109,11 +117,6 @@ const Navbar = () => {
           }
         ]
       }
-    },
-    {
-      name: t('navbar.teams'),
-      subtitle: "Our Teams",
-      href: "/teams"
     },
     {
       name: t('navbar.news'),
@@ -218,8 +221,8 @@ const Navbar = () => {
     <>
       <header
         className={`fixed top-0 w-full z-[9999] transition-all duration-300 ${isScrolled
-            ? "bg-white shadow-xl border-b border-gray-200/50"
-            : "bg-white shadow-lg border-b border-gray-100"
+          ? "bg-white shadow-xl border-b border-gray-200/50"
+          : "bg-white shadow-lg border-b border-gray-100"
           }`}
       >
         <div className="border-b border-gray-100">
